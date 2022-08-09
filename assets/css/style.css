@@ -1,3 +1,27 @@
-body {
-    background: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap');
+        
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:  #6E6259;
+    color: #FAFAD2;
+    font-family: 'Cormorant Garamond', sans-serif;
+}
+
+h1 {
+    font-style: italic;
+    text-align: center;
+    margin-top: 5%;
+
+}
+
+#game-screen {
+    background-color: #e3a857;
+    height: 80%;
+    top: 50%;
+}
+
+input {
+    background-color: ;#FAFAD2;
 }
