@@ -14,14 +14,20 @@
     <section id="background">
         <h1>Celtic Wheel</h1>
         <div id="game-container">
-            <div id="game-screen">
-                <p>
-                    <h2>Quiz your knowledge on the Celtic calander</h2>
-                </p>
-                <label for="name" class="label">Name</label>
-                <input id="name" name="name" type="text" required>
+            <form id="game-screen">
+                <h2>Quiz your knowledge on the Celtic calander</h2>
+                <li class="name-area">
+                    <label for="name" class="label">Name</label>
+                    <input id="name" name="name" type="text" required>
+                </li>
+                <!--
+                <li>
+                    <label for="difficulty">Choose difficulty</label>
+
+                </li> 
+            -->
                 <button type="submit">Begin the wheel</button>
-            </div>
+            </form>
         </div>
     </section>
     <script src="assets/js/script.js"></script>

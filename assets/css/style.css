@@ -20,34 +20,67 @@ body {
 
 }
 
+#background {
+    height: 100%;
+    width: 100%;
+}
+
+/* game area*/
+
 h1 {
     font-style: italic;
+    font-size: 4rem ;
     text-align: center;
-    margin-top: 5%;
-
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 h2 {
     background-color: #e3a857;
+    color: #6E6259;
 }
 
 #game-container {
     display: flex;
-    width: 500px;
     height: 500px;
     justify-content: center;
     align-items: center;
-    padding: 10% ;
+    
 } 
 
 #game-screen {
     background-color: #e3a857;
     height: 80%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+}
+
+form > li {
+    background-color: #e3a857;
+    text-decoration: none;
+}
+
+.name-area {
+    display: flex;
+    margin: 10px;
 }
 
 input {
     background-color: #FAFAD2;
+    color: #6E6259;
+    
+}
+
+.label {
+    background-color: #e3a857;
+    color: #6E6259;
+    font-size: 1.5rem;
+    margin-right: 20px
+}
+
+button {
+    font-size: 1.5rem;
 }
