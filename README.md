@@ -126,6 +126,8 @@ To Clone this repository follow these steps:
 ## CREDITS:
 
 **Code:**
+ 
+ Dropdown code: https://www.w3schools.com/howto/howto_js_dropdown.asp
 
 **Markdown:**
 

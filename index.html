@@ -20,12 +20,17 @@
                     <label for="name" class="label">Name</label>
                     <input id="name" name="name" type="text" required>
                 </li>
-                <!--
-                <li>
-                    <label for="difficulty">Choose difficulty</label>
 
-                </li> 
-            -->
+                <!-- Dropdown code Taken from W3 schools -->
+                <div class ="dropdown"> 
+                    <button onclick="myFunction()" class="dropdown-btn">Choose difficulty</button>
+                        <div id="my-dropdown class="difficulty-setting">
+                            <a href="#">Easy</a>
+                            <a href="#">Medium</a>
+                            <a href="#">Hard</a>
+                        </div>
+                </div>
+                
                 <button type="submit">Begin the wheel</button>
             </form>
         </div>
