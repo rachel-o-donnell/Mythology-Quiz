@@ -45,7 +45,8 @@ h2 {
     height: 500px;
     justify-content: center;
     align-items: center;
-    
+    max-width: 1200px;
+    margin: 0 auto
 } 
 
 #game-screen {
@@ -85,3 +86,5 @@ input {
 button {
     font-size: 1.5rem;
 }
+
+
