@@ -87,44 +87,59 @@ button {
     font-size: 1.5rem;
 }
 
-/* dropdown button code. Styling followed from W3schools */
+/* container for dropdown needed to display button and contents without overlying the start button */
+
+#dropdown-container {
+    padding-bottom: 15%;
+    background-color: #e3a857
+}
+
+/* dropdown button code. Styling followed from W3schools changed to suit my project*/
+ 
 
 .dropdown-btn {
     padding: 10px;
     cursor: pointer;
 }
 
-/* Dropdown button on hover & focus */
+/* Dropdown button on hover & focus W3schools*/
 .dropdown-btn:hover, .dropdownbtn:focus {
     background-color: #e3a857;
   }
 
+/* The container <div> - needed to position the dropdown content  W3schools*/
 
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown Content (Hidden by Default) W3schools */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    background-color: #FAFAD2;
+    width: 100%;
+    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
 
-/* Links inside the dropdown */
+/* Links inside the dropdown W3schools*/
 .dropdown-content a {
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
-  /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
+  /* Change color of dropdown links on hover W3schools*/
+.dropdown-content a:hover {
+    background-color: #FAFAD2;
+    color: #6E6259;
+}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content 
+container when the user clicks on the dropdown button) W3schools*/
+.show {
+    display:block;
+}
