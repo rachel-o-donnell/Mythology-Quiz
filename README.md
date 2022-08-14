@@ -161,6 +161,8 @@ Balsamiq
 
 ## BUGS FIXED:
 
+.dropdown background color changed when I added a margin bottom to the button element. Added new backgrounf color.
+Only had a  margin left 15px to h2 so it stuck too far to the right when on a smaller screen (320px) changed to margin 0 10px to be more balanced. 
 --- 
 
 ## RESOURCES USED:
