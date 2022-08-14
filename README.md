@@ -126,8 +126,17 @@ To Clone this repository follow these steps:
 ## CREDITS:
 
 **Code:**
+Using Love Running and my last project ******INSERT LINK****  as guidlines to rememeber Html and CSS,Love Maths as a guide for JS and adapting all to my needs and design for this project. 
+Heavily relying on Dev Tooos to play around and find the right fit.
+
+https://miker94.github.io/CI-Project-Portfolio-2/ I absolutely loved the style and design of this quiz so Ive been looking a lot at Mike's code to see how he created it but changing as much as possible to suit my needs and simplify it. Mostly I am using the idea of the game screen with all the info centered. Initially I wanted my quiz to be about the Celtic Calendar but after learning about API I needed to change my subject and design. I chose to use an API rather than write all my questions - really just so I could practice on how to use API. 
  
  Dropdown code: https://www.w3schools.com/howto/howto_js_dropdown.asp
+
+ all videos watched about building quizes with JS:
+ https://www.youtube.com/watch?v=riDzcEQbX6k: Web Dev Simplified
+ https://www.youtube.com/watch?v=LQGTb112N_c: Mike Dane
+ https://www.youtube.com/watch?v=zgHim4ZDpZY: Code with Ania Dubów
 
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
