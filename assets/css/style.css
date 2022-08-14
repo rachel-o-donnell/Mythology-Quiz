@@ -27,6 +27,12 @@ body {
 
 /* game area*/
 
+/* hides screens that are not needed untill called*/
+.hide {
+    display: none;
+}
+
+
 h1 {
     font-style: italic;
     font-size: 4rem ;
@@ -64,6 +70,8 @@ h2 {
 
 }
 
+/* initial start screen*/
+
 form > li {
     background-color: #e3a857;
     text-decoration: none;
@@ -90,14 +98,14 @@ input {
 button {
     font-size: 1.5rem;
     margin-bottom: 3%;
-    padding: 10px
+    padding: 10px;
 }
 
 /* container for dropdown needed to display button and contents without overlying the start button */
 
 #dropdown-container {
     padding-bottom: 15%;
-    background-color: #e3a857
+    background-color: #e3a857;
 }
 
 /* dropdown button code. Styling followed from W3schools changed to suit my project*/
@@ -150,3 +158,5 @@ container when the user clicks on the dropdown button) W3schools*/
 .show {
     display:block;
 }
+
+/* questions and answers screen */
