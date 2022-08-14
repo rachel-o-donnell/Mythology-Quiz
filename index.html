@@ -15,34 +15,35 @@
         <h1>Mythology Quiz</h1>
         <div id="game-container">
             <form id="game-screen">
-                <h2>Quiz your knowledge on Mythology</h2>
-                <li class="name-area">
-                    <label for="name" class="label">Name</label>
-                    <input id="name" name="name" type="text" required>
-                </li>
-                <div id="dropdown-container">
-                    <!-- Dropdown code Taken from W3 schools -->
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropdown-btn">Choose difficulty</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Easy</a>
-                            <a href="#">Medium</a>
-                            <a href="#">Hard</a>
+                    <h2 class="hide">Quiz your knowledge on Mythology</h2>
+                    <li class="name-area">
+                        <label for="name" class="label hide">Name</label>
+                        <input class="hide" id="name" name="name" type="text" required>
+                    </li>
+                    <div id="dropdown-container" class="hide">
+                        <!-- Dropdown code Taken from W3 schools -->
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropdown-btn">Choose difficulty</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#">Easy</a>
+                                <a href="#">Medium</a>
+                                <a href="#">Hard</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <button type="submit">Begin the wheel</button>
-            </form>
+                    <button class="hide" type="submit">Begin the wheel</button>
             <!-- questions and answers game screen -->
-            <section class="questions-answers hide">
+            <section class="questions-answers">
                 <div>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                    <h2 id="question-area">Question</h2>
+                    <button id="a"></button>
+                    <button id="b"></button>
+                    <button id="c"></button>
+                    <button id="d"></button>
                 </div>
 
             </section>
+        </form>
         </div>
     </section>
     <script src="assets/js/script.js"></script>
