@@ -135,6 +135,8 @@ https://miker94.github.io/CI-Project-Portfolio-2/ I absolutely loved the style a
 
  all videos watched about building quizes with JS:
  https://www.youtube.com/watch?v=riDzcEQbX6k: Web Dev Simplified
+ box shadow detail, 
+ 
  https://www.youtube.com/watch?v=LQGTb112N_c: Mike Dane
  https://www.youtube.com/watch?v=zgHim4ZDpZY: Code with Ania Dubów
 

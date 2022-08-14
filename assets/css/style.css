@@ -84,12 +84,13 @@ input {
     background-color: #e3a857;
     color: #6E6259;
     font-size: 1.5rem;
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 button {
     font-size: 1.5rem;
-    margin-bottom: 3%
+    margin-bottom: 3%;
+    padding: 10px
 }
 
 /* container for dropdown needed to display button and contents without overlying the start button */
