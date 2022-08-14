@@ -129,6 +129,9 @@ To Clone this repository follow these steps:
  
  Dropdown code: https://www.w3schools.com/howto/howto_js_dropdown.asp
 
+ **Questions:**
+Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
+
 **Markdown:**
 
 format learnings from below
@@ -173,5 +176,5 @@ Only had a  margin left 15px to h2 so it stuck too far to the right when on a sm
 * Youtube
 * Devtools
 * Flex froggy
-
+* Open Trivia Database 
 ---
