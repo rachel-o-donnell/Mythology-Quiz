@@ -37,7 +37,7 @@ h1 {
 h2 {
     background-color: #e3a857;
     color: #6E6259;
-    margin-left: 15px;
+    margin: 0 10px;
 }
 
 #game-container {
@@ -113,6 +113,7 @@ button {
 .dropdown {
     position: relative;
     display: inline-block;
+    background-color: #e3a857;
 }
 
 /* Dropdown Content (Hidden by Default) W3schools */
