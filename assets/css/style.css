@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #FAFAD2;
     font-family: 'Cormorant Garamond', sans-serif;
 }
 
@@ -13,6 +12,7 @@ body {
     /* background image code taken from https://miker94.github.io/CI-Project-Portfolio-2/ */ 
     background: url(../images/mythology-img.png) no-repeat center center fixed;
     background-size: cover;
+    
 }
 
 /* game area*/
@@ -22,23 +22,23 @@ body {
     display: none;
 }
 
-
 h1 {
     font-style: italic;
     font-size: 3rem ;
     text-align: center;
     margin-top: 5%;
+    color: #FAFAD2;
 }
 
 h2 {
     background-color: #e3a857;
-    color: #6E6259;
+    color: #380456;
     margin: 0 10px;
 }
 
 #game-container {
     display: flex;
-    height: 520px;
+    height: 560px;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
@@ -71,9 +71,8 @@ form > li {
    This needs to turn off when we go to game screen 
     display: flex; */ 
     margin: 10px;
+    list-style: none
 }
-
-
 
 input {
     background-color: #FAFAD2;
@@ -83,7 +82,7 @@ input {
 
 .label {
     background-color: #e3a857;
-    color: #6E6259;
+    color: #380456;
     font-size: 1.5rem;
     margin-right: 20px;
 }
@@ -92,6 +91,8 @@ button {
     font-size: 1.5rem;
     margin-bottom: 3%;
     padding: 10px;
+    background-color: #6E6259;
+    color: #FAFAD2;
 }
 
 /* container for dropdown needed to display button and contents without overlying the start button */
@@ -169,6 +170,7 @@ container when the user clicks on the dropdown button) W3schools*/
 
 #game-panel>li, h3 {
     background-color:#e3a857;
+    color: #301934;
 }
 
 h3 {
@@ -180,7 +182,7 @@ h3 {
     display: grid;
     flex-direction: column;
     justify-content: center;
-    background-color: #e3a857;
+    color: #380456;;
 }
 
 
@@ -188,7 +190,7 @@ h3 {
 
 .q-btn {
     background-color: #FAFAD2;
-    color: #6E6259;
+    color: #380456;
 }
 
 /* next button */
@@ -197,4 +199,5 @@ h3 {
     width: 50%;
     margin: 0 auto;
     background-color: #6E6259;
+    color: #FAFAD2;
 }
