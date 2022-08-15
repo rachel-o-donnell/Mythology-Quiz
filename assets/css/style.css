@@ -59,14 +59,14 @@ h2 {
 #game-screen {
     background-color: #e3a857;
     height: 90%;
-    width: 70%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border-radius: 3%;
     box-shadow: inset 0 0 13px 3px;
-    padding: 4px;
+    padding: 18px;
 
 }
 
@@ -164,6 +164,22 @@ container when the user clicks on the dropdown button) W3schools*/
     display: flex;
     list-style: none;
     justify-content: space-around;
+    background-color: #e3a857;
+}
+
+/* game panel icons*/
+
+.fa-solid {
+    margin: 0 5px 10px;
+    background-color: #e3a857;
+}
+
+#game-panel>li, h3 {
+    background-color:#e3a857;
+}
+
+h3 {
+    margin-bottom: 10px;
 }
 
 /* questions and answers screen */

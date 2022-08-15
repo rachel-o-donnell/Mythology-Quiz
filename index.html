@@ -15,42 +15,43 @@
         <h1>Mythology Quiz</h1>
         <div id="game-container">
             <form id="game-screen">
-                    <h2 class="hide">Quiz your knowledge on Mythology</h2>
-                    <li class="name-area hide">
-                        <label for="name" class="label hide">Name</label>
-                        <input class="hide" id="name" name="name" type="text" required>
-                    </li>
-                    <div id="dropdown-container" class="hide">
-                        <!-- Dropdown code Taken from W3 schools -->
-                        <div class="dropdown">
-                            <button onclick="myFunction()" class="dropdown-btn">Choose difficulty</button>
-                            <div id="myDropdown" class="dropdown-content">
-                                <a href="#">Easy</a>
-                                <a href="#">Medium</a>
-                                <a href="#">Hard</a>
-                            </div>
+                <h2 class="hide">Quiz your knowledge on Mythology</h2>
+                <li class="name-area hide">
+                    <label for="name" class="label hide">Name</label>
+                    <input class="hide" id="name" name="name" type="text" required>
+                </li>
+                <div id="dropdown-container" class="hide">
+                    <!-- Dropdown code Taken from W3 schools -->
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropdown-btn">Choose difficulty</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">Easy</a>
+                            <a href="#">Medium</a>
+                            <a href="#">Hard</a>
                         </div>
                     </div>
-                    <button class="hide" type="submit">Begin the wheel</button>
-            <!-- questions and answers game screen -->
-            <section class="q-and-a-container">
-                <header id="game-panel">
-                    <li id="home"> <i class="fa-solid fa-house"></i>Home</li>
-                    <li id="username"><i class="fa-solid fa-user"></i>Username</li>
-                    <li id="score"><i class="fa-solid fa-crown"></i>Score:8</li>
-                    <li id="question-count"><i class="fa-solid fa-question"></i>1/8</li>
-                </header>
-                <div class ="q-and-a-area">
-                    <h3 id="question">"The ancient Roman god of war was commonly known as which of the following?"</h3>
-                    <button id="a">Placer</button>
-                    <button id="b">Placer</button>
-                    <button id="c">Placer</button>
-                    <button id="d">Placer</button>
-                    <button id="next">Next</button>
                 </div>
+                <button class="hide" type="submit">Begin the wheel</button>
+                <!-- questions and answers game screen -->
+                <section class="q-and-a-container">
+                    <header id="game-panel">
+                        <li id="home"> <i class="fa-solid fa-house"></i></li>
+                        <li id="username"><i class="fa-solid fa-user"></i>Username</li>
+                        <li id="score"><i class="fa-solid fa-crown"></i>8</li>
+                        <li id="question-count"><i class="fa-solid fa-question"></i>1/8</li>
+                    </header>
+                    <div class="q-and-a-area">
+                        <h3 id="question">"The ancient Roman god of war was commonly known as which of the following?"
+                        </h3>
+                        <button id="a">Placer</button>
+                        <button id="b">Placer</button>
+                        <button id="c">Placer</button>
+                        <button id="d">Placer</button>
+                        <button id="next">Next</button>
+                    </div>
 
-            </section>
-        </form>
+                </section>
+            </form>
         </div>
     </section>
     <script src="https://kit.fontawesome.com/888b3ce963.js" crossorigin="anonymous"></script>
