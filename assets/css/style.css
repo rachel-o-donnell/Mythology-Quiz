@@ -159,8 +159,14 @@ container when the user clicks on the dropdown button) W3schools*/
     display:block;
 }
 
-/* questions and answers screen */
+/* game-panel */
+#game-panel {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
 
+/* questions and answers screen */
 .q-and-a-area {
     display: grid;
     flex-direction: column;
