@@ -160,3 +160,10 @@ container when the user clicks on the dropdown button) W3schools*/
 }
 
 /* questions and answers screen */
+
+.q-and-a-area {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e3a857;
+}
