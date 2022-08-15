@@ -177,6 +177,9 @@ Balsamiq
 
 .dropdown background color changed when I added a margin bottom to the button element. Added new backgrounf color.
 Only had a  margin left 15px to h2 so it stuck too far to the right when on a smaller screen (320px) changed to margin 0 10px to be more balanced. 
+
+game panel was pushed down so there was a space on top no matter how many hides I addded.
+Removed justify-content on name-area (need to add listener) then styled.s
 --- 
 
 ## RESOURCES USED:
