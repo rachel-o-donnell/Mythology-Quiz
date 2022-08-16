@@ -8,10 +8,10 @@ function myFunction() {
   // Close the dropdown menu if the user clicks outside of it W3schools 
 window.onclick = function(event) {
     if (!event.target.matches('.dropdown-btn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
+      let dropdowns = document.getElementsByClassName("dropdown-content");
+      let i;
       for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
+        let openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
         }
@@ -20,4 +20,16 @@ window.onclick = function(event) {
   }
   
 
-  
+// test
+
+document.getElementById('begin').addEventListener('click', function() {
+  console.log("Test");
+});
+  // hides home screen when start button is pressed and replaces with game screen
+
+/*addEventListeners(click)
+function startGame() {
+    document.getElementsByClassName('hide').style="display:none";
+    console.log('game started')
+  }
+*/ 

@@ -17,7 +17,12 @@ body {
 
 /* game area*/
 
-/* hides screens that are not needed untill called*/
+/* hides screens that are not needed untill called
+.hide-home {
+    display: none;
+}
+*/
+
 .hide {
     display: none;
 }
@@ -36,17 +41,20 @@ h2 {
     margin: 0 10px;
 }
 
-#game-container {
+#home-container, #game-screen-container {
     display: flex;
     height: 560px;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
-    
+    margin: 0 auto;  
 } 
 
-#game-screen {
+#home-screen {
+    justify-content: space-evenly;
+}
+
+#game-screen, #home-screen {
     background-color: #e3a857;
     height: 90%;
     width: 75%;
@@ -154,7 +162,7 @@ container when the user clicks on the dropdown button) W3schools*/
 }
 
 /* game-panel */
-#game-panel {
+#game-panel>ol {
     display: flex;
     list-style: none;
     justify-content: space-around;
@@ -168,7 +176,7 @@ container when the user clicks on the dropdown button) W3schools*/
     background-color: #e3a857;
 }
 
-#game-panel>li, h3 {
+h3 {
     background-color:#e3a857;
     color: #301934;
 }
