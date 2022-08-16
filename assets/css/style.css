@@ -148,8 +148,8 @@ button {
 
   /* Change color of dropdown links on hover W3schools*/
 .dropdown-content a:hover {
-    background-color: #FAFAD2;
-    color: #6E6259;
+    background-color: #6E6259;
+    color: #FAFAD2;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content 
