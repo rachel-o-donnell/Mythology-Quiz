@@ -5,7 +5,7 @@ function showDropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
-  // Close the dropdown menu if the user clicks outside of it W3schools changed 'var's to 'let's
+  // Close the dropdown menu if the user clicks outside of it W3schools
 window.onclick = function(event) {
     if (!event.target.matches('.dropdown-btn')) {
       let dropdowns = document.getElementsByClassName("dropdown-content");
@@ -19,15 +19,20 @@ window.onclick = function(event) {
     }
   }
   
-
 // choosing game difficulty 
 
+const difficulty = ['easy', 'medium', 'hard'];
+
+function selectDifficulty() {
+
+}; 
 // displaying game difficulty 
 
-/*document.getElementById('easy').addEventListener('click', displayEasy())
+document.getElementById('easy').addEventListener('click', displayEasy())
 
 function displayEasy() {
-  document.getElementById('easy');
+  document.getElementById('dropdown-btn').textContent = 'easy';
+}
 
   // hides home screen when start button is pressed and replaces with game screen
 
@@ -35,5 +40,4 @@ function displayEasy() {
 function startGame() {
     document.getElementsByClassName('hide').style="display:none";
     console.log('game started')
-  }
-  */
+  } */ 

@@ -19,15 +19,16 @@
             <form id="home-screen">
                 <h2 class="hide1">Quiz your knowledge on Mythology</h2>
                 <ol class="name-area">
+                    <!-- REMEMBER TO ADD BACK REQUIRED!!!!!!!!!!! required-->
                     <li>
                         <label for="name" class="label">Name</label>
-                        <input id="name" name="name" type="text" required>
+                        <input id="name" name="name" type="text" >
                     </li>
                 </ol>
                 <div id="dropdown-container">
                     <!-- Dropdown code Taken from W3 schools -->
                     <div class="dropdown">
-                        <button onclick="showDropdown()" class="dropdown-btn">Choose difficulty</button>
+                        <button onclick="showDropdown()" class="dropdown-btn" id="dropdown-btn">Choose difficulty</button>
                         <div id="myDropdown" class="dropdown-content">
                             <a id="easy" href="#">Easy</a>
                             <a id="medium" href="#">Medium</a>
