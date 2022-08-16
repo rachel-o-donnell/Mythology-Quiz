@@ -18,14 +18,11 @@ body {
 /* game area*/
 
 /* hides screens that are not needed untill called
-.hide-home {
+.hide-home, .hide-game, hide {
     display: none;
 }
-*/
 
-.hide {
-    display: none;
-}
+*/
 
 h1 {
     font-style: italic;
