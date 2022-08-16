@@ -20,12 +20,23 @@ window.onclick = function(event) {
   }
   
 // choosing game difficulty 
+/*
+ not sure if this will work to rename the button but this was my attempt but I can use it to fetch the api 
+ code taken from https://www.youtube.com/watch?v=zgHim4ZDpZY changed to suit my project 
 
 const difficulty = ['easy', 'medium', 'hard'];
 
 function selectDifficulty() {
 
+  difficulty.forEach(option => {
+    fetch('https://opentdb.com/api.php?amount=10&category=20&difficulty=${difficulty}&type=multiple')
+    .then(response => response.json())
+    .then(data = console.log(data))
+  })
+
 }; 
+*/
+
 // displaying game difficulty 
 
 document.getElementById('easy').addEventListener('click', displayEasy())
