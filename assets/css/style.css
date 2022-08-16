@@ -36,6 +36,7 @@ h2 {
     background-color: #e3a857;
     color: #380456;
     margin: 0 10px;
+    font-size: 1.3rem;
 }
 
 #home-container, #game-screen-container {
@@ -66,9 +67,8 @@ h2 {
 
 /* initial start screen*/
 
-form > li {
-    background-color: #e3a857;
-    text-decoration: none;
+.name-area > li {
+    display: flex;
 }
 
 .name-area {
@@ -76,7 +76,7 @@ form > li {
    This needs to turn off when we go to game screen 
     display: flex; */ 
     margin: 10px;
-    list-style: none
+    list-style: none;
 }
 
 input {
@@ -89,7 +89,7 @@ input {
     background-color: #e3a857;
     color: #380456;
     font-size: 1.5rem;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 button {
@@ -176,11 +176,11 @@ container when the user clicks on the dropdown button) W3schools*/
 h3 {
     background-color:#e3a857;
     color: #301934;
+    margin: 10px;
+
 }
 
-h3 {
-    margin: 10px;
-}
+    
 
 /* questions and answers screen */
 .q-and-a-area {
@@ -206,3 +206,12 @@ h3 {
     background-color: #6E6259;
     color: #FAFAD2;
 }
+
+/* media queries for all screens more than iphone
+.label {
+    margin-right: 20px
+}
+
+h2 {
+    font-size: 
+*/ 
