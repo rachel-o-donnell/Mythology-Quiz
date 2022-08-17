@@ -1,7 +1,7 @@
 // dropdown code taken from w3schools adapted to suit my project
 
 // When the user clicks on the button,toggle between hiding and showing the dropdown content W3schools
-function showDropdown() {
+/* function showDropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
@@ -39,11 +39,25 @@ function selectDifficulty() {
 
 // displaying game difficulty 
 
-document.getElementById('easy').addEventListener('click', displayEasy())
+/* option.addEventListener('click', displaySelectedOption() array.forEach(element => {
+	{
+}); 
+  let option = document.getElementsByClassName('option');
+  let dropdownBtnText = document.getElementById('dropdown-btn').textcontent;
+  
+  function displaySelectedOption() {
+    if (option.textContent === "Easy") {
+    dropdownBtnText = 'Difficuly: Easy'
+  }
+    else if (option.textContent === "Medium") {
+      dropdownBtnText = "Difficuly: Medium"
+    }
+     else if (option.textContent === "Hard") {
+        dropdownBtnText = "Difficuly: Hard"
+      }
+    }
+  });
 
-function displayEasy() {
-  document.getElementById('dropdown-btn').textContent = 'easy';
-}
 
   // hides home screen when start button is pressed and replaces with game screen
 
@@ -52,3 +66,6 @@ function startGame() {
     document.getElementsByClassName('hide').style="display:none";
     console.log('game started')
   } */ 
+  function myFunction() {
+    document.getElementById("mySelect").value = "banana";
+  }

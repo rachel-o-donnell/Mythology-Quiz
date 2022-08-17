@@ -16,7 +16,7 @@
     <h1>Mythology Quiz</h1>
     <section id="game-container">
         <div id="home-container" class="hide1">
-            <form id="home-screen">
+            <div id="home-screen">
                 <h2 class="hide1">Quiz your knowledge on Mythology</h2>
                 <ol class="name-area">
                     <!-- REMEMBER TO ADD BACK REQUIRED!!!!!!!!!!! required-->
@@ -25,19 +25,30 @@
                         <input id="name" name="name" type="text" >
                     </li>
                 </ol>
-                <div id="dropdown-container">
-                    <!-- Dropdown code Taken from W3 schools -->
-                    <div class="dropdown">
-                        <button onclick="showDropdown()" class="dropdown-btn" id="dropdown-btn">Choose difficulty</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a class="option" id="easy" href="#">Easy</a>
-                            <a class="option" id="medium" href="#">Medium</a>
-                            <a class="option" id="hard" href="#">Hard</a>
-                        </div>
-                    </div>
+                <!-- Dropdown code Taken from W3 schools -->
+                <div class="dropdown">
+                <form class="dropdown">
+                    Choose Difficulty:
+                    <select id="select">
+                      <option value="easy">Easy</option>
+                      <option value="medium">Medium</option>
+                      <option value="hard">Hard</option>
+                    </select>
+                  </form>
                 </div>
                 <button id="begin" type="submit">Begin</button>
-            </form>
+                <!-- <div id="dropdown-container">
+                    
+                   
+                        <button onclick="showDropdown()" class="dropdown-btn" id="dropdown-btn">Choose difficulty</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <option class="option" id="easy" href="#">Easy</option>
+                            <option class="option" id="medium" href="#">Medium</option>
+                            <option class="option" id="hard" href="#">Hard</option>
+                        </div>
+                    </div>
+                </div> --> 
+            </div>
         </div>
         <!-- questions and answers game screen -->
         <div id=game-screen-container class="hide">
