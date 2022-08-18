@@ -19,6 +19,61 @@ window.onclick = function (event) {
   }
 }
 
+// HIDES HOME SCREEN credit for structure in README - altered to fit my needs.
+
+const beginBtn = document.getElementById('begin');
+
+let homeScreenElements = document.getElementsByClassName('home');
+
+beginBtn.addEventListener('click',beginGame);
+
+function beginGame() {
+  for (let elements of homeScreenElements) {
+    elements.classList.add('hide')
+  }
+}
+
+// ADDS GAME SCREEN 
+
+// GAME SCREEN 
+
+function displayQuestions() {
+
+}
+
+function displayAnswers() {
+
+}
+
+function rightAns() {
+
+}
+
+function wrongAns() {
+
+}
+
+function nextButton() {
+
+}
+
+// GAME PANEL BAR 
+function score() {
+
+}
+
+function username(){
+
+}
+
+function homeBtn() {
+
+}
+
+function questionOfQuestion() {
+
+}
+
 // choosing game difficulty 
 /*
  not sure if this will work to rename the button but this was my attempt but I can use it to fetch the api 
@@ -41,7 +96,7 @@ function selectDifficulty() {
 
 
 /*" keep getting error messages that either OPTION IS NOT DEFINED/ addevent listener is not a function  "
-let option = document.getElementsByTagName('a');
+let option = document.getElementsByTagName('a'); or add class name option 
 let dropdownBtnText = document.getElementById('dropdown-btn').textcontent;
 
   function displaySelectedOption() {

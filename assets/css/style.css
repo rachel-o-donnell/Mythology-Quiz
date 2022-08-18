@@ -15,14 +15,13 @@ body {
     
 }
 
-/* game area*/
+/* game area */
 
-/* hides screens that are not needed untill called
-.hide-home, .hide-game, hide {
+/* hides screens that are not needed untill called */
+
+.hide-home, .hide-game, .hide {
     display: none;
 }
-
-*/
 
 h1 {
     font-style: italic;
