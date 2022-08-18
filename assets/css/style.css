@@ -99,7 +99,7 @@ button {
     background-color: #6E6259;
     color: #FAFAD2;
 }
-
+/* HTML DROPDOWN STYLE 
 .dropdown {
     display: flex;
     flex-direction: column;
@@ -110,16 +110,18 @@ button {
 #select {
     background-color: #FAFAD2;
     color: #380456;
-}
+} */ 
+
+
 /* JS DROPDOWN STYLE
-/* container for dropdown needed to display button and contents without overlying the start button 
+/* container for dropdown needed to display button and contents without overlying the start button */
 
 #dropdown-container {
     padding-bottom: 15%;
     background-color: #e3a857;
 }
 
-/* dropdown button code. Styling followed from W3schools changed to suit my project
+/* dropdown button code. Styling followed from W3schools changed to suit my project */
  
 
 .dropdown-btn {
@@ -127,12 +129,12 @@ button {
     cursor: pointer;
 }
 
-/* Dropdown button on hover & focus W3schools
+/* Dropdown button on hover & focus W3schools */
 .dropdown-btn:hover, .dropdownbtn:focus {
     background-color: #e3a857;
   }
 
-/* The container <div> - needed to position the dropdown content  W3schools
+/* The container <div> - needed to position the dropdown content  W3schools */
 
 .dropdown {
     position: relative;
@@ -140,7 +142,7 @@ button {
     background-color: #e3a857;
 }
 
-/* Dropdown Content (Hidden by Default) W3schools 
+/* Dropdown Content (Hidden by Default) W3schools */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -151,26 +153,25 @@ button {
     z-index: 1;
   }
 
-/* Links inside the dropdown W3schools
+/* Links inside the dropdown W3schools*/
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
-  /* Change color of dropdown links on hover W3schools
+  /* Change color of dropdown links on hover W3schools*/
 .dropdown-content a:hover {
     background-color: #6E6259;
     color: #FAFAD2;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content 
-container when the user clicks on the dropdown button) W3schools
+container when the user clicks on the dropdown button) W3schools*/
 .show {
     display:block;
 }
 
-*/
 
 /* game-panel */
 #game-panel>ol {
