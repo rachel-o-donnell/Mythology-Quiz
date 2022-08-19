@@ -64,14 +64,21 @@ function nextButton() {
 }
 
 // GAME PANEL BAR 
+
+// Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
+document.getElementById('home.btn').addEventListener('click', goHome)
+
+function goHome() {
+  gameScreenElements.classList.add('hide-game')
+  for (let elements of homeScreenElements) {
+    elements.classList.remove('hide-home')
+  }
+}
+
 function score() {
 
 }
 
-
-function homeBtn() {
-
-}
 
 function questionOfQuestion() {
 
