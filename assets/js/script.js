@@ -39,11 +39,11 @@ function beginGame() {
   //sets username in game panel
   let username = document.getElementById('name').value
   document.getElementById('username').textContent = username
-
+}
   // loads questions
 
   //displayQuestions()
-}
+
 
 // GAME SCREEN 
 
@@ -51,14 +51,31 @@ function beginGame() {
 
 let difficulty = ['easy', 'medium', 'hard']
 let displayQuestion = document.getElementById('question')
+let selectEasy = document.getElementById('easy')
+selectEasy.addEventListener('cick', console.log('You selected easy questions'), displayQuestions)
+
+
+function displayQuestions() {
+
 difficulty.forEach(element => {
       fetch(`https://opentdb.com/api.php?amount=11&category=20&difficulty=${element}&type=multiple`)
         .then(response => response.json())
         .then(data => {
             console.log(data) 
+
+            if (element === 'easy') {
+            displayQuestion.innerHTML = data.results[0].difficulty('easy').question
+          }
+          if (element === 'medium') {
             displayQuestion.innerHTML = data.results[0].question
+          }
+          if (element === 'hard') {
+            displayQuestion.innerHTML = data.results[0].question
+          }
         })
       })
+
+    }
 
 /*let question = document.getElementById('question').innerHTML
 
@@ -67,7 +84,7 @@ selectEasy.addEventListener('cick' displayQuestions)
 
 function displayQuestions() {
   if selectEasy 
-  question = data.results[0].question
+  displayQuestion.innerHTML = data.results[0].question[0]
 }
 */ 
     function displayAnswers() {
@@ -123,5 +140,5 @@ function displayQuestions() {
         }
       }
       option.addEventListener('click', displaySelectedOption())
-
-    */
+*/ 
+    
