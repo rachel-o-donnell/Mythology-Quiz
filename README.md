@@ -140,12 +140,12 @@ Used how to add background image directly- I couldnt find a way to add and style
  box shadow detail, 
  hideing game screen 
 
- USING FETCH API 
+ USING FETCH API : USe a coombo of both below videos to fetch api, set questions, difficulty. etc.
  https://www.youtube.com/watch?v=cuEtnrL9-H0 Web Dev simplified - to use fetch APi
 
- https://www.youtube.com/watch?v=LQGTb112N_c: Mike Dane
- https://www.youtube.com/watch?v=zgHim4ZDpZY: Code with Ania Dubów - using array to fetch difficulty setting.
+ https://www.youtube.com/watch?v=zgHim4ZDpZY: Code with Ania Dubów - using array to fetch difficulty setting and set question
 
+https://www.youtube.com/watch?v=LQGTb112N_c: Mike Dane
  Image:
  Otiginally I had a grey background but I had tyed with the idea of adding images. When I changed my idea to a mythology I immediatly knew I would want to add some rich, classical imagaery. 
  Background image taken from google search on mythological fine art paintings. This was perfect as has many mythological characters and as its painted on a ceiling I feel you can get the feeling of looking up into the sky as you anser your questions- spiraling into a void/ its spiral deign hold the game centre nicely no matter what the screen size. I changed my styling to suit the image .  https://artsandculture.google.com/asset/chamber-of-the-giants-giulio-romano/kwH6-YlTRSD9fA?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A9.70138
