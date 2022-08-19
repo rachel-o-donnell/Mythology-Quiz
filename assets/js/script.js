@@ -23,14 +23,16 @@ window.onclick = function (event) {
 
 const beginBtn = document.getElementById('begin');
 
-let homeScreenElements = document.getElementsByClassName('home');
-
+const homeScreenElements = document.getElementsByClassName('home');
+const gameScreenElements = document.getElementById('q-and-a-container');
 beginBtn.addEventListener('click',beginGame);
 
 function beginGame() {
   for (let elements of homeScreenElements) {
-    elements.classList.add('hide')
+    elements.classList.add('hide-home')
   }
+  console.log('LETS BEGIN')
+  gameScreenElements.classList.remove('hide-game')
 }
 
 // ADDS GAME SCREEN 
