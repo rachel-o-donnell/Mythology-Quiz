@@ -68,6 +68,7 @@ h2 {
 
 .name-area > li {
     display: flex;
+    flex-direction: column;
 }
 
 .name-area {
@@ -88,7 +89,7 @@ input {
     background-color: #e3a857;
     color: #380456;
     font-size: 1.5rem;
-    margin-right: 10px;
+    margin: 0 0 10px;
 }
 
 button {

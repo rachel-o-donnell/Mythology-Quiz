@@ -152,6 +152,9 @@ Used how to add background image directly- I couldnt find a way to add and style
 help with code for inputting usernaem on begin game button. 
 https://www.youtube.com/watch?v=w9GNyw8AvlM 
 and with separating the font awesome icon so it still deisplays with the new text input of username...https://stackoverflow.com/questions/25708569/font-awesome-icons-in-html-form ans from jagmitg
+
+HTML DROPDOWN MENU: 
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_value
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
 
