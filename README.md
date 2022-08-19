@@ -140,8 +140,11 @@ Used how to add background image directly- I couldnt find a way to add and style
  box shadow detail, 
  hideing game screen 
 
+ USING FETCH API 
+ https://www.youtube.com/watch?v=cuEtnrL9-H0 Web Dev simplified - to use fetch APi
+
  https://www.youtube.com/watch?v=LQGTb112N_c: Mike Dane
- https://www.youtube.com/watch?v=zgHim4ZDpZY: Code with Ania Dubów
+ https://www.youtube.com/watch?v=zgHim4ZDpZY: Code with Ania Dubów - using array to fetch difficulty setting.
 
  Image:
  Otiginally I had a grey background but I had tyed with the idea of adding images. When I changed my idea to a mythology I immediatly knew I would want to add some rich, classical imagaery. 
