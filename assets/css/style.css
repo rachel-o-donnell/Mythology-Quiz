@@ -179,6 +179,7 @@ container when the user clicks on the dropdown button) W3schools*/
     list-style: none;
     justify-content: space-around;
     background-color: #e3a857;
+    margin-top: 5px;
 }
 
 /* game panel icons*/
@@ -223,8 +224,7 @@ h3 {
 /* next button */
 
 #next {
-    width: 50%;
-    margin: 0 auto;
+    margin: 5px auto;
     background-color: #6E6259;
     color: #FAFAD2;
 }
