@@ -188,6 +188,13 @@ container when the user clicks on the dropdown button) W3schools*/
     background-color: #e3a857;
 }
 
+/* game panel containers - to style icon and info beside
+ each other but still spaced out on screen */
+
+ .game-panel-containers {
+    display: flex
+ }
+ 
 h3 {
     background-color:#e3a857;
     color: #301934;

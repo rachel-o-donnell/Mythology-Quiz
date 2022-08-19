@@ -195,6 +195,12 @@ Only had a  margin left 15px to h2 so it stuck too far to the right when on a sm
 
 game panel was pushed down so there was a space on top no matter how many hides I addded.
 Removed justify-content on name-area (need to add listener) then styled.s
+
+Font awesome icon missing when You input username - Had to take it out of the text area
+
+redesign username to initials instead as a name pushed the game panel to be too crowded on a mobile device. 
+
+surrounded icon and li partners in game panel with containers to style side by side but still separated out n the screen. 
 --- 
 
 ## RESOURCES USED:

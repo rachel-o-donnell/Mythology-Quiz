@@ -12,6 +12,7 @@
 <!-- added some hides as was at one stage ablle to hide the whole game screen 
     but wasnt able to with home screen then effed it up. come back to this later but this is much 
     easier to keep styling consistent for now.-->
+
 <body>
     <h1>Mythology Quiz</h1>
     <section id="game-container">
@@ -22,7 +23,7 @@
                     <!-- REMEMBER TO ADD BACK REQUIRED!!!!!!!!!!! required-->
                     <li>
                         <label for="name" class="label">Enter your initials</label>
-                        <input id="name" name="name" type="text" >
+                        <input id="name" name="name" type="text">
                     </li>
                 </ol>
                 <!-- Dropdown code Taken from W3 schools -->
@@ -36,17 +37,18 @@
                     </select>
                   </form>
                 </div> -->
-                 <div class="dropdown" id="dropdown-container">
-                     <button onclick="showDropdown()" class="dropdown-btn home" id="dropdown-btn">Choose difficulty</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a class="option" id="easy" href="#">Easy</a>
-                            <a class="option" id="medium" href="#">Medium</a>
-                            <a class="option" id="hard" href="#">Hard</a>
-                        </div>
+                <div class="dropdown" id="dropdown-container">
+                    <button onclick="showDropdown()" class="dropdown-btn home" id="dropdown-btn">Choose
+                        difficulty</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a class="option" id="easy" href="#">Easy</a>
+                        <a class="option" id="medium" href="#">Medium</a>
+                        <a class="option" id="hard" href="#">Hard</a>
                     </div>
-                    <button class="home" id="begin" type="submit">Begin</button>
                 </div>
+                <button class="home" id="begin" type="submit">Begin</button>
             </div>
+        </div>
         </div>
         <!-- questions and answers game screen -->
         <div id=game-screen-container>
@@ -55,10 +57,19 @@
                     <header id="game-panel">
                         <ol>
                             <li id="home.btn"> <i class="fa-solid fa-house"></i></li>
-                            <i class="fa-solid fa-user"></i>
-                            <li id="username">Username</li>
-                            <li id="score"><i class="fa-solid fa-crown"></i>8</li>
-                            <li id="question-count"><i class="fa-solid fa-question"></i>1/8</li>
+                            <div class="game-panel-containers">
+                                <i class="fa-solid fa-user"></i>
+                                <li id="username">Username</li>
+                                </li>
+                            </div>
+                            <div class="game-panel-containers">
+                                <i class="fa-solid fa-crown"></i>
+                                <li id="score">8</li>
+                            </div>
+                            <div class="game-panel-containers">
+                                <i class="fa-solid fa-question"></i>
+                                <li id="question-count">1/8</li>
+                            </div>
                         </ol>
                     </header>
                     <div class="q-and-a-area">
