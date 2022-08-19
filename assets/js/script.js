@@ -19,7 +19,7 @@ window.onclick = function (event) {
   }
 }
 
-// HIDES HOME SCREEN credit for structure in README - altered to fit my needs.
+// HIDES HOME SCREEN // ADDS GAME SCREEN // SETS USERNAME credit for structure in README - altered to fit my needs.
 
 const beginBtn = document.getElementById('begin');
 
@@ -27,15 +27,19 @@ const homeScreenElements = document.getElementsByClassName('home');
 const gameScreenElements = document.getElementById('q-and-a-container');
 beginBtn.addEventListener('click',beginGame);
 
+
 function beginGame() {
   for (let elements of homeScreenElements) {
     elements.classList.add('hide-home')
   }
-  console.log('LETS BEGIN')
+  console.log('LETS BEGIN') 
+  //shows game screen
   gameScreenElements.classList.remove('hide-game')
-}
 
-// ADDS GAME SCREEN 
+ //sets username in game panel
+  let username = document.getElementById('name').value
+   document.getElementById('username').textContent = username
+}
 
 // GAME SCREEN 
 
@@ -64,9 +68,6 @@ function score() {
 
 }
 
-function username(){
-
-}
 
 function homeBtn() {
 
