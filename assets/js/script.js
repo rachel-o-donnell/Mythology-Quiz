@@ -1,14 +1,5 @@
 // dropdown code taken from w3schools adapted to suit my project
 
-let difficulty = ['easy', 'medium', 'hard']
-
-difficulty.forEach(element => {
-  fetch(`https://opentdb.com/api.php?amount=11&category=20&difficulty=${element}&type=multiple`)
-       .then(response => response.json())
-       .then(data => console.log(data))
-});
-       
-
 // When the user clicks on the button,toggle between hiding and showing the dropdown content W3schools
 function showDropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -29,25 +20,14 @@ window.onclick = function (event) {
 }
 
 // choosing game difficulty 
-/* not sure if this will work to rename the button but this was my attempt but I can use it to fetch the api 
- code taken from https://www.youtube.com/watch?v=zgHim4ZDpZY changed to suit my project 
 
- const game = document.getElementById('game')
- const difficulty = ['easy', 'medium', 'hard']
+let difficulty = ['easy', 'medium', 'hard']
 
- function addQAndA() {
-
-    const column = document.createElement('div')
-    column.classList.add('genre-column')
-    column.innerHTML = 'this is a genre'
-    game.append(column)
- 
-   difficulty.forEach(level => {
-     fetch('https://opentdb.com/api.php?amount=14&category=20&difficulty=easy&type=multiple')
-       .then(response => console.log(response))
-   })
- 
- }; */
+difficulty.forEach(element => {
+  fetch(`https://opentdb.com/api.php?amount=11&category=20&difficulty=${element}&type=multiple`)
+       .then(response => response.json())
+       .then(data => console.log(data))
+});
   
 // HIDES HOME SCREEN // ADDS GAME SCREEN // SETS USERNAME credit for structure in README - altered to fit my needs.
 
