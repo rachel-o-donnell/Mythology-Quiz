@@ -49,14 +49,36 @@ function beginGame() {
 
 // choosing game difficulty 
 
-let difficulty = ['easy', 'medium', 'hard']
+//let difficulty = ['easy', 'medium', 'hard']
 let displayQuestion = document.getElementById('question')
-let selectEasy = document.getElementById('easy')
-selectEasy.addEventListener('cick', console.log('You selected easy questions'), displayQuestions)
 
+/* let selectDifficulty = document.getElementsByClassName('option')
+let chosenDifficulty = selectDifficulty.innerHTML
+
+
+selectDifficulty.addEventListener('cick', console.log(`You selected ${chosenDifficulty} questions`))
+
+*/
+
+/*
+let selectedOption = document.getElementById('select')
+selectedOption.addEventListener('change', displayQuestions)
 
 function displayQuestions() {
+if (selectedOption.innerHTML === "easy") {
+  console.log('You have chosen", this.value);
+}
+else if (selectedOption.innerHTML === "medium") {
+  console.log('You have chosen medium questions')
+}
 
+} */
+
+document.getElementById('select').addEventListener('change', function() {
+  console.log(`You selected ${this.value} questions`)
+})
+
+/*
 difficulty.forEach(element => {
       fetch(`https://opentdb.com/api.php?amount=11&category=20&difficulty=${element}&type=multiple`)
         .then(response => response.json())
