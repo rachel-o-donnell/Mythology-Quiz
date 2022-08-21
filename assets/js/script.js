@@ -42,37 +42,13 @@ function beginGame() {
 }
 // loads questions
 
-//displayQuestions()
-
 
 // GAME SCREEN 
 
 // choosing game difficulty 
 
-/* let selectDifficulty = document.getElementsByClassName('option')
-let chosenDifficulty = selectDifficulty.innerHTML
-
-
-selectDifficulty.addEventListener('cick', console.log(`You selected ${chosenDifficulty} questions`))
-
-*/
-
-/*
-let selectedOption = document.getElementById('select')
-selectedOption.addEventListener('change', displayQuestions)
-
-function displayQuestions() {
-if (selectedOption.innerHTML === "easy") {
-  console.log('You have chosen", this.value);
-}
-else if (selectedOption.innerHTML === "medium") {
-  console.log('You have chosen medium questions')
-}
-
-} */
-
-
 let displayQuestion = document.getElementById('question')
+let displayAnswers = document.getElementsByClassName('q-btn')
 
 document.getElementById('select').addEventListener('change', function() {
     console.log(`You selected ${this.value} questions`)
@@ -85,6 +61,7 @@ document.getElementById('select').addEventListener('change', function() {
           .then((data) => {
             console.log(data);
             displayQuestion.innerHTML = data.results[0].question
+            displayAnswers.innerHTML = data.results[0].answer
           })
         }
         if (chosenDifficulty === 'medium') {
@@ -103,6 +80,9 @@ document.getElementById('select').addEventListener('change', function() {
               .then((response) => response.json())
               .then((data) => {
                 console.log(data);
+                //let questions = data.results[0].question//NEED TO LOOP THROUGH QUESTIONS [0] WILL ALWAYS DISPLAY THE FIRST QUESTIONS
+                console.log(questions)
+                //let displayQuestion = questions.sort(() => Math.random() - .5) //web dev simlified
                 displayQuestion.innerHTML = data.results[0].question
               })
             }
@@ -110,29 +90,6 @@ document.getElementById('select').addEventListener('change', function() {
                //- wont work as is when added to data.results[0].question
 
     })
-
-  /* THIS WORKS BUT I CANT SEEM TO ACCESS THE EASY? MEDIUM ETC QUESTIONS */
-  /* let difficultyOptions = ['easy', 'medium', 'hard']
-
-  difficultyOptions.forEach(option => {
-      fetch(`https://opentdb.com/api.php?amount=11&category=20&difficulty=${option}&type=multiple`)
-        .then(response => response.json())
-        .then((data) => {
-          console.log(data);
-          displayQuestion.innerHTML = data.results[0].question
-        })
-      })
-*/
-
-    /* DO I JUST MAKE THIS A REQUIRED SELCTION???
-    else {
-      console.log('You must choose an option')
-    } */ 
-
-
-function displayAnswers() {
-
-}
 
 function rightAns() {
 
@@ -162,24 +119,6 @@ function score() {
 
 }
 
-// displaying game difficulty 
-
-
-/* " keep getting error messages that either OPTION IS NOT DEFINED/ addevent listener is not a function  "
-    let option = document.getElementsByTagName('a'); or add class name option 
-    let dropdownBtnText = document.getElementById('dropdown-btn').textcontent;
-
-      function displaySelectedOption() {
-        if (option.textContent === "Easy") {
-          dropdownBtnText = 'Difficuly: Easy'
-        } else if (option.textContent === "Medium") {
-          dropdownBtnText = "Difficuly: Medium"
-        } else if (option.textContent === "Hard") {
-          dropdownBtnText = "Difficuly: Hard"
-        }
-      }
-      option.addEventListener('click', displaySelectedOption() 
-*/
 function questionOfQuestion() {
 
 };
