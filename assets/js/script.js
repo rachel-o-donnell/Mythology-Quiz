@@ -1,4 +1,4 @@
-// dropdown code taken from w3schools adapted to suit my project
+  // dropdown code taken from w3schools adapted to suit my project
 
 // When the user clicks on the button,toggle between hiding and showing the dropdown content W3schools
 function showDropdown() {
@@ -40,17 +40,14 @@ function beginGame() {
   let username = document.getElementById('name').value
   document.getElementById('username').textContent = username
 }
-  // loads questions
+// loads questions
 
-  //displayQuestions()
+//displayQuestions()
 
 
 // GAME SCREEN 
 
 // choosing game difficulty 
-
-//let difficulty = ['easy', 'medium', 'hard']
-let displayQuestion = document.getElementById('question')
 
 /* let selectDifficulty = document.getElementsByClassName('option')
 let chosenDifficulty = selectDifficulty.innerHTML
@@ -74,81 +71,101 @@ else if (selectedOption.innerHTML === "medium") {
 
 } */
 
+
+let displayQuestion = document.getElementById('question')
+
 document.getElementById('select').addEventListener('change', function() {
-  console.log(`You selected ${this.value} questions`)
-})
+    console.log(`You selected ${this.value} questions`)
+    let chosenDifficulty = this.value
 
-/*
-difficulty.forEach(element => {
-      fetch(`https://opentdb.com/api.php?amount=11&category=20&difficulty=${element}&type=multiple`)
+      if (chosenDifficulty === 'easy') {
+
+        fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=easy&type=multiple')
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            displayQuestion.innerHTML = data.results[0].question
+          })
+        }
+        if (chosenDifficulty === 'medium') {
+
+          fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=medium&type=multiple')
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              displayQuestion.innerHTML = data.results[0].question
+            })
+          }
+
+          if (chosenDifficulty === 'hard') {
+
+            fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=hard&type=multiple')
+              .then((response) => response.json())
+              .then((data) => {
+                console.log(data);
+                displayQuestion.innerHTML = data.results[0].question
+              })
+            }
+               // SHUFFLE QUESTIONS .sort(() => Math.random() - .5) 
+               //- wont work as is when added to data.results[0].question
+
+    })
+
+  /* THIS WORKS BUT I CANT SEEM TO ACCESS THE EASY? MEDIUM ETC QUESTIONS */
+  /* let difficultyOptions = ['easy', 'medium', 'hard']
+
+  difficultyOptions.forEach(option => {
+      fetch(`https://opentdb.com/api.php?amount=11&category=20&difficulty=${option}&type=multiple`)
         .then(response => response.json())
-        .then(data => {
-            console.log(data) 
-
-            if (element === 'easy') {
-            displayQuestion.innerHTML = data.results[0].difficulty('easy').question
-          }
-          if (element === 'medium') {
-            displayQuestion.innerHTML = data.results[0].question
-          }
-          if (element === 'hard') {
-            displayQuestion.innerHTML = data.results[0].question
-          }
+        .then((data) => {
+          console.log(data);
+          displayQuestion.innerHTML = data.results[0].question
         })
       })
+*/
 
-    }
+    /* DO I JUST MAKE THIS A REQUIRED SELCTION???
+    else {
+      console.log('You must choose an option')
+    } */ 
 
-/*let question = document.getElementById('question').innerHTML
 
-let selectEasy = document.getElemendbyId('easy')
-selectEasy.addEventListener('cick' displayQuestions)
+function displayAnswers() {
 
-function displayQuestions() {
-  if selectEasy 
-  displayQuestion.innerHTML = data.results[0].question[0]
 }
-*/ 
-    function displayAnswers() {
 
-    }
+function rightAns() {
 
-    function rightAns() {
+}
 
-    }
+function wrongAns() {
 
-    function wrongAns() {
+}
 
-    }
+function nextButton() {
 
-    function nextButton() {
+}
 
-    }
+// GAME PANEL BAR 
 
-    // GAME PANEL BAR 
+// Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
+document.getElementById('home.btn').addEventListener('click', goHome)
 
-    // Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
-    document.getElementById('home.btn').addEventListener('click', goHome)
+function goHome() {
+  gameScreenElements.classList.add('hide-game')
+  for (let elements of homeScreenElements) {
+    elements.classList.remove('hide-home')
+  }
+}
 
-    function goHome() {
-      gameScreenElements.classList.add('hide-game')
-      for (let elements of homeScreenElements) {
-        elements.classList.remove('hide-home')
-      }
-    }
+function score() {
 
-    function score() {
+}
 
-    }
+// displaying game difficulty 
 
 
-    function questionOfQuestion() {
-
-    }
-    // displaying game difficulty 
-
-
-    /*" keep getting error messages that either OPTION IS NOT DEFINED/ addevent listener is not a function  "
+/* " keep getting error messages that either OPTION IS NOT DEFINED/ addevent listener is not a function  "
     let option = document.getElementsByTagName('a'); or add class name option 
     let dropdownBtnText = document.getElementById('dropdown-btn').textcontent;
 
@@ -161,6 +178,8 @@ function displayQuestions() {
           dropdownBtnText = "Difficuly: Hard"
         }
       }
-      option.addEventListener('click', displaySelectedOption())
-*/ 
-    
+      option.addEventListener('click', displaySelectedOption() 
+*/
+function questionOfQuestion() {
+
+};

@@ -141,7 +141,7 @@ Used how to add background image directly- I couldnt find a way to add and style
  hideing game screen 
 
 Adding and event listener to the html dropdown: Changed to suit my wants
-https://www.codegrepper.com/code-examples/javascript/javascript+event+listener+on+select+option 
+https://www.codegrepper.com/code-examples/javascript/javascript+event+listener+on+select+option (Defeated Dotterel)
 
  USING FETCH API : USe a coombo of both below videos to fetch api, set questions, difficulty. etc.
  https://www.youtube.com/watch?v=cuEtnrL9-H0 Web Dev simplified - to use fetch APi
