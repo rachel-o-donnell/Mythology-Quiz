@@ -1,119 +1,109 @@
-const easyCategory = [{
-
-
-        "difficulty": "easy",
-        "question": "The ancient Roman god of war was commonly known as which of the following?",
-        "correct_answer": "Mars",
-        "incorrect_answers": [
+const easyCategory = [
+    {
+        difficulty: "easy",
+        question: "The ancient Roman god of war was commonly known as which of the following?",
+        correct_answer: "Mars",
+        incorrect_answers: [
             "Jupiter",
             "Juno",
             "Ares"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?",
-        "correct_answer": "Jason",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?",
+        correct_answer: "Jason",
+        incorrect_answers: [
             "Castor",
             "Daedalus",
             "Odysseus"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "Which Greek &amp; Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
-        "correct_answer": "Apollo",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "Which Greek &amp; Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
+        correct_answer: "Apollo",
+        incorrect_answers: [
             "Aphrodite",
             "Artemis",
             "Athena"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "The greek god Poseidon was the god of what?",
-        "correct_answer": "The Sea",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "The greek god Poseidon was the god of what?",
+        correct_answer: "The Sea",
+        incorrect_answers: [
             "War",
             "Sun",
             "Fire"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
-        "correct_answer": "Orpheus",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
+        correct_answer: "Orpheus",
+        incorrect_answers: [
             "Hercules",
             "Perseus",
             "Daedalus"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "In Greek mythology, who is the god of wine?",
-        "correct_answer": "Dionysus",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "In Greek mythology, who is the god of wine?",
+        correct_answer: "Dionysus",
+        incorrect_answers: [
             "Hephaestus",
             "Demeter",
             "Apollo"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "In most traditions, who was the wife of Zeus?",
-        "correct_answer": "Hera",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "In most traditions, who was the wife of Zeus?",
+        correct_answer: "Hera",
+        incorrect_answers: [
             "Aphrodite",
             "Athena",
             "Hestia"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "Which of these mythological creatures is said to be half-man and half-horse?",
-        "correct_answer": "Centaur",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "Which of these mythological creatures is said to be half-man and half-horse?",
+        correct_answer: "Centaur",
+        incorrect_answers: [
             "Minotaur",
             "Pegasus",
             "Gorgon"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "What mythology did the god &quot;Apollo&quot; come from?",
-        "correct_answer": "Greek and Roman",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "What mythology did the god &quot;Apollo&quot; come from?",
+        correct_answer: "Greek and Roman",
+        incorrect_answer: [
             "Roman and Spanish",
             "Greek and Chinese",
             "Greek, Roman and Norse"
         ]
     },
     {
-        "difficulty": "easy",
-        "question": "What mytological creatures have women&#039;s faces and vultures&#039; bodies?",
-        "correct_answer": "Harpies",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "What mytological creatures have women&#039;s faces and vultures&#039; bodies?",
+        correct_answer: "Harpies",
+        incorrect_answers: [
             "Mermaids",
             "Nymph",
             "Lilith"
         ]
     },
     {
-
-        "difficulty": "easy",
-        "question": "The Nike apparel and footwear brand takes it&#039;s name from the Greek goddess of what?",
-        "correct_answer": "Victory",
-        "incorrect_answers": [
+        difficulty: "easy",
+        question: "The Nike apparel and footwear brand takes it&#039;s name from the Greek goddess of what?",
+        correct_answer: "Victory",
+        incorrect_answers: [
             "Courage",
             "Strength",
             "Honor"
