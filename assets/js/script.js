@@ -41,15 +41,19 @@
     document.getElementById('username').textContent = username
 
 }
-// loads questions
+
+let questionText = document.getElementById('question')
+let answerButtons = document.getElementsByClassName('ans-btn')
+let randomQuestion, currentQuestionIndex
+
+// loads questions depending on difficulty chosen
 document.getElementById('select').addEventListener('change', function () {
 console.log(`You selected ${this.value} questions`)
 let chosenDifficulty = this.value
-if (chosenDifficulty === 'easy') {
-  let questionText = document.getElementById('question')
-  //let displayAnswers = document.getElementsByClassName('q-btn')
-  let randomQuestion, currentQuestionIndex
 
+// easy section 
+if (chosenDifficulty === 'easy') {
+  
   randomQuestion = easyCategory.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   chooseNextQuestion()
@@ -60,13 +64,13 @@ function chooseNextQuestion() {
 
 function displayQuestion(question) {
   questionText.innerHTML = question.question
-
+  question.answers.forEach((answer, index) => {
+    answerButtons[index].innerHTML = answer
+  })
 }
     }
   })
   
-  
-     
 
   // GAME SCREEN 
 

@@ -3,8 +3,9 @@ const easyCategory = [
         difficulty: "easy",
         question: "The ancient Roman god of war was commonly known as which of the following?",
         correct_answer: "Mars",
-        incorrect_answers: [
+        answers: [
             "Jupiter",
+            "Mars",
             "Juno",
             "Ares"
         ]
@@ -13,8 +14,9 @@ const easyCategory = [
         difficulty: "easy",
         question: "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?",
         correct_answer: "Jason",
-        incorrect_answers: [
+        answers: [
             "Castor",
+            "Jason",
             "Daedalus",
             "Odysseus"
         ]
@@ -23,8 +25,9 @@ const easyCategory = [
         difficulty: "easy",
         question: "Which Greek &amp; Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
         correct_answer: "Apollo",
-        incorrect_answers: [
+        answers: [
             "Aphrodite",
+            "Apollo",
             "Artemis",
             "Athena"
         ]
@@ -33,9 +36,10 @@ const easyCategory = [
         difficulty: "easy",
         question: "The greek god Poseidon was the god of what?",
         correct_answer: "The Sea",
-        incorrect_answers: [
+        answers: [
             "War",
             "Sun",
+            "The Sea",
             "Fire"
         ]
     },
@@ -43,9 +47,10 @@ const easyCategory = [
         difficulty: "easy",
         question: "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
         correct_answer: "Orpheus",
-        incorrect_answers: [
+        answers: [
             "Hercules",
             "Perseus",
+            "Orpheus",
             "Daedalus"
         ]
     },
@@ -53,8 +58,9 @@ const easyCategory = [
         difficulty: "easy",
         question: "In Greek mythology, who is the god of wine?",
         correct_answer: "Dionysus",
-        incorrect_answers: [
+        answers: [
             "Hephaestus",
+            "Dionysus",
             "Demeter",
             "Apollo"
         ]
@@ -73,9 +79,10 @@ const easyCategory = [
         difficulty: "easy",
         question: "Which of these mythological creatures is said to be half-man and half-horse?",
         correct_answer: "Centaur",
-        incorrect_answers: [
+        answers: [
             "Minotaur",
             "Pegasus",
+            "Centaur",
             "Gorgon"
         ]
     },
@@ -83,27 +90,30 @@ const easyCategory = [
         difficulty: "easy",
         question: "What mythology did the god &quot;Apollo&quot; come from?",
         correct_answer: "Greek and Roman",
-        incorrect_answer: [
+        answer: [
             "Roman and Spanish",
             "Greek and Chinese",
-            "Greek, Roman and Norse"
+            "Greek, Roman and Norse",
+            "Greek and Roman",
         ]
     },
     {
         difficulty: "easy",
         question: "What mytological creatures have women&#039;s faces and vultures&#039; bodies?",
         correct_answer: "Harpies",
-        incorrect_answers: [
+        answers: [
             "Mermaids",
             "Nymph",
-            "Lilith"
+            "Lilith",
+            "Harpies",
         ]
     },
     {
         difficulty: "easy",
         question: "The Nike apparel and footwear brand takes it&#039;s name from the Greek goddess of what?",
         correct_answer: "Victory",
-        incorrect_answers: [
+        answers: [
+            "Victory",
             "Courage",
             "Strength",
             "Honor"
