@@ -46,7 +46,10 @@
   let answerButtons = document.getElementsByClassName('ans-btn')
   let randomQuestion, currentQuestionIndex
 
-  // loads questions depending on difficulty chosen
+  /* loads questions depending on difficulty chosen, randomises questions and displays 
+  the answer options for that particular question */
+
+  //event listener for dropdown and identifying what categoty is chosen
   document.getElementById('select').addEventListener('change', function () {
         console.log(`You selected ${this.value} questions`)
         let chosenDifficulty = this.value
@@ -64,12 +67,13 @@
 
           function displayQuestion(question) {
             questionText.innerHTML = question.question
+            //displays answers
             question.answers.forEach((answer, index) => {
               answerButtons[index].innerHTML = answer
             })
           }
         }
-
+//medium section
         if (chosenDifficulty === 'medium') {
 
           randomQuestion = mediumCategory.sort(() => Math.random() - .5)
@@ -82,12 +86,13 @@
 
           function displayQuestion(question) {
             questionText.innerHTML = question.question
+            //dislays answers
             question.answers.forEach((answer, index) => {
               answerButtons[index].innerHTML = answer
             })
           }
         }
-
+// hard section
         if (chosenDifficulty === 'hard') {
 
           randomQuestion = hardCategory.sort(() => Math.random() - .5)
@@ -100,6 +105,7 @@
 
           function displayQuestion(question) {
             questionText.innerHTML = question.question
+           // displays answers
             question.answers.forEach((answer, index) => {
               answerButtons[index].innerHTML = answer
             })
@@ -107,7 +113,40 @@
         }
       })
 
-        // GAME SCREEN 
+function rightAns() {
+
+}
+
+        function wrongAns() {
+
+        }
+
+        function nextButton() {
+
+        }
+
+        // GAME PANEL BAR 
+
+        // Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
+        document.getElementById('home.btn').addEventListener('click', goHome)
+
+        function goHome() {
+          gameScreenElements.classList.add('hide-game')
+          for (let elements of homeScreenElements) {
+            elements.classList.remove('hide-home')
+          }
+        }
+
+        function score() {
+
+        }
+
+        function questionOfQuestion() {
+
+        };
+
+
+ // GAME SCREEN 
 
         /* choosing game difficulty WITH API
 
@@ -154,35 +193,3 @@
                        //- wont work as is when added to data.results[0].question
 
             }) */
-
-        function rightAns() {
-
-        }
-
-        function wrongAns() {
-
-        }
-
-        function nextButton() {
-
-        }
-
-        // GAME PANEL BAR 
-
-        // Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
-        document.getElementById('home.btn').addEventListener('click', goHome)
-
-        function goHome() {
-          gameScreenElements.classList.add('hide-game')
-          for (let elements of homeScreenElements) {
-            elements.classList.remove('hide-home')
-          }
-        }
-
-        function score() {
-
-        }
-
-        function questionOfQuestion() {
-
-        };
