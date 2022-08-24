@@ -196,7 +196,7 @@ Balsamiq
 
 ## BUGS FIXED:
 
-.dropdown background color changed when I added a margin bottom to the button element. Added new backgrounf color.
+.dropdown background color changed when I added a margin bottom to the button element. Added new background color.
 Only had a  margin left 15px to h2 so it stuck too far to the right when on a smaller screen (320px) changed to margin 0 10px to be more balanced. 
 
 game panel was pushed down so there was a space on top no matter how many hides I addded.
@@ -209,6 +209,10 @@ redesign username to initials instead as a name pushed the game panel to be too 
 surrounded icon and li partners in game panel with containers to style side by side but still separated out n the screen. 
 
 Could not make home ontaner disappear by adding any of the hide classes I had previously made. From playing in dev tools I knew adding display:none worked so I found the correct syntax at https://www.javascripttutorial.net/dom/css/add-styles-to-an-element/ (homeContainer.style.display = 'none')
+
+
+TO BE FIXED: 
+html dropdown styling does not work.  IS IT BECAUSE I CHANGED TO FORM??? 
 --- 
 
 ## RESOURCES USED:

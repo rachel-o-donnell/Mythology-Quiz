@@ -89,7 +89,7 @@
 
           function displayQuestion(question) {
             questionText.innerHTML = question.question
-            //dislays answers
+            //displays answers
             question.answers.forEach((answer, index) => {
               answerButtons[index].innerHTML = answer
             })
