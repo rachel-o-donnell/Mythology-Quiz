@@ -40,114 +40,149 @@
     let username = document.getElementById('name').value
     document.getElementById('username').textContent = username
 
-}
+  }
 
-let questionText = document.getElementById('question')
-let answerButtons = document.getElementsByClassName('ans-btn')
-let randomQuestion, currentQuestionIndex
+  let questionText = document.getElementById('question')
+  let answerButtons = document.getElementsByClassName('ans-btn')
+  let randomQuestion, currentQuestionIndex
 
-// loads questions depending on difficulty chosen
-document.getElementById('select').addEventListener('change', function () {
-console.log(`You selected ${this.value} questions`)
-let chosenDifficulty = this.value
+  // loads questions depending on difficulty chosen
+  document.getElementById('select').addEventListener('change', function () {
+        console.log(`You selected ${this.value} questions`)
+        let chosenDifficulty = this.value
 
-// easy section 
-if (chosenDifficulty === 'easy') {
-  
-  randomQuestion = easyCategory.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
-  chooseNextQuestion()
-    
-function chooseNextQuestion() {
-  displayQuestion(randomQuestion[currentQuestionIndex])
-}
-
-function displayQuestion(question) {
-  questionText.innerHTML = question.question
-  question.answers.forEach((answer, index) => {
-    answerButtons[index].innerHTML = answer
-  })
-}
-    }
-  })
-  
-
-  // GAME SCREEN 
-
-  /* choosing game difficulty WITH API
-
-  let displayQuestion = document.getElementById('question')
-  let displayAnswers = document.getElementsByClassName('q-btn')
-
-  document.getElementById('select').addEventListener('change', function() {
-      console.log(`You selected ${this.value} questions`)
-      let chosenDifficulty = this.value
-
+        // easy section 
         if (chosenDifficulty === 'easy') {
 
-          fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=easy&type=multiple')
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data);
-              displayQuestion.innerHTML = data.results[0].question
-              displayAnswers.innerHTML = data.results[0].answer
+          randomQuestion = easyCategory.sort(() => Math.random() - .5)
+          currentQuestionIndex = 0
+          chooseNextQuestion()
+
+          function chooseNextQuestion() {
+            displayQuestion(randomQuestion[currentQuestionIndex])
+          }
+
+          function displayQuestion(question) {
+            questionText.innerHTML = question.question
+            question.answers.forEach((answer, index) => {
+              answerButtons[index].innerHTML = answer
             })
           }
-          if (chosenDifficulty === 'medium') {
+        }
 
-            fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=medium&type=multiple')
-              .then((response) => response.json())
-              .then((data) => {
-                console.log(data);
-                displayQuestion.innerHTML = data.results[0].question
-              })
-            }
+        if (chosenDifficulty === 'medium') {
 
-            if (chosenDifficulty === 'hard') {
+          randomQuestion = mediumCategory.sort(() => Math.random() - .5)
+          currentQuestionIndex = 0
+          chooseNextQuestion()
 
-              fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=hard&type=multiple')
-                .then((response) => response.json())
-                .then((data) => {
-                  console.log(data);
-                  //let questions = data.results[0].question//NEED TO LOOP THROUGH QUESTIONS [0] WILL ALWAYS DISPLAY THE FIRST QUESTIONS
-                  console.log(questions)
-                  //let displayQuestion = questions.sort(() => Math.random() - .5) //web dev simlified
-                  displayQuestion.innerHTML = data.results[0].question
-                })
-              }
-                 // SHUFFLE QUESTIONS .sort(() => Math.random() - .5) 
-                 //- wont work as is when added to data.results[0].question
+          function chooseNextQuestion() {
+            displayQuestion(randomQuestion[currentQuestionIndex])
+          }
 
-      }) */
+          function displayQuestion(question) {
+            questionText.innerHTML = question.question
+            question.answers.forEach((answer, index) => {
+              answerButtons[index].innerHTML = answer
+            })
+          }
+        }
 
-  function rightAns() {
+        if (chosenDifficulty === 'hard') {
 
-  }
+          randomQuestion = hardCategory.sort(() => Math.random() - .5)
+          currentQuestionIndex = 0
+          chooseNextQuestion()
 
-  function wrongAns() {
+          function chooseNextQuestion() {
+            displayQuestion(randomQuestion[currentQuestionIndex])
+          }
 
-  }
+          function displayQuestion(question) {
+            questionText.innerHTML = question.question
+            question.answers.forEach((answer, index) => {
+              answerButtons[index].innerHTML = answer
+            })
+          }
+        }
+      })
 
-  function nextButton() {
+        // GAME SCREEN 
 
-  }
+        /* choosing game difficulty WITH API
 
-  // GAME PANEL BAR 
+        let displayQuestion = document.getElementById('question')
+        let displayAnswers = document.getElementsByClassName('q-btn')
 
-  // Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
-  document.getElementById('home.btn').addEventListener('click', goHome)
+        document.getElementById('select').addEventListener('change', function() {
+            console.log(`You selected ${this.value} questions`)
+            let chosenDifficulty = this.value
 
-  function goHome() {
-    gameScreenElements.classList.add('hide-game')
-    for (let elements of homeScreenElements) {
-      elements.classList.remove('hide-home')
-    }
-  }
+              if (chosenDifficulty === 'easy') {
 
-  function score() {
+                fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=easy&type=multiple')
+                  .then((response) => response.json())
+                  .then((data) => {
+                    console.log(data);
+                    displayQuestion.innerHTML = data.results[0].question
+                    displayAnswers.innerHTML = data.results[0].answer
+                  })
+                }
+                if (chosenDifficulty === 'medium') {
 
-  }
+                  fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=medium&type=multiple')
+                    .then((response) => response.json())
+                    .then((data) => {
+                      console.log(data);
+                      displayQuestion.innerHTML = data.results[0].question
+                    })
+                  }
 
-  function questionOfQuestion() {
+                  if (chosenDifficulty === 'hard') {
 
-  };
+                    fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=hard&type=multiple')
+                      .then((response) => response.json())
+                      .then((data) => {
+                        console.log(data);
+                        //let questions = data.results[0].question//NEED TO LOOP THROUGH QUESTIONS [0] WILL ALWAYS DISPLAY THE FIRST QUESTIONS
+                        console.log(questions)
+                        //let displayQuestion = questions.sort(() => Math.random() - .5) //web dev simlified
+                        displayQuestion.innerHTML = data.results[0].question
+                      })
+                    }
+                       // SHUFFLE QUESTIONS .sort(() => Math.random() - .5) 
+                       //- wont work as is when added to data.results[0].question
+
+            }) */
+
+        function rightAns() {
+
+        }
+
+        function wrongAns() {
+
+        }
+
+        function nextButton() {
+
+        }
+
+        // GAME PANEL BAR 
+
+        // Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
+        document.getElementById('home.btn').addEventListener('click', goHome)
+
+        function goHome() {
+          gameScreenElements.classList.add('hide-game')
+          for (let elements of homeScreenElements) {
+            elements.classList.remove('hide-home')
+          }
+        }
+
+        function score() {
+
+        }
+
+        function questionOfQuestion() {
+
+        };

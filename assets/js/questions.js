@@ -69,7 +69,8 @@ const easyCategory = [
         difficulty: "easy",
         question: "In most traditions, who was the wife of Zeus?",
         correct_answer: "Hera",
-        incorrect_answers: [
+        answers: [
+            "Hera",
             "Aphrodite",
             "Athena",
             "Hestia"
@@ -90,7 +91,7 @@ const easyCategory = [
         difficulty: "easy",
         question: "What mythology did the god &quot;Apollo&quot; come from?",
         correct_answer: "Greek and Roman",
-        answer: [
+        answers: [
             "Roman and Spanish",
             "Greek and Chinese",
             "Greek, Roman and Norse",
@@ -124,76 +125,83 @@ const easyCategory = [
 
 const mediumCategory = [{
 
-        "difficulty": "medium",
-        "question": "The Hippogriff, not to be confused with the Griffon, is a magical creature with the front half of an eagle, and the back half of what?",
-        "correct_answer": "A Horse",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "The Hippogriff, not to be confused with the Griffon, is a magical creature with the front half of an eagle, and the back half of what?",
+        correct_answer: "A Horse",
+        answers: [
             "A Dragon",
             "A Tiger",
+            "A Horse",
             "A Lion"
         ]
     },
     {
 
-        "difficulty": "medium",
-        "question": "Who was the Roman god of fire?",
-        "correct_answer": "Vulcan",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "Who was the Roman god of fire?",
+        correct_answer: "Vulcan",
+        answers: [
             "Apollo",
             "Jupiter",
+            "Vulcan",
             "Mercury"
         ]
     },
     {
 
-        "difficulty": "medium",
-        "question": "Neptune&#039;s greek name was...",
-        "correct_answer": "Poseidon",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "Neptune&#039;s greek name was...",
+        correct_answer: "Poseidon",
+        answers: [
             "Ares",
             "Zeus",
-            "Apollo"
+            "Apollo",
+            "Poseidon"
         ]
     },
     {
 
-        "difficulty": "medium",
-        "question": "Hera is god of...",
-        "correct_answer": "Marriage",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "Hera is god of...",
+        correct_answer: "Marriage",
+        answers: [
             "Agriculture",
             "Sea",
+            "Marriage",
             "War"
         ]
     },
     {
 
-        "difficulty": "medium",
-        "question": "In Greek Mythology, who killed Achilles?",
-        "correct_answer": "Paris",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "In Greek Mythology, who killed Achilles?",
+        correct_answer: "Paris",
+        answers: [
             "Hector",
+            "Paris",
             "Helen",
             "Pericles"
         ]
     },
     {
 
-        "difficulty": "medium",
-        "question": "A minotaur is half human half what?",
-        "correct_answer": "Bull",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "A minotaur is half human half what?",
+        correct_answer: "Bull",
+        answers: [
             "Cow",
             "Horse",
+            "Bull",
             "Eagle"
         ]
     },
     {
 
-        "difficulty": "medium",
-        "question": "What is the name of the Greek god of blacksmiths?",
-        "correct_answer": "Hephaestus",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "What is the name of the Greek god of blacksmiths?",
+        correct_answer: "Hephaestus",
+        answers: [
+            "Hephaestus",
             "Dyntos",
             "Vulcan",
             "Artagatus"
@@ -201,32 +209,35 @@ const mediumCategory = [{
     },
     {
 
-        "difficulty": "medium",
-        "question": "According to the Egyptian Myth of Osiris, who murdered Osiris?",
-        "correct_answer": "Set",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "According to the Egyptian Myth of Osiris, who murdered Osiris?",
+        correct_answer: "Set",
+        answers: [
             "Horus",
             "Ra",
-            "Anhur"
+            "Anhur",
+            "Set"
         ]
     },
     {
 
-        "difficulty": "medium",
-        "question": "The Maori hold that which island nation was founded by Kupe, who discovered it under a long white cloud?",
-        "correct_answer": "New Zealand",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "The Maori hold that which island nation was founded by Kupe, who discovered it under a long white cloud?",
+        correct_answer: "New Zealand",
+        answers: [
             "Vanuatu",
             "Fiji",
+            "New Zealand",
             "Hawaii"
         ]
     },
     {
 
-        "difficulty": "medium",
-        "question": "Which greek god/goddess tossed a golden apple with the words &quot;for the fairest&quot; into the middle of the feast of the gods?",
-        "correct_answer": "Eris",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "Which greek god/goddess tossed a golden apple with the words &quot;for the fairest&quot; into the middle of the feast of the gods?",
+        correct_answer: "Eris",
+        answers: [
+            "Eris",
             "Hades",
             "Ares",
             "Artemis"
@@ -234,13 +245,14 @@ const mediumCategory = [{
     },
     {
 
-        "difficulty": "medium",
-        "question": "Hel was the daughter of which Norse Mythological figure?",
-        "correct_answer": "Loki",
-        "incorrect_answers": [
+        difficulty: "medium",
+        question: "Hel was the daughter of which Norse Mythological figure?",
+        correct_answer: "Loki",
+        answers: [
             "Thor",
             "Odin",
-            "Balder"
+            "Balder",
+            "Loki",
         ]
     }
 ]
@@ -248,43 +260,47 @@ const mediumCategory = [{
 
 
 const hardCategory = [{
-        "difficulty": "hard",
-        "question": "Talos, the mythical giant bronze man, was the protector of which island?",
-        "correct_answer": "Crete",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "Talos, the mythical giant bronze man, was the protector of which island?",
+        correct_answer: "Crete",
+        answers: [
             "Sardinia",
             "Sicily",
+            "Crete",
             "Cyprus"
         ]
     },
     {
 
-        "difficulty": "hard",
-        "question": "What was the punishment for Sysiphus&#039;s craftiness?",
-        "correct_answer": "Cursed to roll a boulder up a hill for eternity.",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "What was the punishment for Sysiphus&#039;s craftiness?",
+        correct_answer: "Cursed to roll a boulder up a hill for eternity.",
+        answers: [
             "Tied to a boulder for eternity, being pecked by birds.",
             "Standing in a lake filled with water he could not drink.",
+            "Cursed to roll a boulder up a hill for eternity.",
             "To fell a tree that regenerated after every axe swing."
         ]
     },
     {
 
-        "difficulty": "hard",
-        "question": "According to Algonquian folklore, how does one transform into a Wendigo?",
-        "correct_answer": "Participating in cannibalism.",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "According to Algonquian folklore, how does one transform into a Wendigo?",
+        correct_answer: "Participating in cannibalism.",
+        answers: [
             "Excessive mutilation of animal corpses.",
             "Performing a ritual involving murder.",
-            "Drinking the blood of many slain animals."
+            "Drinking the blood of many slain animals.",
+            "Participating in cannibalism."
         ]
     },
     {
 
-        "difficulty": "hard",
-        "question": "In Greek Mythology, who was the daughter of King Minos?",
-        "correct_answer": "Ariadne",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "In Greek Mythology, who was the daughter of King Minos?",
+        correct_answer: "Ariadne",
+        answers: [
+            "Ariadne",
             "Athena",
             "Ariel",
             "Alana"
@@ -292,11 +308,12 @@ const hardCategory = [{
     },
     {
 
-        "difficulty": "hard",
-        "question": "In Norse mythology, what is the name of the serpent which eats the roots of the ash tree Yggdrasil?",
-        "correct_answer": "Nidhogg",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "In Norse mythology, what is the name of the serpent which eats the roots of the ash tree Yggdrasil?",
+        correct_answer: "Nidhogg",
+        answers: [
             "Bragi",
+            "Nidhogg",
             "Odin",
             "Ymir"
         ]
@@ -304,10 +321,11 @@ const hardCategory = [{
     {
 
 
-        "difficulty": "hard",
-        "question": "Which of the following is NOT a god in Norse Mythology.",
-        "correct_answer": "Jens",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "Which of the following is NOT a god in Norse Mythology.",
+        correct_answer: "Jens",
+        answers: [
+            "Jens",
             "Loki",
             "Tyr",
             "Snotra"
@@ -315,55 +333,60 @@ const hardCategory = [{
     },
     {
 
-        "difficulty": "hard",
-        "question": "Nidhogg is a mythical creature from what mythology?",
-        "correct_answer": "Norse",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "Nidhogg is a mythical creature from what mythology?",
+        correct_answer: "Norse",
+        answers: [
             "Egyptian",
             "Greek",
+            "Norse",
             "Hindu"
         ]
     },
     {
 
-        "difficulty": "hard",
-        "question": "Who is the Egyptian god of reproduction and lettuce?",
-        "correct_answer": "Min",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "Who is the Egyptian god of reproduction and lettuce?",
+        correct_answer: "Min",
+        answers: [
             "Menu",
             "Mut",
-            "Meret"
+            "Meret",
+            "Min"
         ]
     },
     {
 
-        "difficulty": "hard",
-        "question": "What immense structure is referred to in Norse Mythology as the Yggdrasil.",
-        "correct_answer": "Tree",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "What immense structure is referred to in Norse Mythology as the Yggdrasil.",
+        correct_answer: "Tree",
+        answers: [
             "Mountain",
+            "Tree",
             "Temple",
             "Castle"
         ]
     },
     {
 
-        "difficulty": "hard",
-        "question": "Which Norse God has a horse named Sleipnir?",
-        "correct_answer": "Odin",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "Which Norse God has a horse named Sleipnir?",
+        correct_answer: "Odin",
+        answers: [
             "Thor",
+            "Odin",
             "Frigg",
             "Balder"
         ]
     },
     {
 
-        "difficulty": "hard",
-        "question": "Who is a minor god that is protector and creator of various arts, such as cheese making and bee keeping.",
-        "correct_answer": "Aristaeus",
-        "incorrect_answers": [
+        difficulty: "hard",
+        question: "Who is a minor god that is protector and creator of various arts, such as cheese making and bee keeping.",
+        correct_answer: "Aristaeus",
+        answers: [
             "Autonoe",
+            "Aristaeus",
             "Carme",
             "Cephisso"
         ]
