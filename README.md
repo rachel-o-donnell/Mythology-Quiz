@@ -207,6 +207,8 @@ Font awesome icon missing when You input username - Had to take it out of the te
 redesign username to initials instead as a name pushed the game panel to be too crowded on a mobile device. 
 
 surrounded icon and li partners in game panel with containers to style side by side but still separated out n the screen. 
+
+Could not make home ontaner disappear by adding any of the hide classes I had previously made. From playing in dev tools I knew adding display:none worked so I found the correct syntax at https://www.javascripttutorial.net/dom/css/add-styles-to-an-element/ (homeContainer.style.display = 'none')
 --- 
 
 ## RESOURCES USED:

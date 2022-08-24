@@ -1,5 +1,5 @@
   // dropdown code taken from w3schools adapted to suit my project
-
+/*
   // When the user clicks on the button,toggle between hiding and showing the dropdown content W3schools
   function showDropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -17,13 +17,14 @@
         }
       }
     }
-  }
+  } */
 
   // HIDES HOME SCREEN // ADDS GAME SCREEN // SETS USERNAME credit for structure in README - altered to fit my needs.
 
   const beginBtn = document.getElementById('begin');
 
   const homeScreenElements = document.getElementsByClassName('home');
+  const homeContainer = document.getElementById('home-container');
   const gameScreenElements = document.getElementById('q-and-a-container');
   beginBtn.addEventListener('click', beginGame);
 
@@ -32,6 +33,8 @@
     for (let elements of homeScreenElements) {
       elements.classList.add('hide-home')
     }
+    //hides home container
+    homeContainer.style.display = 'none'
     console.log('LETS BEGIN')
     //shows game screen
     gameScreenElements.classList.remove('hide-game')
@@ -113,8 +116,17 @@
         }
       })
 
-function rightAns() {
 
+let ansA = document.getElementById('a')
+ansA.addEventListener('click', ansChoice) 
+  
+function ansChoice() {
+  //if (ansA.innerHTML = correct_answer)
+  console.log('you chose ans A')
+}
+
+function rightAns() {
+  console.log('you chose ans A')
 }
 
         function wrongAns() {
