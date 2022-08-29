@@ -1,242 +1,113 @@
-  // dropdown code taken from w3schools adapted to suit my project
-  /*
-    // When the user clicks on the button,toggle between hiding and showing the dropdown content W3schools
-    function showDropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
+const beginBtn = document.getElementById('begin');
+const homeScreenElements = document.getElementsByClassName('home');
+const homeContainer = document.getElementById('home-container');
+const gameScreenElements = document.getElementById('q-and-a-container');
+
+
+beginBtn.addEventListener('click', beginGame);
+
+
+function beginGame() {
+
+  for (let elements of homeScreenElements) {
+    elements.classList.add('hide-home');
+  }
+  //hides home container
+  homeContainer.style.display = 'none';
+  console.log('LETS BEGIN');
+  //shows game screen
+  gameScreenElements.classList.remove('hide-game');
+
+  //sets username in game panel
+  let username = document.getElementById('name').value;
+  document.getElementById('username').textContent = username;
+
+  // sets score to zero
+  let score = document.getElementById('score');
+  score.innerHTML = 0;
+
+}
+
+let questionText = document.getElementById('question');
+let answerButtons = document.getElementsByClassName('ans-btn');
+let randomQuestion, currentQuestionIndex;
+
+/* loads questions depending on difficulty chosen, randomises questions and displays 
+the answer options for that particular question */
+
+//event listener for dropdown and identifying what categoty is chosen
+document.getElementById('select').addEventListener('change', function () {
+  console.log(`You selected ${this.value} questions`);
+  let chosenDifficulty = this.value;
+
+  // easy section 
+  if (chosenDifficulty === 'easy') {
+
+    randomQuestion = easyCategory.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    chooseNextQuestion();
     }
-
-    // Close the dropdown menu if the user clicks outside of it W3schools
-    window.onclick = function (event) {
-      if (!event.target.matches('.dropdown-btn')) {
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        let i;
-        for (i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    } */
-
-  // HIDES HOME SCREEN // ADDS GAME SCREEN // SETS USERNAME credit for structure in README - altered to fit my needs.
-
-  const beginBtn = document.getElementById('begin');
-
-  const homeScreenElements = document.getElementsByClassName('home');
-  const homeContainer = document.getElementById('home-container');
-  const gameScreenElements = document.getElementById('q-and-a-container');
   
+  function chooseNextQuestion() {
+      displayQuestion(randomQuestion[currentQuestionIndex]);
+  }
 
-  beginBtn.addEventListener('click', beginGame);
-
-
-  function beginGame() {
-
-    for (let elements of homeScreenElements) {
-      elements.classList.add('hide-home')
+    function displayQuestion(question) {
+      questionText.innerHTML = question.question;
+      //displays answers
+      question.answers.forEach((answer, index) => {
+        answerButtons[index].innerHTML = answer;
+      });
     }
-    //hides home container
-    homeContainer.style.display = 'none'
-    console.log('LETS BEGIN')
-    //shows game screen
-    gameScreenElements.classList.remove('hide-game')
+  });
+        
+  //medium section
+  if (chosenDifficulty === 'medium') {
 
-    //sets username in game panel
-    let username = document.getElementById('name').value
-    document.getElementById('username').textContent = username
+    randomQuestion = mediumCategory.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    chooseNextQuestion();
+    displayQuestion();
 
-    // sets score to zero
-    let score = document.getElementById('score');
-    score.innerHTML = 0
+ 
+  // hard section
+  if (chosenDifficulty === 'hard') {
 
-  }
-
-  let questionText = document.getElementById('question')
-  let answerButtons = document.getElementsByClassName('ans-btn')
-  let randomQuestion, currentQuestionIndex
-
-  /* loads questions depending on difficulty chosen, randomises questions and displays 
-  the answer options for that particular question */
-
-  //event listener for dropdown and identifying what categoty is chosen
-  document.getElementById('select').addEventListener('change', function () {
-    console.log(`You selected ${this.value} questions`)
-    let chosenDifficulty = this.value
-
-    // easy section 
-    if (chosenDifficulty === 'easy') {
-
-      randomQuestion = easyCategory.sort(() => Math.random() - .5)
-      currentQuestionIndex = 0
-      chooseNextQuestion()
-
-      function chooseNextQuestion() {
-        displayQuestion(randomQuestion[currentQuestionIndex])
-      }
-
-      function displayQuestion(question) {
-        questionText.innerHTML = question.question
-        //displays answers
-        question.answers.forEach((answer, index) => {
-          answerButtons[index].innerHTML = answer
-        })
-      }
+    randomQuestion = hardCategory.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    chooseNextQuestion();
+    displayQuestion();
     }
-    //medium section
-    if (chosenDifficulty === 'medium') {
-
-      randomQuestion = mediumCategory.sort(() => Math.random() - .5)
-      currentQuestionIndex = 0
-      chooseNextQuestion()
-
-      function chooseNextQuestion() {
-        displayQuestion(randomQuestion[currentQuestionIndex])
-      }
-
-      function displayQuestion(question) {
-        questionText.innerHTML = question.question
-        //displays answers
-        question.answers.forEach((answer, index) => {
-          answerButtons[index].innerHTML = answer
-        })
-      }
     }
-    // hard section
-    if (chosenDifficulty === 'hard') {
 
-      randomQuestion = hardCategory.sort(() => Math.random() - .5)
-      currentQuestionIndex = 0
-      chooseNextQuestion()
 
-      function chooseNextQuestion() {
-        displayQuestion(randomQuestion[currentQuestionIndex])
-      }
+let ansA = document.getElementById('a');
+ansA.addEventListener('click', ansChoice);
 
-      function displayQuestion(question) {
-        questionText.innerHTML = question.question
-        // displays answers
-        question.answers.forEach((answer, index) => {
-          answerButtons[index].innerHTML = answer
-        })
-      }
-    }
-  })
-
-  // attempt at adding an event listener to all ans otions
-  // https://www.codeinwp.com/snippets/add-event-listener-to-multiple-elements-with-javascript/
- // let chosenAns = document.getElementById('chosen-ans');
-/*   chosenAns.forEach(function (i) {
-    i.addEventListener('click', function () {
-      console.log(i);
-    });
-  }); /* 
-  //https://bobbyhadz.com/blog/javascript-typeerror-foreach-is-not-a-function
-  /*Array.from(chosenAns).forEach(element => {
-    add.addEventListener('click', console.log(element));
-  }); */
+function ansChoice() {
+console.log ("you chose ans a");
+}
 
 
 
-  //if (ansA.innerHTML = correct_answer)
-  //console.log(this)
-  //this.innerHTML
+// GAME PANEL BAR 
 
+// Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
 
+document.getElementById('home.btn').addEventListener('click', goHome);
 
-  let ansA = document.getElementById('a')
-  ansA.addEventListener('click', ansChoice) 
-
- function ansChoice() {
-  if (ansA.innerHTML = correct_answer) {
-  console.log('you chose', this.innerHTML)
-  score = +1 
+function goHome() {
+  gameScreenElements.classList.add('hide-game');
+  for (let elements of homeScreenElements) {
+    elements.classList.remove('hide-home');
   }
-  chooseNextQuestion()
+}
 
-  //this.innerHTML
-  }
+        
+function score() {
 
+}
 
-  function rightAns() {
-    console.log('you chose ans A')
-    chooseNextQuestion()
-  }
+function questionOfQuestion() {
 
-  function wrongAns() {
-
-  }
-
-  function nextButton() {
-
-  }
-
-  // GAME PANEL BAR 
-
-  // Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
-  
-  document.getElementById('home.btn').addEventListener('click', goHome)
-
-  function goHome() {
-    gameScreenElements.classList.add('hide-game')
-    for (let elements of homeScreenElements) {
-      elements.classList.remove('hide-home')
-    }
-  }
-
-  function score() {
-
-  }
-
-  function questionOfQuestion() {
-
-  };
-
-
-  // GAME SCREEN 
-
-  /* choosing game difficulty WITH API
-
-  let displayQuestion = document.getElementById('question')
-  let displayAnswers = document.getElementsByClassName('q-btn')
-
-  document.getElementById('select').addEventListener('change', function() {
-      console.log(`You selected ${this.value} questions`)
-      let chosenDifficulty = this.value
-
-        if (chosenDifficulty === 'easy') {
-
-          fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=easy&type=multiple')
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data);
-              displayQuestion.innerHTML = data.results[0].question
-              displayAnswers.innerHTML = data.results[0].answer
-            })
-          }
-          if (chosenDifficulty === 'medium') {
-
-            fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=medium&type=multiple')
-              .then((response) => response.json())
-              .then((data) => {
-                console.log(data);
-                displayQuestion.innerHTML = data.results[0].question
-              })
-            }
-
-            if (chosenDifficulty === 'hard') {
-
-              fetch('https://opentdb.com/api.php?amount=11&category=20&difficulty=hard&type=multiple')
-                .then((response) => response.json())
-                .then((data) => {
-                  console.log(data);
-                  //let questions = data.results[0].question//NEED TO LOOP THROUGH QUESTIONS [0] WILL ALWAYS DISPLAY THE FIRST QUESTIONS
-                  console.log(questions)
-                  //let displayQuestion = questions.sort(() => Math.random() - .5) //web dev simlified
-                  displayQuestion.innerHTML = data.results[0].question
-                })
-              }
-                 // SHUFFLE QUESTIONS .sort(() => Math.random() - .5) 
-                 //- wont work as is when added to data.results[0].question
-
-      }) */
+}
