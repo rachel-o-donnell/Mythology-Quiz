@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap');
-        
-*   {
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,23 +9,25 @@
 
 
 body {
-    /* background image code taken from https://miker94.github.io/CI-Project-Portfolio-2/ */ 
+    /* background image code taken from https://miker94.github.io/CI-Project-Portfolio-2/ */
     background: url(../images/mythology-img.png) no-repeat center center fixed;
     background-size: cover;
-    
+
 }
 
 /* game area */
 
 /* hides screens that are not needed untill called */
 
-.hide-home, .hide-game, .hide {
+.hide-home,
+.hide-game,
+.hide {
     display: none;
 }
 
 h1 {
     font-style: italic;
-    font-size: 3rem ;
+    font-size: 3rem;
     text-align: center;
     margin-top: 5%;
     color: #FAFAD2;
@@ -38,20 +40,22 @@ h2 {
     font-size: 1.3rem;
 }
 
-#home-container, #game-screen-container {
+#home-container,
+#game-screen-container {
     display: flex;
     height: 560px;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;  
-} 
+    margin: 0 auto;
+}
 
 #home-screen {
     justify-content: space-evenly;
 }
 
-#game-screen, #home-screen {
+#game-screen,
+#home-screen {
     background-color: #e3a857;
     height: 90%;
     width: 75%;
@@ -66,15 +70,15 @@ h2 {
 
 /* initial start screen*/
 
-.name-area > li {
+.name-area>li {
     display: flex;
     flex-direction: column;
 }
 
 .name-area {
-   /*
+    /*
    This needs to turn off when we go to game screen 
-    display: flex; */ 
+    display: flex; */
     margin: 10px;
     list-style: none;
 }
@@ -82,7 +86,7 @@ h2 {
 input {
     background-color: #FAFAD2;
     color: #6E6259;
-    
+
 }
 
 .label {
@@ -100,7 +104,7 @@ button {
     color: #FAFAD2;
 }
 
-/*HTML DROPDOWN STYLE */ 
+/*HTML DROPDOWN STYLE */
 /*DOES NOT WORK */
 .dropdown {
     display: flex;
@@ -112,7 +116,7 @@ button {
 #select {
     background-color: #FAFAD2;
     color: #380456;
-} 
+}
 
 
 /*
@@ -195,25 +199,26 @@ container when the user clicks on the dropdown button) W3schools
 /* game panel containers - to style icon and info beside
  each other but still spaced out on screen */
 
- .game-panel-containers {
+.game-panel-containers {
     display: flex
- }
- 
+}
+
 h3 {
-    background-color:#e3a857;
+    background-color: #e3a857;
     color: #301934;
     margin: 10px;
 
 }
 
-    
+
 
 /* questions and answers screen */
 .q-and-a-area {
     display: grid;
     flex-direction: column;
     justify-content: center;
-    color: #380456;;
+    color: #380456;
+    ;
 }
 
 
@@ -239,4 +244,4 @@ h3 {
 
 h2 {
     font-size: 
-*/ 
+*/

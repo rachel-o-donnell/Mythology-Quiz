@@ -46,30 +46,30 @@ document.getElementById('select').addEventListener('change', function () {
     randomQuestion = easyCategory.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     chooseNextQuestion();
-    }
-  
-  function chooseNextQuestion() {
-      displayQuestion(randomQuestion[currentQuestionIndex]);
   }
 
-    function displayQuestion(question) {
-      questionText.innerHTML = question.question;
-      //displays answers
-      question.answers.forEach((answer, index) => {
-        answerButtons[index].innerHTML = answer;
-      });
-    }
-  });
-        
-  //medium section
-  if (chosenDifficulty === 'medium') {
+  function chooseNextQuestion() {
+    displayQuestion(randomQuestion[currentQuestionIndex]);
+  }
 
-    randomQuestion = mediumCategory.sort(() => Math.random() - .5);
-    currentQuestionIndex = 0;
-    chooseNextQuestion();
-    displayQuestion();
+  function displayQuestion(question) {
+    questionText.innerHTML = question.question;
+    //displays answers
+    question.answers.forEach((answer, index) => {
+      answerButtons[index].innerHTML = answer;
+    });
+  }
+});
 
- 
+//medium section
+if (chosenDifficulty === 'medium') {
+
+  randomQuestion = mediumCategory.sort(() => Math.random() - .5);
+  currentQuestionIndex = 0;
+  chooseNextQuestion();
+  displayQuestion();
+
+
   // hard section
   if (chosenDifficulty === 'hard') {
 
@@ -77,15 +77,15 @@ document.getElementById('select').addEventListener('change', function () {
     currentQuestionIndex = 0;
     chooseNextQuestion();
     displayQuestion();
-    }
-    }
+  }
+}
 
 
 let ansA = document.getElementById('a');
 ansA.addEventListener('click', ansChoice);
 
 function ansChoice() {
-console.log ("you chose ans a");
+  console.log("you chose ans a");
 }
 
 
@@ -103,7 +103,7 @@ function goHome() {
   }
 }
 
-        
+
 function score() {
 
 }
