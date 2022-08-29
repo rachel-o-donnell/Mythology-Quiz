@@ -25,6 +25,14 @@ function beginGame() {
   username.textContent = username;
   score.innerHTML = 0;
 }
+// Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
+function shuffle(questions) {
+  for(let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i+1));
+    [questions[i], questions[j]] = [questions[j], questions[i]];
+  }
+  return questions;
+};
 
 /* loads questions depending on difficulty chosen, randomises questions and displays 
 the answer options for that particular question */
@@ -36,14 +44,15 @@ document.getElementById('select').addEventListener('change', function () {
 
   // easy section 
   if (chosenDifficulty === 'easy') {
-
-    randomQuestion = easyCategory.sort(() => Math.random() - .5);
+    shuffle(easyCategory)
+  
+      //randomQuestion = easyCategory.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     chooseNextQuestion();
   }
 
   function chooseNextQuestion() {
-    displayQuestion(randomQuestion[currentQuestionIndex]);
+    displayQuestion(easyCategory[currentQuestionIndex]);
   }
 
   function displayQuestion(question) {
@@ -94,9 +103,13 @@ document.getElementById('select').addEventListener('change', function () {
 
 let ansA = document.getElementById('a');
 ansA.addEventListener('click', ansChoice);
+let correctAns = 
 
 function ansChoice() {
-  console.log("you chose ans a");
+  if (ansA.innerHTML === question.correct_ans) {
+    console.log('correct');
+    console.log('A');
+  }
 }
 
 

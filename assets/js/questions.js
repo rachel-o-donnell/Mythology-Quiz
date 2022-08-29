@@ -9,6 +9,7 @@ const easyCategory = [{
             "Ares"
         ]
     },
+
     {
         difficulty: "easy",
         question: "Who in Greek mythology, who led the Argonauts in search of the Golden Fleece?",
@@ -20,6 +21,8 @@ const easyCategory = [{
             "Odysseus"
         ]
     },
+
+
     {
         difficulty: "easy",
         question: "Which Greek &amp; Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
@@ -42,6 +45,10 @@ const easyCategory = [{
             "Fire"
         ]
     },
+
+]
+
+/*
     {
         difficulty: "easy",
         question: "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
@@ -390,4 +397,4 @@ const hardCategory = [{
             "Cephisso"
         ]
     }
-];
+]; */
