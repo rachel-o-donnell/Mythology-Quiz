@@ -210,6 +210,7 @@ surrounded icon and li partners in game panel with containers to style side by s
 
 Could not make home ontaner disappear by adding any of the hide classes I had previously made. From playing in dev tools I knew adding display:none worked so I found the correct syntax at https://www.javascripttutorial.net/dom/css/add-styles-to-an-element/ (homeContainer.style.display = 'none')
 
+game kept getting reset to home when answer button was pressed - Changed form to section and that fixed the problem thanks to Sean Young's help on Slack!
 
 TO BE FIXED: 
 html dropdown styling does not work.  IS IT BECAUSE I CHANGED TO FORM??? 

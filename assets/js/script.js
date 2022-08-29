@@ -59,11 +59,7 @@ document.getElementById('select').addEventListener('change', function () {
 
     randomQuestion = mediumCategory.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
-    chooseNextQuestion();
-    
-    function chooseNextQuestion() {
-      displayQuestion(randomQuestion[currentQuestionIndex]);
-    }
+    chooseNextQuestion()
   
     function displayQuestion(question) {
       questionText.innerHTML = question.question;
