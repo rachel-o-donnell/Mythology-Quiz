@@ -26,10 +26,13 @@
   const homeScreenElements = document.getElementsByClassName('home');
   const homeContainer = document.getElementById('home-container');
   const gameScreenElements = document.getElementById('q-and-a-container');
+  
+
   beginBtn.addEventListener('click', beginGame);
 
 
   function beginGame() {
+
     for (let elements of homeScreenElements) {
       elements.classList.add('hide-home')
     }
@@ -42,6 +45,10 @@
     //sets username in game panel
     let username = document.getElementById('name').value
     document.getElementById('username').textContent = username
+
+    // sets score to zero
+    let score = document.getElementById('score');
+    score.innerHTML = 0
 
   }
 
@@ -118,7 +125,7 @@
 
   // attempt at adding an event listener to all ans otions
   // https://www.codeinwp.com/snippets/add-event-listener-to-multiple-elements-with-javascript/
-  let chosenAns = document.getElementById('chosen-ans');
+ // let chosenAns = document.getElementById('chosen-ans');
 /*   chosenAns.forEach(function (i) {
     i.addEventListener('click', function () {
       console.log(i);
@@ -140,14 +147,20 @@
   let ansA = document.getElementById('a')
   ansA.addEventListener('click', ansChoice) 
 
-  //function ansChoice() {
-  //if (ansA.innerHTML = correct_answer)
-  //console.log('you chose')
+ function ansChoice() {
+  if (ansA.innerHTML = correct_answer) {
+  console.log('you chose', this.innerHTML)
+  score = +1 
+  }
+  chooseNextQuestion()
+
   //this.innerHTML
-  //}
+  }
+
 
   function rightAns() {
     console.log('you chose ans A')
+    chooseNextQuestion()
   }
 
   function wrongAns() {
@@ -161,6 +174,7 @@
   // GAME PANEL BAR 
 
   // Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
+  
   document.getElementById('home.btn').addEventListener('click', goHome)
 
   function goHome() {
