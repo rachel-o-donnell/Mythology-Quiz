@@ -8,6 +8,7 @@ let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, chosenDifficulty
 let currentQuestionIndex = 0
+let correct, wrong
 
 let ansA = document.getElementById('a');
 let ansB = document.getElementById('b');
@@ -85,9 +86,15 @@ document.getElementById('select').addEventListener('change', function () {
   
       console.log('you selected ' + this.innerHTML)
       if (this.innerHTML === correctAns) {
-        console.log('correct')
+        console.log('correct!');
+        correct = this 
+        correct.style.backgroundColor = '#004600'
       }
-      else console.log('wrong')
+      if (this.innerHTML !== correctAns) {
+        console.log('wrong')
+        wrong = this
+        wrong.style.backgroundColor = '#8B0000'
+      }
     }
 
   
@@ -134,28 +141,6 @@ document.getElementById('select').addEventListener('change', function () {
 });
 
 
-/* THIS FIRES BEFORE THE CLICK EVEN HAPPENS
-
-for (let answerButton of answerButtons) {
-answerButton.addEventListener('click', checkAns());
-} */ 
-
-
-
-//let correctAns = currentQuestionIndex.correct_answer
-
-
-//let correctAns = questions[i].correct_ans 
-//console.log(correctAns)
-
-
-/*
-function ansChoice() {
-  if (this.innerHTML === correctAns) {
-    console.log('correct');
-    console.log('A');
-  }
-} */ 
 
 
 // GAME PANEL BAR 

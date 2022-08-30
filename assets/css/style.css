@@ -17,6 +17,7 @@ body {
 
 /* game area */
 
+/* ADDED FROM JS */
 /* hides screens that are not needed untill called */
 
 .hide-home,
@@ -24,6 +25,7 @@ body {
 .hide {
     display: none;
 }
+
 
 h1 {
     font-style: italic;
@@ -96,6 +98,7 @@ input {
     margin: 0 0 10px;
 }
 
+
 button {
     font-size: 1.5rem;
     margin-bottom: 3%;
@@ -103,6 +106,7 @@ button {
     background-color: #6E6259;
     color: #FAFAD2;
 }
+
 
 /*HTML DROPDOWN STYLE */
 /*DOES NOT WORK */
@@ -223,12 +227,18 @@ h3 {
 
 
 /* question buttons */
-
+/*
 .q-btn {
     background-color: #FAFAD2;
     color: #380456;
-}
+} */ 
 
+/* ADDED FROM JS */
+/*
+.correct-button {
+    background-color: #8bbd78;
+    color: #301934;
+} */
 /* next button */
 
 #next {
