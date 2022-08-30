@@ -7,7 +7,15 @@ let score = document.getElementById('score');
 let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, chosenDifficulty
+
 let currentQuestionIndex = 0
+
+let ansA = document.getElementById('a');
+let ansB = document.getElementById('b');
+let ansC = document.getElementById('c');
+let ansD = document.getElementById('d');
+
+
 
 
 // EVENT LISTENERS
@@ -58,14 +66,7 @@ document.getElementById('select').addEventListener('change', function () {
     displayQuestion(easyCategory[currentQuestionIndex]);
   }
 
- /* so you would need something like
-let currentQuestionIndex = 0;
-chooseNextQuestion(currentQuestionIndex);
-and declare the function to take the parameter
-function chooseNextQuestion(index) {
-displayQuestion(easyCategory[index]);
-}
-*/ 
+
   function displayQuestion(question) {
     questionText.innerHTML = question.question;
     //displays answers
@@ -75,6 +76,20 @@ displayQuestion(easyCategory[index]);
 
     let correctAns = question.correct_answer;
     console.log(correctAns)
+
+    ansA.addEventListener('click', checkAns);
+    ansB.addEventListener('click', checkAns);
+    ansC.addEventListener('click', checkAns);
+    ansD.addEventListener('click', checkAns);
+
+    function checkAns() {
+  
+      console.log('you selected ' + this.innerHTML)
+      if (this.innerHTML === correctAns) {
+        console.log('correct')
+      }
+      else console.log('wrong')
+    }
 
   
   }
@@ -129,27 +144,11 @@ answerButton.addEventListener('click', checkAns());
 
 
 //let correctAns = currentQuestionIndex.correct_answer
-let ansA = document.getElementById('a');
-let ansB = document.getElementById('b');
-let ansC = document.getElementById('c');
-let ansD = document.getElementById('d');
 
-ansA.addEventListener('click', checkAns);
-ansB.addEventListener('click', checkAns);
-ansC.addEventListener('click', checkAns);
-ansD.addEventListener('click', checkAns);
 
 //let correctAns = questions[i].correct_ans 
 //console.log(correctAns)
 
-function checkAns() {
-  
-  console.log('you selected ' + this.innerHTML)
-  if (this.innerHTML === correctAns) {
-    console.log('correct')
-  }
-  else console.log('wrong')
-}
 
 /*
 function ansChoice() {
