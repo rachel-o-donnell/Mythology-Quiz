@@ -6,7 +6,8 @@ let username = document.getElementById('name').value;
 let score = document.getElementById('score');
 let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
-let randomQuestion, currentQuestionIndex;
+let randomQuestion, chosenDifficulty
+let currentQuestionIndex = 0
 
 
 // EVENT LISTENERS
@@ -26,6 +27,7 @@ function beginGame() {
   username.textContent = username;
   score.innerHTML = 0;
 }
+
 // Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
 function shuffle(questions) {
   for(let i = questions.length - 1; i > 0; i--) {
@@ -43,15 +45,12 @@ the answer options for that particular question */
 //event listener for dropdown and identifying what categoty is chosen
 document.getElementById('select').addEventListener('change', function () {
   console.log(`You selected ${this.value} questions`);
-  let chosenDifficulty = this.value;
+ chosenDifficulty = this.value;
 
+  
   // easy section 
   if (chosenDifficulty === 'easy') {
-    shuffle(easyCategory)
-  
-      //randomQuestion = easyCategory.sort(() => Math.random() - .5);
-      
-    currentQuestionIndex = 0;
+    shuffle(easyCategory)  
     chooseNextQuestion();
   }
 
@@ -59,6 +58,14 @@ document.getElementById('select').addEventListener('change', function () {
     displayQuestion(easyCategory[currentQuestionIndex]);
   }
 
+ /* so you would need something like
+let currentQuestionIndex = 0;
+chooseNextQuestion(currentQuestionIndex);
+and declare the function to take the parameter
+function chooseNextQuestion(index) {
+displayQuestion(easyCategory[index]);
+}
+*/ 
   function displayQuestion(question) {
     questionText.innerHTML = question.question;
     //displays answers
@@ -73,7 +80,6 @@ document.getElementById('select').addEventListener('change', function () {
   }
 
  
-
 //medium section
   if (chosenDifficulty === 'medium') {
     shuffle(mediumCategory)
@@ -124,8 +130,14 @@ answerButton.addEventListener('click', checkAns());
 
 //let correctAns = currentQuestionIndex.correct_answer
 let ansA = document.getElementById('a');
+let ansB = document.getElementById('b');
+let ansC = document.getElementById('c');
+let ansD = document.getElementById('d');
 
 ansA.addEventListener('click', checkAns);
+ansB.addEventListener('click', checkAns);
+ansC.addEventListener('click', checkAns);
+ansD.addEventListener('click', checkAns);
 
 //let correctAns = questions[i].correct_ans 
 //console.log(correctAns)
@@ -133,7 +145,10 @@ ansA.addEventListener('click', checkAns);
 function checkAns() {
   
   console.log('you selected ' + this.innerHTML)
-  console.log()
+  if (this.innerHTML === correctAns) {
+    console.log('correct')
+  }
+  else console.log('wrong')
 }
 
 /*

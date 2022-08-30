@@ -126,7 +126,7 @@ const easyCategory = [{
     }
 ];
 
-
+/*
 const mediumCategory = [{
 
         difficulty: "medium",
@@ -395,4 +395,4 @@ const hardCategory = [{
             "Cephisso"
         ]
     }
-]; 
+]; */
