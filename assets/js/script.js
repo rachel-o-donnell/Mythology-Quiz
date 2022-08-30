@@ -87,8 +87,9 @@ document.getElementById('select').addEventListener('change', function () {
       console.log('you selected ' + this.innerHTML)
       if (this.innerHTML === correctAns) {
         console.log('correct!');
-        correct = this 
-        correct.style.backgroundColor = '#004600'
+        correct = this;
+        correct.style.backgroundColor = '#004600';
+        score.innerHTML = + 5;
       }
       if (this.innerHTML !== correctAns) {
         console.log('wrong')
@@ -157,6 +158,7 @@ function goHome() {
 
 
 function adjustscore() {
+    score.innerhtml = 5 
 
 }
 
