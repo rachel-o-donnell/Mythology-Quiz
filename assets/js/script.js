@@ -7,7 +7,6 @@ let score = document.getElementById('score');
 let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, chosenDifficulty
-
 let currentQuestionIndex = 0
 
 let ansA = document.getElementById('a');
