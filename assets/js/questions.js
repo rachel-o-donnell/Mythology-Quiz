@@ -46,9 +46,7 @@ const easyCategory = [{
         ]
     },
 
-]
 
-/*
     {
         difficulty: "easy",
         question: "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
@@ -397,4 +395,4 @@ const hardCategory = [{
             "Cephisso"
         ]
     }
-]; */
+]; 

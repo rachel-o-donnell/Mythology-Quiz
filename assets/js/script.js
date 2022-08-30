@@ -8,6 +8,7 @@ let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, currentQuestionIndex;
 
+
 // EVENT LISTENERS
 beginBtn.addEventListener('click', beginGame);
 document.getElementById('home.btn').addEventListener('click', goHome);
@@ -32,7 +33,9 @@ function shuffle(questions) {
     [questions[i], questions[j]] = [questions[j], questions[i]];
   }
   return questions;
+  
 };
+
 
 /* loads questions depending on difficulty chosen, randomises questions and displays 
 the answer options for that particular question */
@@ -47,6 +50,7 @@ document.getElementById('select').addEventListener('change', function () {
     shuffle(easyCategory)
   
       //randomQuestion = easyCategory.sort(() => Math.random() - .5);
+      
     currentQuestionIndex = 0;
     chooseNextQuestion();
   }
@@ -61,12 +65,20 @@ document.getElementById('select').addEventListener('change', function () {
     question.answers.forEach((answer, index) => {
       answerButtons[index].innerHTML = answer;
     });
+
+    let correctAns = question.correct_answer;
+    console.log(correctAns)
+
+  
   }
+
+ 
 
 //medium section
   if (chosenDifficulty === 'medium') {
+    shuffle(mediumCategory)
 
-    randomQuestion = mediumCategory.sort(() => Math.random() - .5);
+    //randomQuestion = mediumCategory.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     chooseNextQuestion()
   
@@ -81,8 +93,8 @@ document.getElementById('select').addEventListener('change', function () {
 
   // hard section
   if (chosenDifficulty === 'hard') {
-
-    randomQuestion = hardCategory.sort(() => Math.random() - .5);
+    shuffle(hardCategory)
+    //randomQuestion = hardCategory.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     chooseNextQuestion();
 
@@ -101,17 +113,36 @@ document.getElementById('select').addEventListener('change', function () {
 }
 });
 
-let ansA = document.getElementById('a');
-ansA.addEventListener('click', ansChoice);
-let correctAns = 
 
+/* THIS FIRES BEFORE THE CLICK EVEN HAPPENS
+
+for (let answerButton of answerButtons) {
+answerButton.addEventListener('click', checkAns());
+} */ 
+
+
+
+//let correctAns = currentQuestionIndex.correct_answer
+let ansA = document.getElementById('a');
+
+ansA.addEventListener('click', checkAns);
+
+//let correctAns = questions[i].correct_ans 
+//console.log(correctAns)
+
+function checkAns() {
+  
+  console.log('you selected ' + this.innerHTML)
+  console.log()
+}
+
+/*
 function ansChoice() {
-  if (ansA.innerHTML === question.correct_ans) {
+  if (this.innerHTML === correctAns) {
     console.log('correct');
     console.log('A');
   }
-}
-
+} */ 
 
 
 // GAME PANEL BAR 
