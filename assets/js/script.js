@@ -15,7 +15,7 @@ let ansB = document.getElementById('b');
 let ansC = document.getElementById('c');
 let ansD = document.getElementById('d');
 
-let quizlength = 8
+let quizLength = 8
 
 
 // EVENT LISTENERS
@@ -46,7 +46,6 @@ function shuffle(questions) {
 };
 
 function resetAnsBtnColor() {
-  console.log('reset color')
   for (let i = 0; i < answerButtons.length; i++) {
     answerButtons[i].removeAttribute('style')
   
@@ -101,18 +100,20 @@ document.getElementById('select').addEventListener('change', function () {
         console.log('correct!');
         correct = this;
         correct.style.backgroundColor = '#004600';
-        score.innerHTML = + 5;
+        adjustScore();
+        
       }
       if (this.innerHTML !== correctAns) {
-        console.log('wrong')
-        wrong = this
-        wrong.style.backgroundColor = '#8B0000'
+        console.log('wrong');
+        wrong = this;
+        wrong.style.backgroundColor = '#8B0000';
+        
       }
     }
 
     nextButton.addEventListener('click', function() {
-      console.log('you clicked next');
       resetAnsBtnColor();
+      shuffle(easyCategory);
       chooseNextQuestion();
     })
     
@@ -177,8 +178,11 @@ function goHome() {
 }
 
 
-function adjustscore() {
-    score.innerhtml = 5 
+function adjustScore() {
+ 
+  let oldScore = parseInt(score.innerText);
+  score.innerText = ++oldScore;
+
 
 }
 
