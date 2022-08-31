@@ -2,20 +2,21 @@ const beginBtn = document.getElementById('begin');
 const homeScreenElements = document.getElementsByClassName('home');
 const homeContainer = document.getElementById('home-container');
 const gameScreenElements = document.getElementById('q-and-a-container');
-const nextButton = document.getElementById('next')
+const nextButton = document.getElementById('next');
 let username = document.getElementById('name').value;
 let score = document.getElementById('score');
+let questionCountDisplay = document.getElementById('question-count-display');
 let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
-let randomQuestion, chosenDifficulty
-let correct, wrong
-let currentQuestionIndex = 0
+let randomQuestion, chosenDifficulty;
+let correct, wrong;
+let currentQuestionIndex = 0;
 let ansA = document.getElementById('a');
 let ansB = document.getElementById('b');
 let ansC = document.getElementById('c');
 let ansD = document.getElementById('d');
 
-let quizLength = 8
+let quizLength = 8;
 
 
 // EVENT LISTENERS
@@ -115,6 +116,7 @@ document.getElementById('select').addEventListener('change', function () {
       resetAnsBtnColor();
       shuffle(easyCategory);
       chooseNextQuestion();
+      questionOfQuestion();
     })
     
     
@@ -187,5 +189,7 @@ function adjustScore() {
 }
 
 function questionOfQuestion() {
-
+  console.log('questionCountDisplay')
+  let questionCount = parseInt(questionCountDisplay.innerText)
+  questionCountDisplay.innerText = ++questionCount
 }
