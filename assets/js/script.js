@@ -2,26 +2,25 @@ const beginBtn = document.getElementById('begin');
 const homeScreenElements = document.getElementsByClassName('home');
 const homeContainer = document.getElementById('home-container');
 const gameScreenElements = document.getElementById('q-and-a-container');
+const nextButton = document.getElementById('next')
 let username = document.getElementById('name').value;
 let score = document.getElementById('score');
 let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, chosenDifficulty
-let currentQuestionIndex = 0
 let correct, wrong
-
+let currentQuestionIndex = 0
 let ansA = document.getElementById('a');
 let ansB = document.getElementById('b');
 let ansC = document.getElementById('c');
 let ansD = document.getElementById('d');
 
-
+let quizlength = 8
 
 
 // EVENT LISTENERS
 beginBtn.addEventListener('click', beginGame);
 document.getElementById('home.btn').addEventListener('click', goHome);
-
 
 //begins game - hides home container, shows game screen, sets username in game panel, sets score to zero
 
@@ -46,6 +45,17 @@ function shuffle(questions) {
   
 };
 
+function resetAnsBtnColor() {
+  console.log('reset color')
+  for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].removeAttribute('style')
+  
+  }
+}
+
+//function chooseNextQuestion() {
+ // displayQuestions(category[index]);
+//}
 
 /* loads questions depending on difficulty chosen, randomises questions and displays 
 the answer options for that particular question */
@@ -54,16 +64,18 @@ the answer options for that particular question */
 document.getElementById('select').addEventListener('change', function () {
   console.log(`You selected ${this.value} questions`);
  chosenDifficulty = this.value;
+ 
+//})
 
-  
   // easy section 
   if (chosenDifficulty === 'easy') {
     shuffle(easyCategory)  
     chooseNextQuestion();
+    
   }
 
   function chooseNextQuestion() {
-    displayQuestion(easyCategory[currentQuestionIndex]);
+  displayQuestion(easyCategory[currentQuestionIndex]);
   }
 
 
@@ -83,7 +95,7 @@ document.getElementById('select').addEventListener('change', function () {
     ansD.addEventListener('click', checkAns);
 
     function checkAns() {
-  
+
       console.log('you selected ' + this.innerHTML)
       if (this.innerHTML === correctAns) {
         console.log('correct!');
@@ -97,6 +109,14 @@ document.getElementById('select').addEventListener('change', function () {
         wrong.style.backgroundColor = '#8B0000'
       }
     }
+
+    nextButton.addEventListener('click', function() {
+      console.log('you clicked next');
+      resetAnsBtnColor();
+      chooseNextQuestion();
+    })
+    
+    
 
   
   }
