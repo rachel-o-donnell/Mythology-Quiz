@@ -11,6 +11,7 @@ let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, chosenDifficulty;
 let correct, wrong;
 let currentQuestionIndex = 0;
+let currentGameQuestions = {}
 let ansA = document.getElementById('a');
 let ansB = document.getElementById('b');
 let ansC = document.getElementById('c');
@@ -34,6 +35,8 @@ function beginGame() {
   gameScreenElements.classList.remove('hide-game');
   username.textContent = username;
   score.innerHTML = 0;
+  questionCountDisplay.innerHTML = 1;
+  queQuestionCount();
 }
 
 // Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
@@ -42,8 +45,9 @@ function shuffle(questions) {
     const j = Math.floor(Math.random() * (i+1));
     [questions[i], questions[j]] = [questions[j], questions[i]];
   }
-  return questions;
-  
+  return questions
+  //let currentGameQuestions = questions;  
+
 };
 
 function resetAnsBtnColor() {
@@ -73,6 +77,8 @@ document.getElementById('select').addEventListener('change', function () {
     chooseNextQuestion();
     
   }
+ 
+  
 
   function chooseNextQuestion() {
   displayQuestion(easyCategory[currentQuestionIndex]);
@@ -80,11 +86,14 @@ document.getElementById('select').addEventListener('change', function () {
 
 
   function displayQuestion(question) {
+    
+     
     questionText.innerHTML = question.question;
     //displays answers
     question.answers.forEach((answer, index) => {
       answerButtons[index].innerHTML = answer;
-    });
+    })
+  
 
     let correctAns = question.correct_answer;
     console.log(correctAns)
@@ -119,12 +128,9 @@ document.getElementById('select').addEventListener('change', function () {
       questionOfQuestion();
     })
     
-    
-
-  
   }
-
- 
+}) //
+/* 
 //medium section
   if (chosenDifficulty === 'medium') {
     shuffle(mediumCategory)
@@ -163,7 +169,7 @@ document.getElementById('select').addEventListener('change', function () {
   }
 }
 });
-
+*/
 
 
 
@@ -192,4 +198,24 @@ function questionOfQuestion() {
   console.log('questionCountDisplay')
   let questionCount = parseInt(questionCountDisplay.innerText)
   questionCountDisplay.innerText = ++questionCount
+  
 }
+
+function queQuestionCount() {
+if (questionCountDisplay.innerHTML >= quizLength) {
+  chooseNextQuestion();
+}
+else {
+  endGame()
+}
+}
+
+function endGame() {
+  console.log('game ended')
+}
+//game over 
+//tally the points?/difficulty etc
+
+//play again 
+
+//button to return to home screen 
