@@ -20,12 +20,18 @@ body {
 /* ADDED FROM JS */
 /* hides screens that are not needed untill called */
 
-.hide-home,
-.hide-game,
+
+
 .hide {
     display: none;
 }
 
+.hide-home {
+    display: none;
+}
+.hide-game {
+    display: none;
+}
 
 h1 {
     font-style: italic;
@@ -78,7 +84,9 @@ h2 {
     padding: 18px;
 
 }
-
+#game-screen {
+    display: flex
+}
 #end-screen {
     justify-content: space-around;
 }

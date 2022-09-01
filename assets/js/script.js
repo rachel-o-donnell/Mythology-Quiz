@@ -7,6 +7,7 @@ const nextButton = document.getElementById('next');
 const gameContainer = document.getElementById('game-container');
 const endGameContainer = document.getElementById('end-game-container')
 const endScreen = document.getElementById('end-screen');
+const playAgain = document.getElementById('play-again');
 let username = document.getElementById('name').value;
 let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
@@ -189,6 +190,14 @@ function goHome() {
   for (let elements of homeScreenElements) {
     elements.classList.remove('hide-home');
   }
+  homeContainer.removeAttribute('style')
+  gameScreenContainer.removeAttribute('style')
+  gameContainer.classList.remove('hide-game')
+  endGameContainer.classList.add('hide')
+  endGameContainer.removeAttribute('style')
+ /* for (let elements of endGameContainer) {
+    elements.classList.add('hide');
+  } */ 
 }
 
 
@@ -221,6 +230,7 @@ function endGame() {
   gameScreenElements.classList.add('hide-game');
   gameContainer.classList.add('hide-game');
   endScreen.classList.remove('hide');
+  gameScreenContainer.style.removeProperty('display')
   endGameContainer.style.display = 'flex';
   endMessage.innerHTML= (`You scored ${score.innerText} out of 8 in the ${chosenDifficulty} category. Ready to play again?`)
   //document.createElement('img');
@@ -234,8 +244,9 @@ function endGame() {
   //tryAgain.innerHTML = "Try again"
   
 }
-//game over 
-//tally the points?/difficulty etc
+
+playAgain.addEventListener('click', goHome)
+
 
 //play again 
 
