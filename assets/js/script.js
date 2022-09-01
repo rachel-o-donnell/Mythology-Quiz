@@ -20,8 +20,8 @@ let ansA = document.getElementById('a');
 let ansB = document.getElementById('b');
 let ansC = document.getElementById('c');
 let ansD = document.getElementById('d');
-
 let quizLength = 8;
+let endMessage = document.getElementById('end-message')
 
 
 // EVENT LISTENERS
@@ -218,11 +218,13 @@ else {
 }
 
 function endGame() {
-  console.log('game ended')
   gameScreenElements.classList.add('hide-game');
-  gameContainer.classList.add('hide');
+  gameContainer.classList.add('hide-game');
   endScreen.classList.remove('hide');
   endGameContainer.style.display = 'flex';
+  endMessage.innerHTML= (`You scored ${score.innerText} out of 8 in the ${chosenDifficulty} category. Ready to play again?`)
+  //document.createElement('img');
+
 
  // let statsText = document.createElement('h2');
  // statsText.innerHTML = `Congratulations you scored ${score} in ${chosenDifficulty}`

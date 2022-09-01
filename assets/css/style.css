@@ -254,6 +254,9 @@ h3 {
     color: #FAFAD2;
 }
 
+#venus {
+    width: 85%
+}
 /* media queries for all screens more than iphone
 .label {
     margin-right: 20px

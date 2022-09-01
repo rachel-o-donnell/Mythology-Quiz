@@ -28,6 +28,10 @@ Google Fonts:
 
 Hero image:
 
+end of game : 
+The Birth of Venus by Botticelli (1486). Photograph: Alamy taken from
+https://www.theguardian.com/artanddesign/2016/mar/05/destination-venus-how-botticelli-became-a-brand
+
 
 ## Wireframes:
 
