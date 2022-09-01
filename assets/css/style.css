@@ -265,6 +265,12 @@ h3 {
 #venus {
     width: 85%
 }
+
+#perseus,
+#oedipus {
+    width: 55%
+}
+
 /* media queries for all screens more than iphone
 .label {
     margin-right: 20px

@@ -8,6 +8,9 @@ const gameContainer = document.getElementById('game-container');
 const endGameContainer = document.getElementById('end-game-container')
 const endScreen = document.getElementById('end-screen');
 const playAgain = document.getElementById('play-again');
+const venus = document.getElementById('venus');
+const perseus = document.getElementById('perseus');
+const oedipus = document.getElementById('oedipus');
 let username = document.getElementById('name').value;
 let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
@@ -233,6 +236,15 @@ function endGame() {
   gameScreenContainer.style.removeProperty('display')
   endGameContainer.style.display = 'flex';
   endMessage.innerHTML= (`You scored ${score.innerText} out of 8 in the ${chosenDifficulty} category. Ready to play again?`)
+  if (chosenDifficulty === 'easy'){
+    venus.classList.remove('hide')
+  }
+  if (chosenDifficulty === 'medium'){
+    perseus.classList.remove('hide')
+  }
+  if (chosenDifficulty === 'hard'){
+    oedipus.classList.remove('hide')
+  }
   //document.createElement('img');
 
 
