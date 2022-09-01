@@ -11,7 +11,6 @@ const playAgain = document.getElementById('play-again');
 const venus = document.getElementById('venus');
 const perseus = document.getElementById('perseus');
 const oedipus = document.getElementById('oedipus');
-let username = document.getElementById('name').value;
 let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
 let questionText = document.getElementById('question');
@@ -36,6 +35,12 @@ playAgain.addEventListener('click', goHome);
 
 //begins game - hides home container, shows game screen, sets username in game panel, sets score to zero
 
+function setUsername() {
+    let name = document.getElementById('name');
+    let username = name.value;
+    document.getElementById('username').textContent = username
+}
+
 function beginGame() {
 
     for (let elements of homeScreenElements) {
@@ -44,7 +49,7 @@ function beginGame() {
     homeContainer.style.display = 'none';
     gameScreenContainer.style.display = 'flex';
     gameScreenElements.classList.remove('hide-game');
-    username.textContent = username;
+    setUsername();
     score.innerHTML = 0;
     questionCountDisplay.innerHTML = 1;
 

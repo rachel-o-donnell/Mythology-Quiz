@@ -105,6 +105,8 @@ Mobile Pages:
   
 Desktop Pages:
 
+JShint
+https://beautifier.io/
 --- 
 
 ## DEPLOYMENT:
