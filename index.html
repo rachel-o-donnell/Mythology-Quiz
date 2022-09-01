@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
-<!-- added some hides as was at one stage ablle to hide the whole game screen 
-    but wasnt able to with home screen then effed it up. come back to this later but this is much 
-    easier to keep styling consistent for now.-->
 
 <body>
     <h1>Mythology Quiz</h1>
@@ -26,7 +23,7 @@
                         <input id="name" name="name" type="text">
                     </li>
                 </ol>
-                <!-- Dropdown code Taken from W3 schools -->
+                <!-- Dropdown code Taken from W3 schools  ADD REQUIRED!!!!-->
                 <div class="dropdown">
                     <form class="dropdown">
                         <select id="select" class="home">
@@ -37,23 +34,12 @@
                         </select>
                     </form>
                 </div>
-                <!--
-                <div class="dropdown" id="dropdown-container">
-                    <button onclick="showDropdown()" class="dropdown-btn home" id="dropdown-btn">Choose
-                        difficulty</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <option class="option" id="easy" href="#">Easy</option>
-                        <option class="option" id="medium" href="#">Medium</option>
-                        <a class="option" id="hard" href="#">Hard</a>
-                    </div>
-                </div> -->
                 <button class="home" id="begin" type="submit">Begin</button>
             </div>
         </div>
         </div>
     </section>
-
-    <!-- questions and answers game screen ADD BACK class="hide-game" to q-and-a container after testing!!!!!-->
+    <!-- questions and answers game screen -->
     <div id=game-screen-container class="hide-game">
         <section id="game-screen" class="hide-game">
             <section id="q-and-a-container" class="hide-game">
@@ -88,13 +74,16 @@
             </section>
         </section>
     </div>
-
+    <!-- END GAME SCREEN -->
     <div id="end-game-container" class="hide">
         <section id="end-screen" class="hide">
             <h2 id="end-message">placer</h2>
-            <img id="venus" class="hide" src="assets/images/venus.webp" alt="painting of the birth of venus by Botticelli">
-            <img id="perseus" class="hide" src="assets/images/Perseus-and-Andromeda.jpeg" alt="painting of perseus and andromeda by frederick leighton">
-            <img id="oedipus" class="hide" src="assets/images/Oedipus.png" alt="painting of Oedipus and the Sphinx by Gustave Moreau">
+            <img id="venus" class="hide" src="assets/images/venus.webp"
+                alt="painting of the birth of venus by Botticelli">
+            <img id="perseus" class="hide" src="assets/images/Perseus-and-Andromeda.jpeg"
+                alt="painting of perseus and andromeda by frederick leighton">
+            <img id="oedipus" class="hide" src="assets/images/Oedipus.png"
+                alt="painting of Oedipus and the Sphinx by Gustave Moreau">
             <button id="play-again">Play again</button>
         </section>
     </div>
