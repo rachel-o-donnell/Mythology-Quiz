@@ -17,8 +17,8 @@ let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, chosenDifficulty;
 let correct, wrong;
-let currentQuestionIndex = 0;
-//let currentGameQuestions = {}
+//let currentQuestionIndex = 0;
+let currentGameQuestions = []
 let ansA = document.getElementById('a');
 let ansB = document.getElementById('b');
 let ansC = document.getElementById('c');
@@ -55,22 +55,110 @@ function beginGame() {
 
 }
 
-// Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
-function shuffle(questions) {
-    for (let i = questions.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [questions[i], questions[j]] = [questions[j], questions[i]];
-    }
-    return questions;
-    //let currentGameQuestions = questions;  
-
-}
 
 function resetAnsBtnColor() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeAttribute('style');
     }
 }
+
+document.getElementById('select').addEventListener('change', function() {
+  chosenDifficulty = this.value;
+  console.log(chosenDifficulty)
+  if (chosenDifficulty === 'easy') {
+    chosenDifficulty = easyCategory
+    shuffle(easyCategory)
+    console.log('SHUFFLE EASY')
+    console.log(easyCategory)
+    chooseNextQuestion()
+  }
+
+/*  if (chosenDifficulty === 'medium') {
+    chosenDifficulty = mediumCategory
+  } */ 
+});
+
+/*
+function shuffle() {
+  randomQuestion = chosenDifficulty.sort(() => Math.random() - .5); 
+}
+*/
+
+// Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
+
+function shuffle(questions) {
+    for (let i = questions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
+    return questions;
+   // let currentGameQuestions = questions; 
+
+}
+
+
+function chooseNextQuestion() {
+  let currentQuestionIndex = 0
+/*  for (let i = 0, i <== questions.length, i++) {
+    console.log(questions)
+  }
+  */
+  displayQuestion(chosenDifficulty[currentQuestionIndex]);
+  queQuestionCount();
+  
+  //currentQuestionIndex ++
+  //question++
+
+
+  /*
+  tutor support :
+  chooseNextQuestion(currentQuestionIndex);
+  chooseNextQuestion(index) {
+  displayQuestion(easyCategory[index]);
+}
+ */
+}
+
+function displayQuestion(question) {
+  questionText.innerHTML = question.question;
+  //displays answers
+  question.answers.forEach((answer, index) => {
+      answerButtons[index].innerHTML = answer;
+  })
+
+let correctAns = question.correct_answer;
+    console.log(correctAns);
+
+
+    ansA.addEventListener('click', checkAns);
+    ansB.addEventListener('click', checkAns);
+    ansC.addEventListener('click', checkAns);
+    ansD.addEventListener('click', checkAns);
+
+
+function checkAns() {
+
+  console.log('you selected ' + this.innerHTML);
+  if (this.innerHTML === correctAns) {
+      console.log('correct!');
+      correct = this;
+      correct.style.backgroundColor = '#004600';
+      adjustScore();
+  }
+  if (this.innerHTML !== correctAns) {
+      console.log('wrong');
+      wrong = this;
+      wrong.style.backgroundColor = '#8B0000';
+  }
+}
+}
+
+nextButton.addEventListener('click', function() {
+  resetAnsBtnColor();
+  //shuffle(easyCategory);
+  chooseNextQuestion();
+  questionOfQuestion();
+});
 
 //function chooseNextQuestion() {
 // displayQuestions(category[index]);
@@ -79,11 +167,9 @@ function resetAnsBtnColor() {
 /* loads questions depending on difficulty chosen, randomises questions and displays 
 the answer options for that particular question */
 
-//event listener for dropdown and identifying what categoty is chosen
-document.getElementById('select').addEventListener('change', function() {
-    chosenDifficulty = this.value;
-//});
+//event listener for dropdown and identifying what category is chosen
 
+/*
 // easy section 
 if (chosenDifficulty === 'easy') {
     shuffle(easyCategory);
@@ -138,7 +224,7 @@ function displayQuestion(question) {
 if (chosenDifficulty === 'medium') {
     shuffle(mediumCategory);
     //randomQuestion = mediumCategory.sort(() => Math.random() - .5);
-    currentQuestionIndex = 0;
+    //currentQuestionIndex = 0;
     chooseNextQuestion();
 
     function chooseNextQuestion() {
@@ -173,9 +259,9 @@ if (chosenDifficulty === 'medium') {
         }
     }
 }
-})
+}) //
 
-
+*/ 
 // GAME PANEL BAR 
 
 // Home button pressed - goes to ghome screen - DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? 
@@ -208,12 +294,14 @@ function questionOfQuestion() {
 }
 
 function queQuestionCount() {
-    if (questionCountDisplay.innerHTML <= quizLength) {
+    if (questionCountDisplay.innerHTML >= quizLength) {
         console.log('queQuestionCount');
-        //chooseNextQuestion();
-    } else {
         endGame();
     }
+        //chooseNextQuestion();
+   // } else {
+   //     endGame();
+    //}
 }
 
 function endGame() {
@@ -222,6 +310,7 @@ function endGame() {
     endScreen.classList.remove('hide');
     gameScreenContainer.style.removeProperty('display');
     endGameContainer.style.display = 'flex';
+    //endMessage()
     endMessage.innerHTML = (`You scored ${score.innerText} out of 8 in the ${chosenDifficulty} category. Ready to play again?`);
     if (chosenDifficulty === 'easy') {
         venus.classList.remove('hide');
@@ -233,3 +322,18 @@ function endGame() {
         oedipus.classList.remove('hide');
     }
 }
+
+/*
+function endMessage() {
+endMessage.innerHTML = (`You scored ${score.innerText} out of 8 in the ${chosenDifficulty} category. Ready to play again?`);
+    if (chosenDifficulty === 'easy') {
+        venus.classList.remove('hide');
+    }
+    if (chosenDifficulty === 'medium') {
+        perseus.classList.remove('hide');
+    }
+    if (chosenDifficulty === 'hard') {
+        oedipus.classList.remove('hide');
+    }
+  }
+  */

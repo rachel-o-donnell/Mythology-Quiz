@@ -190,6 +190,8 @@ h3 {
     margin: 5px auto;
     background-color: #6E6259;
     color: #FAFAD2;
+
+   /* THIS IS NOT RESPONSIVE NEED TO FIX*/
     position: fixed;
     bottom: 136px;
     right: 120px;
