@@ -31,11 +31,17 @@ I do not have the rights to these images they are used for educational purposes 
 Hero image:
 
 end of game : 
+easy
 The Birth of Venus by Botticelli (1486). Photograph: Alamy taken from
 https://www.theguardian.com/artanddesign/2016/mar/05/destination-venus-how-botticelli-became-a-brand
 
-“Perseus and Andromeda” by Frederic Leighton
+medium
+“Perseus and Andromeda” by Frederic Leighton taken from
 https://joyofmuseums.com/artists-index/frederic-leighton/perseus-and-andromeda-by-frederic-leighton/
+
+hard
+"Oedipus and the Sphinx" by Gustave Moreau taken from
+https://www.widewalls.ch/magazine/greek-mythology-paintings/gustave-moreau-oedipus-and-the-sphinx
 
 ## Wireframes:
 
