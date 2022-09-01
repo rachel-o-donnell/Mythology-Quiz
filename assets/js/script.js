@@ -3,6 +3,8 @@ const homeScreenElements = document.getElementsByClassName('home');
 const homeContainer = document.getElementById('home-container');
 const gameScreenElements = document.getElementById('q-and-a-container');
 const nextButton = document.getElementById('next');
+const gameContainer = document.getElementById('game-container');
+const endScreen = document.getElementById('end-screen');
 let username = document.getElementById('name').value;
 let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
@@ -36,7 +38,7 @@ function beginGame() {
   username.textContent = username;
   score.innerHTML = 0;
   questionCountDisplay.innerHTML = 1;
-  queQuestionCount();
+  
 }
 
 // Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
@@ -82,6 +84,7 @@ document.getElementById('select').addEventListener('change', function () {
 
   function chooseNextQuestion() {
   displayQuestion(easyCategory[currentQuestionIndex]);
+  queQuestionCount();
   }
 
 
@@ -202,8 +205,9 @@ function questionOfQuestion() {
 }
 
 function queQuestionCount() {
-if (questionCountDisplay.innerHTML >= quizLength) {
-  chooseNextQuestion();
+if (questionCountDisplay.innerHTML <= quizLength) {
+ console.log('queQuestionCount')
+  //chooseNextQuestion();
 }
 else {
   endGame()
@@ -212,6 +216,17 @@ else {
 
 function endGame() {
   console.log('game ended')
+  gameScreenElements.classList.add('hide-game');
+  gameContainer.classList.add('hide');
+  endScreen.classList.remove('hide');
+
+ // let statsText = document.createElement('h2');
+ // statsText.innerHTML = `Congratulations you scored ${score} in ${chosenDifficulty}`
+  //let gameScreen = document.getElementById('game-screen')
+  //let endGameDisplay = document.createAttribute('div');
+  //const tryAgain = endGameDisplay.document.createElement('button');
+  //tryAgain.innerHTML = "Try again"
+  
 }
 //game over 
 //tally the points?/difficulty etc

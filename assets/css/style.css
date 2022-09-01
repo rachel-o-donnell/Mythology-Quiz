@@ -43,7 +43,8 @@ h2 {
 }
 
 #home-container,
-#game-screen-container {
+#game-screen-container,
+#end-game-container {
     display: flex;
     height: 560px;
     justify-content: center;
@@ -52,12 +53,15 @@ h2 {
     margin: 0 auto;
 }
 
+
+
 #home-screen {
     justify-content: space-evenly;
 }
 
 #game-screen,
-#home-screen {
+#home-screen,
+#end-screen {
     background-color: #e3a857;
     height: 90%;
     width: 75%;
@@ -70,6 +74,9 @@ h2 {
 
 }
 
+#end-screen {
+    justify-content: space-around;
+}
 /* initial start screen*/
 
 .name-area>li {
