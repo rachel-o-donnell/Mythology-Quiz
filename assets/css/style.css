@@ -64,7 +64,10 @@ h2 {
 #game-screen,
 #home-screen,
 #end-screen {
-    background-color: #e3a857;
+   /* background-color:rgba(227, 169, 87, 0.800);*/
+    background-color: #e3a857; 
+    /* really like this but not sure about accessability 
+    background-color: rgba(224, 199, 199, 0.28);*/
     height: 90%;
     width: 75%;
     display: flex;

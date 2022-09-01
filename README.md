@@ -214,6 +214,8 @@ Could not make home ontaner disappear by adding any of the hide classes I had pr
 
 game kept getting reset to home when answer button was pressed - Changed form to section and that fixed the problem thanks to Sean Young's help on Slack!
 
+game screens not displaying because they had been set to flex i style.css so I made JS add display style to only brin up the containers with display flex when they were called by a function like- begin and endgame. 
+
 TO BE FIXED: 
 html dropdown styling does not work.  IS IT BECAUSE I CHANGED TO FORM??? 
 --- 
