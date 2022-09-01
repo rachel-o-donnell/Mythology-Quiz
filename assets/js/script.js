@@ -1,9 +1,11 @@
 const beginBtn = document.getElementById('begin');
 const homeScreenElements = document.getElementsByClassName('home');
 const homeContainer = document.getElementById('home-container');
+const gameScreenContainer = document.getElementById('game-screen-container')
 const gameScreenElements = document.getElementById('q-and-a-container');
 const nextButton = document.getElementById('next');
 const gameContainer = document.getElementById('game-container');
+const endGameContainer = document.getElementById('end-game-container')
 const endScreen = document.getElementById('end-screen');
 let username = document.getElementById('name').value;
 let score = document.getElementById('score');
@@ -34,6 +36,7 @@ function beginGame() {
     elements.classList.add('hide-home');
   }
   homeContainer.style.display = 'none';
+  gameScreenContainer.style.display = 'flex';
   gameScreenElements.classList.remove('hide-game');
   username.textContent = username;
   score.innerHTML = 0;
@@ -219,6 +222,7 @@ function endGame() {
   gameScreenElements.classList.add('hide-game');
   gameContainer.classList.add('hide');
   endScreen.classList.remove('hide');
+  endGameContainer.style.display = 'flex';
 
  // let statsText = document.createElement('h2');
  // statsText.innerHTML = `Congratulations you scored ${score} in ${chosenDifficulty}`

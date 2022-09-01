@@ -45,7 +45,6 @@ h2 {
 #home-container,
 #game-screen-container,
 #end-game-container {
-    display: flex;
     height: 560px;
     justify-content: center;
     align-items: center;
@@ -54,6 +53,9 @@ h2 {
 }
 
 
+#home-container {
+    display: flex;
+}
 
 #home-screen {
     justify-content: space-evenly;
