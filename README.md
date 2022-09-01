@@ -179,6 +179,12 @@ and with separating the font awesome icon so it still deisplays with the new tex
 
 HTML DROPDOWN MENU: 
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_value
+
+MAKING THE NEXT BUTTON STICK IN THE ONE PLACE (FOR BETTER USER EXPERIENCE)
+https://stackoverflow.com/questions/30026487/how-to-make-a-button-stay-at-a-bottom-of-a-screen
+ans from Nilesh Mahajan then I played in dev tools untill I was happy with the position
+
+
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
 
