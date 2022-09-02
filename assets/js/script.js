@@ -25,10 +25,7 @@ let ansD = document.getElementById('d');
 let quizLength = 8;
 let endMessage = document.getElementById('end-message');
 let correctAns;
-//let selectedAns;
-//let randomQuestion
-//let currentQuestionIndex = 0;
-//let currentGameQuestions = [];
+let currentQuestionIndex = 0;
 
 
 // EVENT LISTENERS
@@ -39,10 +36,9 @@ playAgain.addEventListener('click', goHome); // PLAY AGAIN BUTTON - RESETS THE G
 
 // !!!!!!  NEED TO DISABLE THESE WHEN ONE IS CLICKED AND ONLY ALLOW NEXT BUTTON TO BE PRESSES WHEN ANSWERED . ADD HOVER? !!!!! 
 ansA.addEventListener('click', checkAns); // ANSWER BUTTONS - CHECKS IF THE SELECTED ANSWER IS CORRECT OR WRONG
-ansB.addEventListener('click', checkAns); 
+ansB.addEventListener('click', checkAns);
 ansC.addEventListener('click', checkAns);
 ansD.addEventListener('click', checkAns);
-
 
 
 // SETS USERNAME IN PANEL WHEN CALLED
@@ -78,30 +74,30 @@ function resetAnsBtnColor() {
 
 
 // IDENTIFIES USERS CHOSEN DIFFICULTY FROM DROPDOWN AND LOADS AND RANDOMISES CORRESPONDING CATEGORY
-document.getElementById('select').addEventListener('change', function() {
-  chosenDifficulty = this.value;
-  console.log(chosenDifficulty);
+document.getElementById('select').addEventListener('change', function () {
+    chosenDifficulty = this.value;
+    console.log(chosenDifficulty);
 
-  if (chosenDifficulty === 'easy') {
-    chosenDifficulty = easyCategory;
-    level = 'easy';
-    shuffle(easyCategory);
-    chooseNextQuestion();
-  }
+    if (chosenDifficulty === 'easy') {
+        chosenDifficulty = easyCategory;
+        level = 'easy';
+        shuffle(easyCategory);
+        chooseNextQuestion();
+    }
 
- if (chosenDifficulty === 'medium') {
-    chosenDifficulty = mediumCategory;
-    level = 'medium';
-    shuffle(mediumCategory);
-    chooseNextQuestion();
-  } 
+    if (chosenDifficulty === 'medium') {
+        chosenDifficulty = mediumCategory;
+        level = 'medium';
+        shuffle(mediumCategory);
+        chooseNextQuestion();
+    }
 
-  if (chosenDifficulty === 'hard') {
-    chosenDifficulty = hardCategory;
-    level = 'hard';
-    shuffle(hardCategory);
-    chooseNextQuestion();
-  } 
+    if (chosenDifficulty === 'hard') {
+        chosenDifficulty = hardCategory;
+        level = 'hard';
+        shuffle(hardCategory);
+        chooseNextQuestion();
+    }
 });
 
 /* ORIGINAL SHUFFLE 
@@ -119,73 +115,62 @@ function shuffle(questions) {
         [questions[i], questions[j]] = [questions[j], questions[i]];
     }
     return questions;
-   // let currentGameQuestions = questions; 
+    // let currentGameQuestions = questions; 
 
 }
 
 // 
 function chooseNextQuestion() {
-  let currentQuestionIndex = 0; 
-/*  for (let i = 0, i <== questions.length, i++) {
-    console.log(questions)
-  }
-  */
-  displayQuestion(chosenDifficulty[currentQuestionIndex]);
-  queQuestionCount();
-  
-  //currentQuestionIndex ++
-  //question++
 
-  /*
-  tutor support :
-  chooseNextQuestion(currentQuestionIndex);
-  chooseNextQuestion(index) {
-  displayQuestion(easyCategory[index]);
-}
- */
+    /*  for (let i = 0, i <== questions.length, i++) {
+        console.log(questions)
+      }
+      */
+    displayQuestion(chosenDifficulty[currentQuestionIndex]);
+    queQuestionCount();
+
 }
 
-// NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER
+// NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION
 
-// ------- !!!NEED TO GET IT TO CALL NEXT QUESTION AND ANSWER SET!!!
-nextButton.addEventListener('click', function() {
+nextButton.addEventListener('click', function () {
     resetAnsBtnColor();
     //shuffle(easyCategory); ---- THIS JuST SHUFFLES THE CATEGORY EACH TIME SO CAN END UP WITH SAME QUESTION IN THE GAME
-   
+    currentQuestionIndex++;
     chooseNextQuestion();
     questionOfQuestion();
-  });
-  
+});
+
 
 // DISPLAYS QUESTION AND ANSWERS 
 function displayQuestion(question) {
-  questionText.innerHTML = question.question;
-  //displays answers
-  question.answers.forEach((answer, index) => {
-      answerButtons[index].innerHTML = answer;
-  });
+    questionText.innerHTML = question.question;
+    //displays answers
+    question.answers.forEach((answer, index) => {
+        answerButtons[index].innerHTML = answer;
+    });
 
-  correctAns = question.correct_answer;
+    correctAns = question.correct_answer;
     console.log(correctAns);
 
 }
-    //selectedAns = this.innerHTML
+//selectedAns = this.innerHTML
 
 // CHECKS ANSWERS AND CHANGES COLOR OF SELECTED BUTTONS TO RED OR GREEN ACCORDINGLY
 function checkAns() {
 
-  console.log('you selected ' + this.innerHTML);
-  if (this.innerHTML === correctAns) {
-      console.log('correct!');
-      correct = this;
-      correct.style.backgroundColor = '#004600';
-      adjustScore();
-  }
-  if (this.innerHTML !== correctAns) {
-      console.log('wrong');
-      wrong = this;
-      wrong.style.backgroundColor = '#8B0000';
-  }
+    console.log('you selected ' + this.innerHTML);
+    if (this.innerHTML === correctAns) {
+        console.log('correct!');
+        correct = this;
+        correct.style.backgroundColor = '#004600';
+        adjustScore();
+    }
+    if (this.innerHTML !== correctAns) {
+        console.log('wrong');
+        wrong = this;
+        wrong.style.backgroundColor = '#8B0000';
+    }
 }
 //}
 
@@ -232,9 +217,9 @@ function queQuestionCount() {
         console.log('queQuestionCount');
         endGame();
     }
-        //chooseNextQuestion();
-   // } else {
-   //     endGame();
+    //chooseNextQuestion();
+    // } else {
+    //     endGame();
     //}
 }
 
@@ -258,113 +243,6 @@ function endGame() {
     }
     if (level === 'hard') {
         oedipus.classList.remove('hide');
-       
+
     }
 }
-
-
-
-// OLD CODE FOR DISPLAYING Q&A _ WORKED BUT ALSO WAS TERRIBLY STRUCTURED AND WOULD REPEAT CALLS ON CONSOLE> 
-
-
-//function chooseNextQuestion() {
-// displayQuestions(category[index]);
-//}
-
-/* loads questions depending on difficulty chosen, randomises questions and displays 
-the answer options for that particular question */
-
-//event listener for dropdown and identifying what category is chosen
-
-/*
-// easy section 
-if (chosenDifficulty === 'easy') {
-    shuffle(easyCategory);
-    chooseNextQuestion();
-}
-
-function chooseNextQuestion() {
-    displayQuestion(easyCategory[currentQuestionIndex]);
-    queQuestionCount();
-}
-
-function displayQuestion(question) {
-    questionText.innerHTML = question.question;
-    //displays answers
-    question.answers.forEach((answer, index) => {
-        answerButtons[index].innerHTML = answer;
-    });
-
-    let correctAns = question.correct_answer;
-    console.log(correctAns);
-
-    ansA.addEventListener('click', checkAns);
-    ansB.addEventListener('click', checkAns);
-    ansC.addEventListener('click', checkAns);
-    ansD.addEventListener('click', checkAns);
-
-    function checkAns() {
-
-        console.log('you selected ' + this.innerHTML);
-        if (this.innerHTML === correctAns) {
-            console.log('correct!');
-            correct = this;
-            correct.style.backgroundColor = '#004600';
-            adjustScore();
-        }
-        if (this.innerHTML !== correctAns) {
-            console.log('wrong');
-            wrong = this;
-            wrong.style.backgroundColor = '#8B0000';
-        }
-    }
-
-    nextButton.addEventListener('click', function() {
-        resetAnsBtnColor();
-        shuffle(easyCategory);
-        chooseNextQuestion();
-        questionOfQuestion();
-    });
-}
-
-//medium section
-if (chosenDifficulty === 'medium') {
-    shuffle(mediumCategory);
-    //randomQuestion = mediumCategory.sort(() => Math.random() - .5);
-    //currentQuestionIndex = 0;
-    chooseNextQuestion();
-
-    function chooseNextQuestion() {
-        displayQuestion(randomQuestion[currentQuestionIndex]);
-    }
-
-    function displayQuestion(question) {
-        questionText.innerHTML = question.question;
-        //displays answers
-        question.answers.forEach((answer, index) => {
-            answerButtons[index].innerHTML = answer;
-        });
-    }
-
-    // hard section
-    if (chosenDifficulty === 'hard') {
-        shuffle(hardCategory);
-        //randomQuestion = hardCategory.sort(() => Math.random() - .5);
-        currentQuestionIndex = 0;
-        chooseNextQuestion();
-
-        function chooseNextQuestion() {
-            displayQuestion(randomQuestion[currentQuestionIndex]);
-        }
-
-        function displayQuestion(question) {
-            questionText.innerHTML = question.question;
-            //displays answers
-            question.answers.forEach((answer, index) => {
-                answerButtons[index].innerHTML = answer;
-            });
-        }
-    }
-}
-}) //
-*/
