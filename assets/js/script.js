@@ -16,6 +16,7 @@ let questionCountDisplay = document.getElementById('question-count-display');
 let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, chosenDifficulty;
+let level;
 let correct, wrong;
 //let currentQuestionIndex = 0;
 let currentGameQuestions = [];
@@ -71,6 +72,7 @@ document.getElementById('select').addEventListener('change', function() {
   console.log(chosenDifficulty);
   if (chosenDifficulty === 'easy') {
     chosenDifficulty = easyCategory;
+    level = 'easy';
     shuffle(easyCategory);
     console.log('SHUFFLE EASY');
     console.log(easyCategory);
@@ -78,7 +80,8 @@ document.getElementById('select').addEventListener('change', function() {
   }
 
  if (chosenDifficulty === 'medium') {
-    chosenDifficulty = mediumCategory
+    chosenDifficulty = mediumCategory;
+    level = 'medium';
     shuffle(mediumCategory);
     console.log('SHUFFLE MEDIUM');
     console.log(mediumCategory);
@@ -86,7 +89,8 @@ document.getElementById('select').addEventListener('change', function() {
   } 
 
   if (chosenDifficulty === 'hard') {
-    chosenDifficulty = hardCategory
+    chosenDifficulty = hardCategory;
+    level = 'hard';
     shuffle(hardCategory);
     console.log('SHUFFLE HARD');
     console.log(hardCategory);
@@ -323,15 +327,16 @@ function endGame() {
     gameScreenContainer.style.removeProperty('display');
     endGameContainer.style.display = 'flex';
     //endMessage()
-    endMessage.innerHTML = (`You scored ${score.innerText} out of 8 in the ${chosenDifficulty} category. Ready to play again?`);
-    if (chosenDifficulty === 'easy') {
+    endMessage.innerHTML = (`You scored ${score.innerText} out of 8 in the ${level} category. Ready to play again?`);
+    if (level === 'easy') {
         venus.classList.remove('hide');
     }
-    if (chosenDifficulty === 'medium') {
+    if (level === 'medium') {
         perseus.classList.remove('hide');
     }
-    if (chosenDifficulty === 'hard') {
+    if (level === 'hard') {
         oedipus.classList.remove('hide');
+       
     }
 }
 
