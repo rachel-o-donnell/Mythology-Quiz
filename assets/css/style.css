@@ -68,7 +68,7 @@ h1 {
     font-size: 3rem;
     text-align: center;
     margin-top: 5%;
-    margin-bottom: 6%;
+    margin-bottom: 2%;
     color: #FAFAD2;
 }
 
@@ -165,9 +165,9 @@ button {
     color: #FAFAD2;
 }
 
-/* !!!!! THIS KEEPS FUCKING UP MY GRID FOR BUTTONS */ 
+/* !!!!! THIS KEEPS FUCKING UP MY GRID FOR BUTTONS */
 #button-container {
-display: flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -258,9 +258,9 @@ h3 {
 }
 
 @media screen and (min-width: 30em) {
-   
-        
-        /* GAP DOES SOMETING WEIRD IF I INSCREASE ITS NOT EVEN
+}
+
+    /* GAP DOES SOMETING WEIRD IF I INSCREASE ITS NOT EVEN
     }
 }
 
@@ -278,15 +278,25 @@ h3 {
 
 /* for screens that are 769px or above*/
 
-@media screen and (min-width: 48em) {}
-#button-container {
-    display: grid;
-    grid-template-columns: 50% auto;
-    gap: 10px;
-    align-content: space-evenly;
-    align-items: center;
-    margin-top: 20px;
-/*
+    @media screen and (min-width: 48em) {
+        #button-container {
+            display: grid;
+            grid-template-columns: 50% auto;
+            gap: 10px;
+            align-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+        }
+    }
+
+    @media screen and (min-width: 48em) {
+        header {
+            font-size: 1.3rem;
+            margin: 15px 3px 9px 22px;
+        }
+    }
+
+    /*
 .label {
     margin-right: 20px
 }
