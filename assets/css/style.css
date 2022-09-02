@@ -20,7 +20,7 @@ body {
 /* hides screens that are not needed untill called */
 
 header {
-    margin-left: 20px;
+    margin: 10px 0 0 20px;
 }
 
 /* game-panel */
@@ -235,7 +235,23 @@ h3 {
     width: 55%
 }
 
-/* media queries for all screens more than iphone
+/* media queries for all screens more than iphone */
+/* breakpoints taken from my last project.
+
+/* for screens that are 481px or above*/
+@media screen and (min-width: 30em) {
+
+    
+}
+
+/* for screens that are 769px or above*/
+
+@media screen and (min-width: 48em) {
+
+    
+}
+
+/*
 .label {
     margin-right: 20px
 }
