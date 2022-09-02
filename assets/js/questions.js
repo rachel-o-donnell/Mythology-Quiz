@@ -1,3 +1,5 @@
+// EASY QUESTIONS 
+
 const easyCategory = [{
         difficulty: "easy",
         question: "The ancient Roman god of war was commonly known as which of the following?",
@@ -126,6 +128,7 @@ const easyCategory = [{
     }
 ];
 
+// MEDIUM QUESTIONS 
 
 const mediumCategory = [{
 
@@ -262,7 +265,7 @@ const mediumCategory = [{
 ];
 
 
-
+// HARD QUESTIONS 
 const hardCategory = [{
         difficulty: "hard",
         question: "Talos, the mythical giant bronze man, was the protector of which island?",
