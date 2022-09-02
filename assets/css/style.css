@@ -24,6 +24,10 @@ header {
     align-items: flex-end;
 }
 
+.panel-element {
+    margin-right: 5px;
+}
+
 .hide {
     display: none;
 }
@@ -92,9 +96,9 @@ h2 {
 }
 
 #game-screen {
-    display: flex; 
+    display: flex;
     height: 100%;
-  /*  display: grid; */
+    /*  display: grid; */
     grid-template-rows: 10% 20% 10% 10% 10% 20%;
     height: 100%;
     grid-template-columns: 50% auto;
@@ -169,7 +173,7 @@ button {
 /* game panel icons*/
 
 .fa-solid {
-    margin: 0 5px 10px;
+    margin: 5px 10px;
     background-color: #e3a857;
 }
 
@@ -194,7 +198,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     color: #380456;
-    
+
 }
 
 /* next button */
@@ -204,7 +208,7 @@ h3 {
     background-color: #6E6259;
     color: #FAFAD2;
 
-   /* THIS IS NOT RESPONSIVE NEED TO FIX*/
+    /* THIS IS NOT RESPONSIVE NEED TO FIX*/
     /*position: fixed;
     bottom: 136px;
     right: 120px;
@@ -215,6 +219,7 @@ h3 {
     display: flex;
 
 }
+
 #venus {
     width: 85%
 }
