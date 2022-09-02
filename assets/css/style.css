@@ -182,6 +182,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     color: #380456;
+    
 }
 
 /* next button */
@@ -192,11 +193,16 @@ h3 {
     color: #FAFAD2;
 
    /* THIS IS NOT RESPONSIVE NEED TO FIX*/
-    position: fixed;
+    /*position: fixed;
     bottom: 136px;
     right: 120px;
+    */
 }
 
+#next-container {
+    display: flex;
+
+}
 #venus {
     width: 85%
 }
@@ -213,4 +219,13 @@ h3 {
 
 h2 {
     font-size: 
+
+initial grid tests for q@A aread
+    grid-template-columns: 50% auto;
+    grid-template-areas: "question"
+    "a" "b"
+    "c" "d"
+    "next";
+
+    DO I STILL NEED THE NEXT BUTTON CONTAINER IF I USE GRID?
 */
