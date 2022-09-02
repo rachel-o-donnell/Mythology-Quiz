@@ -241,8 +241,15 @@ game screens not displaying because they had been set to flex i style.css so I m
 Fix bug of not displaying the next question"
 needed to inscrease currentquestion index in next button call and declare the variable outside of the choose next question function
 
+fa-solid was at 0 5px 10px so would not manipulate with margin- right (I renamed them panel-elements)
+
+major overhaul of html structure - trying to get panel to separate and run on the same line but after fixing home by adding the display flex the user icon still runs lower than the others . Tried flex end but that doesnt move it and when I apply that to the others they move way too low.
+--- !!!!!!!!cone back to this I think
+
 TO BE FIXED: 
 html dropdown styling does not work.  IS IT BECAUSE I CHANGED TO FORM??? 
+
+
 --- 
 
 ## RESOURCES USED:

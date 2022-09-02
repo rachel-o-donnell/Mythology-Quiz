@@ -208,7 +208,7 @@ function adjustScore() {
 function questionOfQuestion() {
     console.log('questionCountDisplay');
     let questionCount = parseInt(questionCountDisplay.innerText);
-    questionCountDisplay.innerText = ++questionCount;
+    questionCountDisplay.innerHTML = ++questionCount;
 }
 
 // CHECKS THE QUESTION COUNT AND CALLS TO END THE GAME WHEN IT REACHES 9 

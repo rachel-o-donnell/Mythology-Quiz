@@ -20,13 +20,35 @@ body {
 /* hides screens that are not needed untill called */
 
 header {
+    margin-left: 20px;
+}
+
+/* game-panel */
+
+header, 
+#home-btn {
     display: flex;
-    align-items: flex-end;
 }
 
 .panel-element {
-    margin-right: 5px;
+    display: flex
 }
+
+
+#game-panel {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: #e3a857;
+    margin-top: 5px;
+}
+
+.game-panel-containers {
+    display: flex;
+    margin-right: 20px;
+}
+/* game panel icons*/
 
 .hide {
     display: none;
@@ -160,30 +182,14 @@ button {
     color: #380456;
 }
 
-/* game-panel */
-#game-panel {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    align-items: flex-end;
-    background-color: #e3a857;
-    margin-top: 5px;
-}
 
-/* game panel icons*/
 
-.fa-solid {
-    margin: 5px 10px;
-    background-color: #e3a857;
-}
 
 /* game panel containers - to style icon and info beside
  each other but still spaced out on screen */
 
 
-.game-panel-containers {
-    display: flex
-}
+
 
 h3 {
     background-color: #e3a857;
