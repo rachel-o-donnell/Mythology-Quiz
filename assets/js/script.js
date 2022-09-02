@@ -18,14 +18,14 @@ let answerButtons = document.getElementsByClassName('ans-btn');
 let randomQuestion, chosenDifficulty;
 let correct, wrong;
 //let currentQuestionIndex = 0;
-let currentGameQuestions = []
+let currentGameQuestions = [];
 let ansA = document.getElementById('a');
 let ansB = document.getElementById('b');
 let ansC = document.getElementById('c');
 let ansD = document.getElementById('d');
 let quizLength = 8;
 let endMessage = document.getElementById('end-message');
-
+let selectedAns;
 
 // EVENT LISTENERS
 beginBtn.addEventListener('click', beginGame);
@@ -33,6 +33,10 @@ document.getElementById('home.btn').addEventListener('click', goHome);
 // PLAY AGAIN BUTTON - RESETS THE GAME TO THE START
 playAgain.addEventListener('click', goHome);
 
+ansA.addEventListener('click', checkAns);
+ansB.addEventListener('click', checkAns);
+ansC.addEventListener('click', checkAns);
+ansD.addEventListener('click', checkAns);
 //begins game - hides home container, shows game screen, sets username in game panel, sets score to zero
 
 function setUsername() {
@@ -64,18 +68,30 @@ function resetAnsBtnColor() {
 
 document.getElementById('select').addEventListener('change', function() {
   chosenDifficulty = this.value;
-  console.log(chosenDifficulty)
+  console.log(chosenDifficulty);
   if (chosenDifficulty === 'easy') {
-    chosenDifficulty = easyCategory
-    shuffle(easyCategory)
-    console.log('SHUFFLE EASY')
-    console.log(easyCategory)
-    chooseNextQuestion()
+    chosenDifficulty = easyCategory;
+    shuffle(easyCategory);
+    console.log('SHUFFLE EASY');
+    console.log(easyCategory);
+    chooseNextQuestion();
   }
 
-/*  if (chosenDifficulty === 'medium') {
+ if (chosenDifficulty === 'medium') {
     chosenDifficulty = mediumCategory
-  } */ 
+    shuffle(mediumCategory);
+    console.log('SHUFFLE MEDIUM');
+    console.log(mediumCategory);
+    chooseNextQuestion();
+  } 
+
+  if (chosenDifficulty === 'hard') {
+    chosenDifficulty = hardCategory
+    shuffle(hardCategory);
+    console.log('SHUFFLE HARD');
+    console.log(hardCategory);
+    chooseNextQuestion();
+  } 
 });
 
 /*
@@ -98,7 +114,7 @@ function shuffle(questions) {
 
 
 function chooseNextQuestion() {
-  let currentQuestionIndex = 0
+  let currentQuestionIndex = 0;
 /*  for (let i = 0, i <== questions.length, i++) {
     console.log(questions)
   }
@@ -126,15 +142,11 @@ function displayQuestion(question) {
       answerButtons[index].innerHTML = answer;
   })
 
-let correctAns = question.correct_answer;
+  correctAns = question.correct_answer;
     console.log(correctAns);
 
-
-    ansA.addEventListener('click', checkAns);
-    ansB.addEventListener('click', checkAns);
-    ansC.addEventListener('click', checkAns);
-    ansD.addEventListener('click', checkAns);
-
+}
+    //selectedAns = this.innerHTML
 
 function checkAns() {
 
@@ -151,7 +163,7 @@ function checkAns() {
       wrong.style.backgroundColor = '#8B0000';
   }
 }
-}
+//}
 
 nextButton.addEventListener('click', function() {
   resetAnsBtnColor();
