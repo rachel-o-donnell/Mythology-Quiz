@@ -285,17 +285,20 @@ h3 {
 }
 }
 
+@media screen and (min-width: 30em) {
+    #oedipus {
+        width: 40%;
+    }
+}
+
+
+/* EXTRA BREAKPOINT FOR THESE IMAGES */
 @media screen and (min-width: 40em) {
     #perseus {
         width: 30%;
     }
 }
 
-@media screen and (min-width: 30em) {
-    #oedipus {
-        width: 40%;
-    }
-}
 
 @media screen and (min-width: 40em) {
     #oedipus {
@@ -320,6 +323,18 @@ h3 {
         font-size: 1.3rem;
         margin: 15px 3px 9px 22px;
     }
+}
+
+@media screen and (min-width: 48em) {
+    h1 {
+        font-size: 4rem;      
+}
+}
+
+@media screen and (min-width: 48em) {
+    h2 {
+        font-size: 2rem;      
+}
 }
 
 @media screen and (min-width: 48em) {
