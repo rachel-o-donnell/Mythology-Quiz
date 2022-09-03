@@ -163,8 +163,14 @@ button {
     padding: 10px;
     background-color: #6E6259;
     color: #FAFAD2;
+    
 }
 
+button:hover {
+    background-color: #FAFAD2;
+    color: #6E6259;
+    
+}
 /* !!!!! THIS KEEPS FUCKING UP MY GRID FOR BUTTONS */
 #button-container {
     display: flex;
