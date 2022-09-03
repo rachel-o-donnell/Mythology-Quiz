@@ -199,6 +199,8 @@ h3 {
     background-color: #e3a857;
     color: #301934;
     margin: 10px;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -315,6 +317,12 @@ h3 {
         align-content: space-evenly;
         align-items: center;
         margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    #q-and-a-container {
+        width: 90%;
     }
 }
 
