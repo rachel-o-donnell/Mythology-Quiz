@@ -166,6 +166,11 @@ button {
     
 }
 
+.ans-btn:hover {
+    background-color:#FAFAD2;
+    color: #6E6259; ;
+}
+
 button:hover {
     background-color: #FAFAD2;
     color: #6E6259;

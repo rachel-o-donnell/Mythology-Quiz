@@ -41,9 +41,6 @@ ansB.addEventListener('click', checkAns);
 ansC.addEventListener('click', checkAns);
 ansD.addEventListener('click', checkAns);
 
-//RESETS DROPDOWN MENU TO DEFAULT
-
-
 
 // SETS USERNAME IN PANEL WHEN CALLED
 function setUsername() {
@@ -73,8 +70,8 @@ function beginGame() {
 function resetAnsBtnColor() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeAttribute('style');
-        //answerButtons[i].addClick
     }
+    
 }
 
 
@@ -105,12 +102,6 @@ document.getElementById('select').addEventListener('change', function () {
     }
 });
 
-/* ORIGINAL SHUFFLE 
-function shuffle() {
-  randomQuestion = chosenDifficulty.sort(() => Math.random() - .5); 
-}
-*/
-
 // Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
 
 // SHUFFLES QUESTIONS OF WHATEVER CATERGORY IS CHOSEN. 
@@ -120,58 +111,46 @@ function shuffle(questions) {
         [questions[i], questions[j]] = [questions[j], questions[i]];
     }
     return questions;
-    // let currentGameQuestions = questions; 
 }
 
 // 
 function chooseNextQuestion() {
-
-    /*  for (let i = 0, i <== questions.length, i++) {
-        console.log(questions)
-      }
-      */
     displayQuestion(chosenDifficulty[currentQuestionIndex]);
     queQuestionCount();
-
 }
 
 // NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION
 
 nextButton.addEventListener('click', function () {
     resetAnsBtnColor();
-    //shuffle(easyCategory); ---- THIS JuST SHUFFLES THE CATEGORY EACH TIME SO CAN END UP WITH SAME QUESTION IN THE GAME
     currentQuestionIndex++;
     chooseNextQuestion();
     questionOfQuestion();
     addClick();
+    
 });
 
 
 // DISPLAYS QUESTION AND ANSWERS 
 function displayQuestion(question) {
     questionText.innerHTML = question.question;
-    //displays answers
     question.answers.forEach((answer, index) => {
         answerButtons[index].innerHTML = answer;
     });
-
     correctAns = question.correct_answer;
     console.log(correctAns);
-
 }
 
 
 // CHECKS ANSWERS AND CHANGES COLOR OF SELECTED BUTTONS TO RED OR GREEN ACCORDINGLY
 function checkAns() {
-
-    console.log('you selected ' + this.innerHTML);
     if (this.innerHTML === correctAns) {
         console.log('correct!');
         correct = this;
         correct.style.backgroundColor = '#004600';
         adjustScore();
         removeClick();
-
+        
     }
     if (this.innerHTML !== correctAns) {
         console.log('wrong');
@@ -187,6 +166,7 @@ function removeClick() {
     ansB.removeEventListener("click", checkAns);
     ansC.removeEventListener("click", checkAns);
     ansD.removeEventListener("click", checkAns);
+  
 }
 
 // ADDS BACK EVENT LISTENERS TO ANSWER BUTTONS WHEN NEXT BUTTON IS PRESSED.
@@ -195,11 +175,11 @@ function addClick() {
     ansB.addEventListener('click', checkAns);
     ansC.addEventListener('click', checkAns);
     ansD.addEventListener('click', checkAns);
+
 }
 
 // GAME PANEL BAR 
 
-// Home button pressed - goes to home screen - 
 
 // RESETS GAME TO HOME SCREEN WHEN PRESSED 
 
@@ -214,7 +194,6 @@ function goHome() {
     endGameContainer.classList.add('hide');
     endGameContainer.removeAttribute('style');
     reloadGame();
-
 }
 
 
@@ -250,7 +229,7 @@ function endGame() {
     gameScreenContainer.style.removeProperty('display');
     endGameContainer.style.display = 'flex';
     //endMessage()
-    endMessage.innerHTML = (`You scored ${score.innerText} out of 8 in the ${level} category. Ready to play again?`);
+    endMessage.innerHTML = (`${username.innerText}, you scored ${score.innerText} out of 8 in the ${level} category. Ready to play again?`);
     if (level === 'easy') {
         venus.classList.remove('hide');
         perseus.classList.add('hide');
@@ -273,3 +252,20 @@ function endGame() {
 function reloadGame() {
     document.location.reload();
 }
+
+/*
+for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].removeAttribute('ans-btn:hover');
+}
+
+for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addAttribute('ans-btn:hover');
+}
+
+for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].classList.remove('ans-btn:hover');
+}
+
+for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].classList.remove('ans-btn:hover');
+}*/
