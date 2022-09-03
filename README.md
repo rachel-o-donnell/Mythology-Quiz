@@ -246,6 +246,8 @@ fa-solid was at 0 5px 10px so would not manipulate with margin- right (I renamed
 major overhaul of html structure - trying to get panel to separate and run on the same line but after fixing home by adding the display flex the user icon still runs lower than the others . Tried flex end but that doesnt move it and when I apply that to the others they move way too low.
 --- !!!!!!!!cone back to this I think
 
+Fix bug of other category image showing up on 2nd round - needed to add hides 
+
 TO BE FIXED: 
 html dropdown styling does not work.  IS IT BECAUSE I CHANGED TO FORM??? 
 
