@@ -187,15 +187,6 @@ button {
     color: #380456;
 }
 
-
-
-
-/* game panel containers - to style icon and info beside
- each other but still spaced out on screen */
-
-
-
-
 h3 {
     background-color: #e3a857;
     color: #301934;
@@ -268,22 +259,6 @@ h3 {
         margin-right: 40px;
     }
 }
-
-/* GAP DOES SOMETING WEIRD IF I INSCREASE ITS NOT EVEN
-    }
-}
-
-@media screen and (min-width: 30em) {
-    select {
-        font-size: 1.3rem;
-    }
-}
-
-@media screen and (min-width: 30em) {
-    .game-panel-containers {
-        margin-right: 40px;
-    }
-}  */
 
 
 @media screen and (min-width: 30em) {
@@ -380,21 +355,3 @@ h3 {
         width: 20%;
     }
 }
-
-/*
-.label {
-    margin-right: 20px
-}
-
-h2 {
-    font-size: 
-
-initial grid tests for q@A aread
-    grid-template-columns: 50% auto;
-    grid-template-areas: "question"
-    "a" "b"
-    "c" "d"
-    "next";
-
-    DO I STILL NEED THE NEXT BUTTON CONTAINER IF I USE GRID?
-*/

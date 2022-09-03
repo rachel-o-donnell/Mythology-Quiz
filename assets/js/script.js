@@ -65,9 +65,7 @@ function beginGame() {
     setUsername();
     score.innerHTML = 0;
     questionCountDisplay.innerHTML = 1;
-   // shuffle(questions);
-    // shuffle()
-
+    
 }
 
 // RESETS COLOUR OF ANSWER BUTTONS
@@ -75,6 +73,7 @@ function beginGame() {
 function resetAnsBtnColor() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeAttribute('style');
+        //answerButtons[i].addClick
     }
 }
 
@@ -144,6 +143,7 @@ nextButton.addEventListener('click', function () {
     currentQuestionIndex++;
     chooseNextQuestion();
     questionOfQuestion();
+    addClick();
 });
 
 
@@ -159,7 +159,7 @@ function displayQuestion(question) {
     console.log(correctAns);
 
 }
-//selectedAns = this.innerHTML
+
 
 // CHECKS ANSWERS AND CHANGES COLOR OF SELECTED BUTTONS TO RED OR GREEN ACCORDINGLY
 function checkAns() {
@@ -170,22 +170,36 @@ function checkAns() {
         correct = this;
         correct.style.backgroundColor = '#004600';
         adjustScore();
+        removeClick();
+
     }
     if (this.innerHTML !== correctAns) {
         console.log('wrong');
         wrong = this;
         wrong.style.backgroundColor = '#8B0000';
+        removeClick();
     }
 }
-//}
+
+function removeClick() {
+    ansA.removeEventListener("click", checkAns);
+    ansB.removeEventListener("click", checkAns);
+    ansC.removeEventListener("click", checkAns);
+    ansD.removeEventListener("click", checkAns);
+}
+
+function addClick() {
+    ansA.addEventListener('click', checkAns);
+    ansB.addEventListener('click', checkAns);
+    ansC.addEventListener('click', checkAns);
+    ansD.addEventListener('click', checkAns);
+}
 
 // GAME PANEL BAR 
 
-// Home button pressed - goes to ghome screen - 
+// Home button pressed - goes to home screen - 
 
 // RESETS GAME TO HOME SCREEN WHEN PRESSED 
-// !!!! DO YOU WANT TO CLEAR THE USERNAME? OR KEEP IT? !!!!
-// !!!! DO YOU WANT TO ADD A WARNING? !!!!!
 
 function goHome() {
     gameScreenElements.classList.add('hide-game');
@@ -198,9 +212,7 @@ function goHome() {
     endGameContainer.classList.add('hide');
     endGameContainer.removeAttribute('style');
     reloadGame();
-    /* for (let elements of endGameContainer) {
-       elements.classList.add('hide');
-     } */
+
 }
 
 
@@ -223,10 +235,6 @@ function queQuestionCount() {
         console.log('queQuestionCount');
         endGame();
     }
-    //chooseNextQuestion();
-    // } else {
-    //     endGame();
-    //}
 }
 
 // HIDES GAME SCREEN AND DISPLAYS END GAME SCREEN, 
