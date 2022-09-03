@@ -314,13 +314,19 @@ h3 {
         gap: 10px;
         align-content: space-evenly;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 20px 0 100px;
     }
 }
 
 @media screen and (min-width: 48em) {
     #q-and-a-container {
         width: 90%;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    #question {
+        margin: 25px;
     }
 }
 
@@ -347,6 +353,13 @@ h3 {
         font-size: 2rem;      
 }
 }
+
+@media screen and (min-width: 48em) {
+    #next {
+        margin: 70px auto 20px;
+    }
+}
+
 
 @media screen and (min-width: 48em) {
     #venus {

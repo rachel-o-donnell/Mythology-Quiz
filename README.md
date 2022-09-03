@@ -1,6 +1,6 @@
-# WELCOME TO THE CELTIC WHEEL.
+# WELCOME TO THE MYTHOLOGY QUIZ 
 
-overview
+
 
 ---
 
@@ -98,15 +98,13 @@ Devices tested:
 
 HTML: No errors are returned when passing through the official W3C validator.
 CSS: No errors are returned when passing throught the official Jigsaw validator.
-
+JShint
+https://beautifier.io/
 **Lighthouse**
 
 Mobile Pages:
   
 Desktop Pages:
-
-JShint
-https://beautifier.io/
 
 testing game elements :
 | issue | TESTING | RESULT |
