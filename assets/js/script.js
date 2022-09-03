@@ -181,6 +181,7 @@ function checkAns() {
     }
 }
 
+// REMOVES EVENT LISTENERS TO ANSWER BUTTONS ONCE AN ANSWER HAS BEEN GIVEN
 function removeClick() {
     ansA.removeEventListener("click", checkAns);
     ansB.removeEventListener("click", checkAns);
@@ -188,6 +189,7 @@ function removeClick() {
     ansD.removeEventListener("click", checkAns);
 }
 
+// ADDS BACK EVENT LISTENERS TO ANSWER BUTTONS WHEN NEXT BUTTON IS PRESSED.
 function addClick() {
     ansA.addEventListener('click', checkAns);
     ansB.addEventListener('click', checkAns);
