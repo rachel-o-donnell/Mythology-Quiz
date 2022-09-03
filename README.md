@@ -108,24 +108,25 @@ Desktop Pages:
 JShint
 https://beautifier.io/
 
-
 testing game elements :
-home button resets game
-username displays inputted username
-score increases with eachcorrect ans
-question counter increases with each new question
-Can not select more than one answer
-correct ans turns green
-incorrect ans turns red
-next button can only be clicked when an answer is given.
-game ends when player has answered 8 questions.
-questions are not repeated in a game.
-a different picture is displayed when you reach the end game screen depending on the category chosen
-the players score and reminder of what category was played on the end screen. NAME??????
-game resets when play again button is chosen.
-each button on the dropdown menu works, displays the category chosen and defaults to choose difficulty when game resets
-this is a required area
-begin button can only be pressed when initials and difficulty is selected 
+| issue | TESTING | RESULT |
+| ----- | ------- | ------ |
+|       |         | home button resets game |
+ | | username displays inputted username| 
+| | score increases with eachcorrect ans |
+| |question counter increases with each new question | 
+| |Can not select more than one answer |
+| | correct ans turns green |
+| |incorrect ans turns red |
+| |next button can only be clicked when an answer is given.|
+| |game ends when player has answered 8 questions.|
+| |questions are not repeated in a game.|
+ || a different picture is displayed when you reach the end game screen depending on the category chosen|
+| |the players score and reminder of what category was played on the end screen. NAME??????
+| |game resets when play again button is chosen.|
+| |each button on the dropdown menu works, displays the category chosen and defaults to choose difficulty when game resets|
+| |this is a required area|
+| | begin button can only be pressed when initials and difficulty is selected |
 
 --- 
 
