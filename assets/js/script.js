@@ -237,12 +237,18 @@ function endGame() {
     endMessage.innerHTML = (`You scored ${score.innerText} out of 8 in the ${level} category. Ready to play again?`);
     if (level === 'easy') {
         venus.classList.remove('hide');
+        perseus.classList.add('hide');
+        oedipus.classList.add('hide');
     }
     if (level === 'medium') {
         perseus.classList.remove('hide');
+        oedipus.classList.add('hide');
+        venus.classList.add('hide');
     }
     if (level === 'hard') {
         oedipus.classList.remove('hide');
+        perseus.classList.add('hide');
+        venus.classList.add('hide');
 
     }
 }
