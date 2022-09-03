@@ -11,6 +11,7 @@ const playAgain = document.getElementById('play-again');
 const venus = document.getElementById('venus');
 const perseus = document.getElementById('perseus');
 const oedipus = document.getElementById('oedipus');
+let defaultDropdown = document.getElementById('default');
 let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
 let questionText = document.getElementById('question');
@@ -40,6 +41,9 @@ ansB.addEventListener('click', checkAns);
 ansC.addEventListener('click', checkAns);
 ansD.addEventListener('click', checkAns);
 
+//RESETS DROPDOWN MENU TO DEFAULT
+
+
 
 // SETS USERNAME IN PANEL WHEN CALLED
 function setUsername() {
@@ -61,6 +65,8 @@ function beginGame() {
     setUsername();
     score.innerHTML = 0;
     questionCountDisplay.innerHTML = 1;
+   // shuffle(questions);
+    // shuffle()
 
 }
 
@@ -116,7 +122,6 @@ function shuffle(questions) {
     }
     return questions;
     // let currentGameQuestions = questions; 
-
 }
 
 // 
@@ -192,6 +197,7 @@ function goHome() {
     gameContainer.classList.remove('hide-game');
     endGameContainer.classList.add('hide');
     endGameContainer.removeAttribute('style');
+    reloadGame();
     /* for (let elements of endGameContainer) {
        elements.classList.add('hide');
      } */
@@ -249,6 +255,11 @@ function endGame() {
         oedipus.classList.remove('hide');
         perseus.classList.add('hide');
         venus.classList.add('hide');
-
     }
+}
+
+
+// RELOADS GAME TO ORIGINAL GAME STATE
+function reloadGame() {
+    document.location.reload();
 }

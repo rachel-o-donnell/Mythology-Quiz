@@ -248,6 +248,8 @@ major overhaul of html structure - trying to get panel to separate and run on th
 
 Fix bug of other category image showing up on 2nd round - needed to add hides 
 
+on 2nd game it would stop working when the questions ran out so I needed to hook up a new function of reloading the game to its original state to clear the questions. default was selected in dropdown so people can change category. used w3 schools to default selected and get reload code.
+
 TO BE FIXED: 
 html dropdown styling does not work.  IS IT BECAUSE I CHANGED TO FORM??? 
 
@@ -259,6 +261,7 @@ html dropdown styling does not work.  IS IT BECAUSE I CHANGED TO FORM???
 * Stack Overflow
 * Google
 * W3 Schools
+* Mdn web docs
 * Youtube
 * Devtools
 * Flex froggy
