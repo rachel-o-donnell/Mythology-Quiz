@@ -1,6 +1,8 @@
 # WELCOME TO THE MYTHOLOGY QUIZ 
 
+A multiple choice quiz for lovers of Greek mythology set in a sreen with a backdrop of one of the most famous paintings on this theme 
 
+There is 3 difficulty levels to choose from easy, medium and hard. Players can enter their initials 
 
 ---
 
@@ -8,14 +10,31 @@
 
 **Target Audience:**
 
+Lovers of Greek mythology and art. A multtiple choice method makes it more accessable to different knowledge levels as well as the choice to step up the challenge by choosing different difficulty levels. 
+
 **Site Goals:** 
+
+users can easily navigate the game by use of of simple box displaying all interactive elements. Users can enter their initials coose a level of difficulty and begin the game. On the game screen the player can clearly see icons at the top of the screen with a home button that bring them back to the home screen at any point in the game, a user icon displays their own initials that they entered, an icon if a tropy displays / SUGGESTS??? the score the player is on and lastly that will be displayed on the screen, Users can easily see what question they are on out of 8 . 
+
+each quesion is dispalyed with 4 options for answers, users can control when they see the next question but pressing a next button in case they want to study the answer in the event they chose incorrectly. the button will only fire after they have submitted an answer, and a color change will occur -green for rcorrect red for incorrect. the the player has answered 8 questions an end game screen will appear telling the user, a personalised message with the players name, score and level difficulty. A painting of a mythological significance will be displayed and the olayer has the option to play the game again if they wish.
 
 **User Stories:**
 
 **Colour choice:**
 
+Originally I wanted t have the game based on the Celtic wheel of the year but chose to change and try API . 
+
+Insoired by the color choice of this picture for its calming, wamr and complementary tones. I wanted a color scheeme to feel classic, rich while neutral.
+
+Once I found the background image I knew is would work perfectly to act as a background that would draw the players attention to the centre of the screen with its circular layout while still being an incredible textur compliment to the ochre screen.
+
+
 **Colours**
 added the dark purple font for more acceability while being a complimentary color to the mustard.
+
+stone grey. 
+
+I opted for richer palette for the red and green that would sit within the mustard and not appear garish. They needed to feel like old colors of the time. I used the undertones of ht ebackgrouind image to pull out tones that might suit, ultimately landing on the ones fhosen. 
 
 **Fonts:**
 
@@ -51,19 +70,21 @@ Wireframes were made with Balsamiq and can be found here
 
 ## FEATURES:
 
+background image
 **Nav bar:**
 
-
-
+**enter initials:**
+**Drop down menu:**
+**Game Panel :**
+**Question :**
+**Ansers:**
 The Nav bar consists of 3 options, XYZ  allowing the user to easily navigate their journey without using the back button.
 Each nav button has an accompanying icon that can be easily read visually.
 The active page is underlined confirming to the user what page they are currently on.
 It is fully responsive with layout of the nav bar being consistent in style across different screen sizes save for a stacked style for a mobile device.
 
-**Footer:**
-
-Clickable socail media links allow our members to easily follow us on whatever socials they prefer on a separate tab.
-gallery
+**Answer buttons:**
+**Play again:**
 
 ---
 
@@ -97,9 +118,10 @@ Devices tested:
  * Validator Testing:
 
 HTML: No errors are returned when passing through the official W3C validator.
-CSS: No errors are returned when passing throught the official Jigsaw validator.
-JShint
+CSS: No errors are returned when passing through the official Jigsaw validator.
+JShint: No errors are returned when passing through the official JShint.
 https://beautifier.io/
+
 **Lighthouse**
 
 Mobile Pages:
@@ -107,24 +129,26 @@ Mobile Pages:
 Desktop Pages:
 
 testing game elements :
-| issue | TESTING | RESULT |
-| ----- | ------- | ------ |
-|       |         | home button resets game |
- | | username displays inputted username| 
-| | score increases with eachcorrect ans |
-| |question counter increases with each new question | 
-| |Can not select more than one answer |
-| | correct ans turns green |
-| |incorrect ans turns red |
-| |next button can only be clicked when an answer is given.|
-| |game ends when player has answered 8 questions.|
-| |questions are not repeated in a game.|
- || a different picture is displayed when you reach the end game screen depending on the category chosen|
-| |the players score and reminder of what category was played on the end screen. NAME??????
-| |game resets when play again button is chosen.|
-| |each button on the dropdown menu works, displays the category chosen and defaults to choose difficulty when game resets|
-| |this is a required area|
-| | begin button can only be pressed when initials and difficulty is selected |
+| FEATURE | EXPEXT | ACTION | RESULT |
+| ----- | ------- | ------ | ------ |
+| Enter initials area | Input are requires the player to enter their initials before the game gan be played |  Pressed begin button without entering| Player is prompted to enter initials before game can be played|
+| Dropdown button | Each button on the dropdown menu works, displays questions ans answers from category chosen and defaults to choose difficulty when game resets | Chose each category, logged the answer sets to the console to check the category | Each button on the dropdown menu works, displays questions ans answers from category chosen and defaults to choose difficulty when game resets|
+|Dropdown menu | Player must select a difficulty setting before game can be played | Pressed begin button without choosing a level | layer must select a difficulty setting before game can be played. |s
+| Begin button | Begin button will start the game and load the game screen. | Pressed begin button (after submiting initials and difficulty | Begin button will start the game and load the game screen. |
+| Home icon   |   Pressing home button brings you to the home screen and resets the game | Clicked home button | Home button resets game and bring to home screen when pressed |
+| Username display| Username displays inputted initials from home screen on the right og the user icon | Entered initials into username input | Username displays inputted username on the right of the user icon |
+| Score display | Game screen displays a score of zero on the right of the trophy icon and increases by 1 each time the player answers correctly but stays the same if answered incorrectly. | Played the game to the end answering correctly and Incorrectly  | Score begins at zero increases with eachc orrect ans and stays the same when answered incorrectly |
+| Question counter | Question counter displays to the right of the ? icon. It begins at 1/8 and increases with each new question until it reaches 8/8 | Played game from start to finish | Question counter displays to the right of the ? icon. It begins at 1/8 and increases with each new question until it reaches 8 | 
+| Questions | Questions are not repeated in a game. | Played each level repeatedly. | Questions are not repeated in a game.|
+| Anwer Buttons | Player can only select one answer button, and attempts to click will not incur a color change | Click an answer button , then tried to click all other answers.| Can not select more than one answer. Game no longer recocgnises the click or changes the color of the buttons. |
+| Correct answer | Correct answer button turns green when selected | Selected the correct answer | Correct answer button turns green when selected |
+| Incorrect answer | Incorrect answer button turns red when selected | Selected an incorrect answer | Incorrect answer button turns red when selected |
+| Next Button | Next button can only be clicked when an answer is given. | Clicked next button without answering a question| Nothin happens. Next button then works when an answer is given.|
+| End Game | Game ends when player has answered 8 questions.| Played game | Game ends when player has answered 8 questions.|
+| End screen message | The players initials, score and reminder of what category was played on the end screen. | Played the game multiple times on all levels to the end, with different initials, and different scores. The inputted initials, score and reminder of what category was played on the end screen. 
+| Home icon | Game resets when play again button is clicked.| Clicked home button | Game resets when play again button is clicked.|
+| End screen picture| A different picture is displayed when you reach the end game screen depending on the category chosen  - Easy: Venus, Medium: Perseus, Hard: Oedipus | Played each game repeatedly until the end screen appears | A different picture is displayed when you reach the end game screen depending on the category chosen - Easy: Venus, Medium: Perseus, Hard: Oedipus|
+| Play again button | Resets game to home screen and resets to the default settings allowing the player to choose a new level or a new player can enter their initials without having to clear the last players.  | PLayed game multiple times on  different levels using the play again button. | Resets game to home screen and resets to the default settings. Initial area is clear waiting foe input and dropdown prompts to choose a difficulty. 
 
 --- 
 
@@ -155,6 +179,17 @@ To Clone this repository follow these steps:
 --- 
 
 ## FUTURE FEATURES:
+
+More questions, 
+more images 
+difference in scoring depending on level
+highscores page
+your high scores 
+rules page
+sound effects
+insert message of correct or wrong
+hints
+mix levels and scores. 
 
 ---
 
