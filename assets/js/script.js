@@ -53,6 +53,7 @@ homeScreenForm.addEventListener("submit", event => {
 
     if (userName && level) {
         beginGame();
+        console.log(quizLength)
     }
 });
 
@@ -225,17 +226,17 @@ function endGame() {
     endGameContainer.style.display = 'flex';
     //endMessage()
     endMessage.innerHTML = (`${username.innerText}, you scored ${score.innerText} out of ${quizLength} in the ${level} category. Ready to play again?`);
-    if (level === 'easy') {
+    if (chosenDifficulty === 'easy') {
         venus.classList.remove('hide');
         perseus.classList.add('hide');
         oedipus.classList.add('hide');
     }
-    else if (level === 'medium') {
+    else if (chosenDifficulty === 'medium') {
         perseus.classList.remove('hide');
         oedipus.classList.add('hide');
         venus.classList.add('hide');
     }
-    else if (level === 'hard') {
+    else if (chosenDifficulty === 'hard') {
         oedipus.classList.remove('hide');
         perseus.classList.add('hide');
         venus.classList.add('hide');
