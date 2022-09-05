@@ -15,13 +15,14 @@ let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
 let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
-let chosenDifficulty;
-let questions;
-let correct, wrong;
-let quizLength = 8;
 let endMessage = document.getElementById('end-message');
-let correctAns;
+let quizLength = 8;
 let currentQuestionIndex = 0;
+let correctAns;
+let chosenDifficulty, questions;
+let correct, wrong;
+let level, username;
+
 
 // EVENT LISTENERS
 
@@ -32,7 +33,7 @@ playAgain.addEventListener('click', goHome); // PLAY AGAIN BUTTON - RESETS THE G
 // ANSWER BUTTONS - CHECKS IF THE SELECTED ANSWER IS CORRECT OR WRONG
 Array.from(answerButtons).forEach(eachBtn => {
     eachBtn.addEventListener('click', checkAns);
-  });
+});
 
 // SETS USERNAME IN PANEL WHEN CALLED
 function setUsername() {
@@ -51,7 +52,6 @@ homeScreenForm.addEventListener("submit", event => {
 
     if (userName && level) {
         beginGame();
-        console.log(quizLength)
     }
 });
 
@@ -83,22 +83,18 @@ function resetAnsBtnColor() {
 
 
 // IDENTIFIES USERS CHOSEN DIFFICULTY FROM DROPDOWN AND LOADS AND RANDOMISES CORRESPONDING CATEGORY
-document.getElementById('select').addEventListener('change', function () {
+document.getElementById('select').addEventListener('change', function() {
     chosenDifficulty = this.value;
 
     if (chosenDifficulty === 'easy') {
         questions = easyCategory;
         shuffleQuestions();
         chooseNextQuestion();
-    }
-
-    else if (chosenDifficulty === 'medium') {
+    } else if (chosenDifficulty === 'medium') {
         questions = mediumCategory;
         shuffleQuestions();
         chooseNextQuestion();
-    }
-
-     else if (chosenDifficulty === 'hard') {
+    } else if (chosenDifficulty === 'hard') {
         questions = hardCategory;
         shuffleQuestions();
         chooseNextQuestion();
@@ -123,13 +119,13 @@ function chooseNextQuestion() {
 }
 
 // NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION BUT ONLY IF AN ANSWER HAS
-nextButton.addEventListener('click', function () { 
+nextButton.addEventListener('click', function() {
     enableAnswerBtns();
     resetAnsBtnColor();
     currentQuestionIndex++;
     chooseNextQuestion();
     questionOfQuestion();
-    });
+});
 
 
 // DISPLAYS QUESTION AND ANSWERS 
@@ -149,13 +145,10 @@ function checkAns() {
     if (this.innerHTML === correctAns) {
         correct = this;
         correct.style.backgroundColor = '#004600';
-        adjustScore();   
-
-    }
-
-    else {
+        adjustScore();
+    } else {
         wrong = this;
-        wrong.style.backgroundColor = '#8B0000';   
+        wrong.style.backgroundColor = '#8B0000';
     }
 }
 
@@ -175,7 +168,7 @@ function enableAnswerBtns() {
 
 function disableHover() {
     for (let i = 0; i < answerButtons.length; i++) {
-        answerButtons[i].style.pointerEvents = "none"; 
+        answerButtons[i].style.pointerEvents = "none";
     }
 }
 
@@ -227,13 +220,11 @@ function endGame() {
         venus.classList.remove('hide');
         perseus.classList.add('hide');
         oedipus.classList.add('hide');
-    }
-    else if (chosenDifficulty === 'medium') {
+    } else if (chosenDifficulty === 'medium') {
         perseus.classList.remove('hide');
         oedipus.classList.add('hide');
         venus.classList.add('hide');
-    }
-    else if (chosenDifficulty === 'hard') {
+    } else if (chosenDifficulty === 'hard') {
         oedipus.classList.remove('hide');
         perseus.classList.add('hide');
         venus.classList.add('hide');
