@@ -145,10 +145,12 @@ function displayQuestion(question) {
 // CHECKS ANSWERS AND CHANGES COLOR OF SELECTED BUTTONS TO RED OR GREEN ACCORDINGLY
 function checkAns() {
     disableAnswerBtns();
+    disableHover();
     if (this.innerHTML === correctAns) {
         correct = this;
         correct.style.backgroundColor = '#004600';
-        adjustScore();    
+        adjustScore();   
+
     }
 
     else {
