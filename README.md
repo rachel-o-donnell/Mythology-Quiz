@@ -40,6 +40,10 @@ I opted for richer palette for the red and green that would sit within the musta
 
 Google Fonts:
 
+Cormorant+Garamond Classic but with a little opulant decoration
+
+![This is an image](/assets/images/fonts.png)
+
 **Imagery:**
 
 
@@ -180,16 +184,16 @@ To Clone this repository follow these steps:
 
 ## FUTURE FEATURES:
 
-More questions, 
-more images 
-difference in scoring depending on level
-highscores page
-your high scores 
-rules page
-sound effects
-insert message of correct or wrong
-hints
-mix levels and scores. 
+* More questions 
+* More images 
+* Difference in scoring depending on level
+* Highscores page
+* Your high scores 
+* Rules page
+* Sound effects
+* Insert message of correct or wrong
+* Hints
+* Option to mix levels 
 
 ---
 
@@ -304,8 +308,6 @@ Fix bug of other category image showing up on 2nd round - needed to add hides
 
 on 2nd game it would stop working when the questions ran out so I needed to hook up a new function of reloading the game to its original state to clear the questions. default was selected in dropdown so people can change category. used w3 schools to default selected and get reload code.
 
-TO BE FIXED: 
-html dropdown styling does not work.  IS IT BECAUSE I CHANGED TO FORM??? 
 
 
 --- 
