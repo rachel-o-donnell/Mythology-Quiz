@@ -18,6 +18,7 @@ let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
 let level;
 let chosenDifficulty;
+let questions;
 let correct, wrong;
 let quizLength = 8;
 let endMessage = document.getElementById('end-message');
@@ -86,23 +87,20 @@ document.getElementById('select').addEventListener('change', function () {
 
 
     if (chosenDifficulty === 'easy') {
-        chosenDifficulty = easyCategory;
-        level = 'easy';
-        shuffle(easyCategory);
+        questions = easyCategory;
+        shuffleQuestions();
         chooseNextQuestion();
     }
 
     else if (chosenDifficulty === 'medium') {
-        chosenDifficulty = mediumCategory;
-        level = 'medium';
-        shuffle(mediumCategory);
+        questions = mediumCategory;
+        shuffleQuestions();
         chooseNextQuestion();
     }
 
      else if (chosenDifficulty === 'hard') {
-        chosenDifficulty = hardCategory;
-        level = 'hard';
-        shuffle(hardCategory);
+        questions = hardCategory;
+        shuffleQuestions();
         chooseNextQuestion();
     }
 });
@@ -110,7 +108,7 @@ document.getElementById('select').addEventListener('change', function () {
 // Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
 
 // SHUFFLES QUESTIONS OF WHATEVER CATERGORY IS CHOSEN. 
-function shuffle(questions) {
+function shuffleQuestions() {
     for (let i = questions.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [questions[i], questions[j]] = [questions[j], questions[i]];
@@ -120,7 +118,7 @@ function shuffle(questions) {
 
 // 
 function chooseNextQuestion() {
-    displayQuestion(chosenDifficulty[currentQuestionIndex]);
+    displayQuestion(questions[currentQuestionIndex]);
     queQuestionCount();
 }
 

@@ -247,6 +247,8 @@ ans from Nilesh Mahajan then I played in dev tools untill I was happy with the p
 editing a commit message after being pushed
 https://www.educative.io/answers/how-to-change-a-git-commit-message-after-a-push
 
+disabling elements :
+https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a%20button%20using,disabled%20JavaScript%20property%20to%20false%20.
 
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
