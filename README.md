@@ -194,6 +194,8 @@ To Clone this repository follow these steps:
 * Insert message of correct or wrong
 * Hints
 * Option to mix levels 
+* Keep next button in a constant place for better player experience.
+
 
 ---
 

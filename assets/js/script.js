@@ -29,18 +29,6 @@ let correctAns;
 let currentQuestionIndex = 0;
 
 const form = document.getElementById("home-screen")
-
-form.addEventListener("submit", event => {
-event.preventDefault()
-
-const name = event.target.name?.value;
-const select = event.target.select?.value;
-
-if (name && select) {
-// now you can hide the form
-beginGame()
-}
-})
  
 // EVENT LISTENERS
 
@@ -62,6 +50,18 @@ function setUsername() {
     document.getElementById('username').textContent = username;
 }
 
+// ADDS EVENT LISTENER TO THE FORM ON HOME SCREEN THAT ONLY ALLOWS THE 
+// PLAYER TO BEGIN THE GAME WHEN THE REQUIRED FIELDS ARE FILLED OUT
+form.addEventListener("submit", event => {
+    event.preventDefault()
+    
+    const name = event.target.name?.value;
+    const select = event.target.select?.value;
+    
+    if (name && select) {
+    beginGame()
+    }
+    })
 
 // BEGINS GAME - HIDES HOME CONTAINER , SHOWS GAME SCREEN, DISPLAYS NAME, RESETS SCORE AND QUESTION COUNTER
 function beginGame() {
