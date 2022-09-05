@@ -155,17 +155,15 @@ function checkAns() {
         correct = this;
         correct.style.backgroundColor = '#004600';
         adjustScore();
-        removeClick();
-
+        
     }
     else if (this.innerHTML !== correctAns) {
         wrong = this;
-        wrong.style.backgroundColor = '#8B0000';
-        removeClick();
+        wrong.style.backgroundColor = '#8B0000';   
     }
 }
 
-// REMOVES EVENT LISTENERS TO ANSWER BUTTONS ONCE AN ANSWER HAS BEEN GIVEN
+// REMOVES EVENT LISTENERS AND HOVER TO ANSWER BUTTONS ONCE AN ANSWER HAS BEEN GIVEN
 
 function disableAnswerBtns() {
     for (let i = 0; i < answerButtons.length; i++) {
@@ -176,6 +174,12 @@ function disableAnswerBtns() {
 function enableAnswerBtns() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].disabled = false;
+    }
+}
+
+function disableHover() {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].style.pointerEvents = "none"; 
     }
 }
 // ADDS BACK EVENT LISTENERS TO ANSWER BUTTONS WHEN NEXT BUTTON IS PRESSED.

@@ -250,6 +250,10 @@ https://www.educative.io/answers/how-to-change-a-git-commit-message-after-a-push
 disabling elements :
 https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a%20button%20using,disabled%20JavaScript%20property%20to%20false%20.
 
+disabling hover functio
+Bert Verhelst comment from 
+https://www.quora.com/How-to-unhover-an-element-with-an-active-hover-with-JS
+
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
 
@@ -331,4 +335,5 @@ Required elements on home screen - initials input and dropdown rewuired was not 
 * Flex froggy
 * Grid Garden
 * Open Trivia Database 
+* Quora
 ---
