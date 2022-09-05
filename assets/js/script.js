@@ -55,6 +55,8 @@ homeScreenForm.addEventListener("submit", event => {
     }
 });
 
+
+//HIDES HOME SCREEN
 function hideElements() {
     for (let elements of homeScreenElements) {
         elements.classList.add('hide-home');
@@ -101,8 +103,6 @@ document.getElementById('select').addEventListener('change', function() {
     }
 });
 
-// Fisher yates shuffle code from Sean young on Slack. Took a few attempts to understand and how to apply to my needs
-
 // SHUFFLES QUESTIONS OF WHATEVER CATERGORY IS CHOSEN. 
 function shuffleQuestions() {
     for (let i = questions.length - 1; i > 0; i--) {
@@ -112,13 +112,13 @@ function shuffleQuestions() {
     return questions;
 }
 
-// 
+// DISPLAYS QUESTION
 function chooseNextQuestion() {
     displayQuestion(questions[currentQuestionIndex]);
     queQuestionCount();
 }
 
-// NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION BUT ONLY IF AN ANSWER HAS
+// NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION
 nextButton.addEventListener('click', function() {
     enableAnswerBtns();
     resetAnsBtnColor();

@@ -147,7 +147,7 @@ testing game elements :
 | Anwer Buttons | Player can only select one answer button, and attempts to click will not incur a color change | Click an answer button , then tried to click all other answers.| Can not select more than one answer. Game no longer recocgnises the click or changes the color of the buttons. |
 | Correct answer | Correct answer button turns green when selected | Selected the correct answer | Correct answer button turns green when selected |
 | Incorrect answer | Incorrect answer button turns red when selected | Selected an incorrect answer | Incorrect answer button turns red when selected |
-| Next Button | Next button can only be clicked when an answer is given. | Clicked next button without answering a question| Nothin happens. Next button then works when an answer is given.|
+| Next Button | Next button skips to next question, whether an anwer is chosen or not. | Clicked next button with and without answering a question|  Next button then works when an answer is given and skips to next question without an answer.|
 | End Game | Game ends when player has answered 8 questions.| Played game | Game ends when player has answered 8 questions.|
 | End screen message | The players initials, score and reminder of what category was played on the end screen. | Played the game multiple times on all levels to the end, with different initials, and different scores. The inputted initials, score and reminder of what category was played on the end screen. 
 | Home icon | Game resets when play again button is clicked.| Clicked home button | Game resets when play again button is clicked.|
@@ -195,6 +195,7 @@ To Clone this repository follow these steps:
 * Hints
 * Option to mix levels 
 * Keep next button in a constant place for better player experience.
+* Option not to be able to use next button unless answr has been given.
 
 
 ---
@@ -253,6 +254,8 @@ https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a
 disabling hover functio
 Bert Verhelst comment from 
 https://www.quora.com/How-to-unhover-an-element-with-an-active-hover-with-JS
+
+ Fisher yates shuffle code suggested ny Sean Young on slack as I had otriginally applied the math.random.  Took a few attempts to understand and how to apply to my needs
 
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
