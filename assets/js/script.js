@@ -92,14 +92,14 @@ document.getElementById('select').addEventListener('change', function () {
         chooseNextQuestion();
     }
 
-    if (chosenDifficulty === 'medium') {
+    else if (chosenDifficulty === 'medium') {
         chosenDifficulty = mediumCategory;
         level = 'medium';
         shuffle(mediumCategory);
         chooseNextQuestion();
     }
 
-    if (chosenDifficulty === 'hard') {
+     else if (chosenDifficulty === 'hard') {
         chosenDifficulty = hardCategory;
         level = 'hard';
         shuffle(hardCategory);
@@ -155,7 +155,7 @@ function checkAns() {
         removeClick();
 
     }
-    if (this.innerHTML !== correctAns) {
+    else if (this.innerHTML !== correctAns) {
         wrong = this;
         wrong.style.backgroundColor = '#8B0000';
         removeClick();
@@ -228,12 +228,12 @@ function endGame() {
         perseus.classList.add('hide');
         oedipus.classList.add('hide');
     }
-    if (level === 'medium') {
+    else if (level === 'medium') {
         perseus.classList.remove('hide');
         oedipus.classList.add('hide');
         venus.classList.add('hide');
     }
-    if (level === 'hard') {
+    else if (level === 'hard') {
         oedipus.classList.remove('hide');
         perseus.classList.add('hide');
         venus.classList.add('hide');
@@ -245,20 +245,3 @@ function endGame() {
 function reloadGame() {
     document.location.reload();
 }
-
-/*
-for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].removeAttribute('ans-btn:hover');
-}
-
-for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].addAttribute('ans-btn:hover');
-}
-
-for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].classList.remove('ans-btn:hover');
-}
-
-for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].classList.remove('ans-btn:hover');
-}*/
