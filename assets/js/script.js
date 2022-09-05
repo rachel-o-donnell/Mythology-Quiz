@@ -28,10 +28,23 @@ let endMessage = document.getElementById('end-message');
 let correctAns;
 let currentQuestionIndex = 0;
 
+const form = document.getElementById("home-screen")
 
+form.addEventListener("submit", event => {
+event.preventDefault()
+
+const name = event.target.name?.value;
+const select = event.target.select?.value;
+
+if (name && select) {
+// now you can hide the form
+beginGame()
+}
+})
+ 
 // EVENT LISTENERS
 
-beginBtn.addEventListener('click', beginGame); // BEGIN BUTTON- BEGINS THE GAME
+//beginBtn.addEventListener('click', beginGame); // BEGIN BUTTON- BEGINS THE GAME
 document.getElementById('home.btn').addEventListener('click', goHome); // HOME ICON - RESETS TO HOME SCREEN
 playAgain.addEventListener('click', goHome); // PLAY AGAIN BUTTON - RESETS THE GAME TO THE START
 

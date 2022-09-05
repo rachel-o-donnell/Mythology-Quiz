@@ -11,38 +11,39 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
+<!--HOME SCREEN -->
 
 <body>
     <h1>Mythology Quiz</h1>
     <section id="game-container">
         <div id="home-container">
-            <div id="home-screen">
+            <form id="home-screen" method="POST" action=".">
                 <h2 class="home">Quiz your knowledge on Mythology</h2>
                 <ol class="name-area home">
-                    <!-- REMEMBER TO ADD BACK REQUIRED!!!!!!!!!!! required-->
                     <li>
                         <label for="name" class="label">Enter your initials</label>
-                        <input id="name" name="name" type="text">
+                        <input id="name" name="name" type="text" min-length="1" required />
                     </li>
                 </ol>
-                <!-- Dropdown code Taken from W3 schools  ADD REQUIRED!!!!-->
+                <!-- DROPDOWN -->
                 <div class="dropdown">
-                    <form class="dropdown">
-                        <select id="select" class="home">
-                            <option value="choose-difficulty" selected> Choose difficulty</option>
-                            <option value="easy">Easy</option>
-                            <option value="medium">Medium</option>
-                            <option value="hard">Hard</option>
-                        </select>
-                    </form>
+                    <label for="select">Choose difficulty</label>
+                    <select id="select" class="home" name="select" required>
+                        <option label = "Choose difficulty" value="" selected></option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
                 </div>
+
                 <button class="home" id="begin" type="submit">Begin</button>
-            </div>
+            </form>
         </div>
     </section>
-    <!-- questions and answers game screen -->
+    <!-- GAME SCREEN -->
     <div id=game-screen-container class="hide-game">
         <section id="game-screen" class="hide-game">
+            <!-- GAME PANEL HEADER WITH ICONS HOME, USERNAME, SCORE, AND QUESTIONS LEFT -->
             <header id="#game-panel">
                 <div class="game-panel-containers">
                     <div id="home.btn" class="panel-element"><i class="fa-solid fa-house"></i>
@@ -62,6 +63,7 @@
                     <div class="panel-element">/8</div>
                 </div>
             </header>
+            <!-- Q & A AREA -->
             <div id="q-and-a-container" class="hide-game">
                 <div id="game" class="q-and-a-area">
                     <h3 id="question">""
@@ -83,6 +85,7 @@
     <div id="end-game-container" class="hide">
         <section id="end-screen" class="hide">
             <h3 id="end-message">placer</h3>
+            <!-- IMAGES -->
             <img id="venus" class="hide" src="assets/images/venus.webp"
                 alt="painting of the birth of venus by Botticelli">
             <img id="perseus" class="hide" src="assets/images/Perseus-and-Andromeda.jpeg"
