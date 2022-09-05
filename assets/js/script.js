@@ -56,20 +56,24 @@ homeScreenForm.addEventListener("submit", event => {
     }
 });
 
-// BEGINS GAME - HIDES HOME CONTAINER , SHOWS GAME SCREEN, DISPLAYS NAME, RESETS SCORE AND QUESTION COUNTER
-function beginGame() {
-
+function hideElements() {
     for (let elements of homeScreenElements) {
         elements.classList.add('hide-home');
     }
     homeContainer.style.display = 'none';
     gameScreenContainer.style.display = 'flex';
     gameScreenElements.classList.remove('hide-game');
+}
+
+// BEGINS GAME - HIDES HOME CONTAINER , SHOWS GAME SCREEN, DISPLAYS NAME, RESETS SCORE AND QUESTION COUNTER
+function beginGame() {
+    hideElements();
     setUsername();
     score.innerHTML = 0;
     questionCountDisplay.innerHTML = 1;
 
 }
+
 
 // RESETS COLOUR OF ANSWER BUTTONS
 
