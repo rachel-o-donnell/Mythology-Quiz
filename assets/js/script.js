@@ -19,10 +19,6 @@ let answerButtons = document.getElementsByClassName('ans-btn');
 let level;
 let chosenDifficulty;
 let correct, wrong;
-let ansA = document.getElementById('a');
-let ansB = document.getElementById('b');
-let ansC = document.getElementById('c');
-let ansD = document.getElementById('d');
 let quizLength = 8;
 let endMessage = document.getElementById('end-message');
 let correctAns;
@@ -35,11 +31,9 @@ document.getElementById('home.btn').addEventListener('click', goHome); // HOME I
 playAgain.addEventListener('click', goHome); // PLAY AGAIN BUTTON - RESETS THE GAME TO THE START
 
 // ANSWER BUTTONS - CHECKS IF THE SELECTED ANSWER IS CORRECT OR WRONG
-ansA.addEventListener('click', checkAns); 
-ansB.addEventListener('click', checkAns);
-ansC.addEventListener('click', checkAns);
-ansD.addEventListener('click', checkAns);
-
+Array.from(answerButtons).forEach(eachBtn => {
+    eachBtn.addEventListener('click', checkAns);
+  });
 
 // SETS USERNAME IN PANEL WHEN CALLED
 function setUsername() {
@@ -132,11 +126,11 @@ function chooseNextQuestion() {
 
 // NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION BUT ONLY IF AN ANSWER HAS
 nextButton.addEventListener('click', function () { 
+    enableAnswerBtns();
     resetAnsBtnColor();
     currentQuestionIndex++;
     chooseNextQuestion();
     questionOfQuestion();
-    addClick();
     });
 
 
@@ -153,6 +147,7 @@ function displayQuestion(question) {
 
 // CHECKS ANSWERS AND CHANGES COLOR OF SELECTED BUTTONS TO RED OR GREEN ACCORDINGLY
 function checkAns() {
+    disableAnswerBtns();
     if (this.innerHTML === correctAns) {
         correct = this;
         correct.style.backgroundColor = '#004600';
@@ -168,22 +163,20 @@ function checkAns() {
 }
 
 // REMOVES EVENT LISTENERS TO ANSWER BUTTONS ONCE AN ANSWER HAS BEEN GIVEN
-function removeClick() {
-    ansA.removeEventListener("click", checkAns);
-    ansB.removeEventListener("click", checkAns);
-    ansC.removeEventListener("click", checkAns);
-    ansD.removeEventListener("click", checkAns);
 
+function disableAnswerBtns() {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].disabled = true;
+    }
 }
 
+function enableAnswerBtns() {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].disabled = false;
+    }
+}
 // ADDS BACK EVENT LISTENERS TO ANSWER BUTTONS WHEN NEXT BUTTON IS PRESSED.
-function addClick() {
-    ansA.addEventListener('click', checkAns);
-    ansB.addEventListener('click', checkAns);
-    ansC.addEventListener('click', checkAns);
-    ansD.addEventListener('click', checkAns);
 
-}
 
 // GAME PANEL BAR 
 

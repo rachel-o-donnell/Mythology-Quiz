@@ -244,6 +244,9 @@ MAKING THE NEXT BUTTON STICK IN THE ONE PLACE (FOR BETTER USER EXPERIENCE)
 https://stackoverflow.com/questions/30026487/how-to-make-a-button-stay-at-a-bottom-of-a-screen
 ans from Nilesh Mahajan then I played in dev tools untill I was happy with the position
 
+editing a commit message after being pushed
+https://www.educative.io/answers/how-to-change-a-git-commit-message-after-a-push
+
 
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
