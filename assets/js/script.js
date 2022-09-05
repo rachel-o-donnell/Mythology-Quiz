@@ -1,4 +1,4 @@
-const form = document.getElementById("home-screen");
+const homeScreenForm = document.getElementById("home-screen");
 const homeScreenElements = document.getElementsByClassName('home');
 const homeContainer = document.getElementById('home-container');
 const gameScreenContainer = document.getElementById('game-screen-container');
@@ -11,6 +11,7 @@ const playAgain = document.getElementById('play-again');
 const venus = document.getElementById('venus');
 const perseus = document.getElementById('perseus');
 const oedipus = document.getElementById('oedipus');
+
 let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
 let questionText = document.getElementById('question');
@@ -49,7 +50,7 @@ function setUsername() {
 
 // ADDS EVENT LISTENER TO THE FORM ON HOME SCREEN THAT ONLY ALLOWS THE 
 // PLAYER TO BEGIN THE GAME WHEN THE REQUIRED FIELDS ARE FILLED OUT
-form.addEventListener("submit", event => {
+homeScreenForm.addEventListener("submit", event => {
     event.preventDefault();
 
     const name = event.target.name?.value;
@@ -88,7 +89,6 @@ function resetAnsBtnColor() {
 // IDENTIFIES USERS CHOSEN DIFFICULTY FROM DROPDOWN AND LOADS AND RANDOMISES CORRESPONDING CATEGORY
 document.getElementById('select').addEventListener('change', function () {
     chosenDifficulty = this.value;
-    console.log(chosenDifficulty);
 
     if (chosenDifficulty === 'easy') {
         chosenDifficulty = easyCategory;
@@ -130,14 +130,12 @@ function chooseNextQuestion() {
 }
 
 // NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION BUT ONLY IF AN ANSWER HAS
-nextButton.addEventListener('click', function () {
-    
+nextButton.addEventListener('click', function () { 
     resetAnsBtnColor();
     currentQuestionIndex++;
     chooseNextQuestion();
     questionOfQuestion();
     addClick();
-
     });
 
 
@@ -149,14 +147,12 @@ function displayQuestion(question) {
         answerButtons[index].innerHTML = answer;
     });
     correctAns = question.correct_answer;
-    console.log(correctAns);
 }
 
 
 // CHECKS ANSWERS AND CHANGES COLOR OF SELECTED BUTTONS TO RED OR GREEN ACCORDINGLY
 function checkAns() {
     if (this.innerHTML === correctAns) {
-        console.log('correct!');
         correct = this;
         correct.style.backgroundColor = '#004600';
         adjustScore();
@@ -164,7 +160,6 @@ function checkAns() {
 
     }
     if (this.innerHTML !== correctAns) {
-        console.log('wrong');
         wrong = this;
         wrong.style.backgroundColor = '#8B0000';
         removeClick();
@@ -199,11 +194,6 @@ function goHome() {
     for (let elements of homeScreenElements) {
         elements.classList.remove('hide-home');
     }
-    homeContainer.removeAttribute('style');
-    gameScreenContainer.removeAttribute('style');
-    gameContainer.classList.remove('hide-game');
-    endGameContainer.classList.add('hide');
-    endGameContainer.removeAttribute('style');
     reloadGame();
 }
 
@@ -216,7 +206,6 @@ function adjustScore() {
 
 // DISPLAYS WHAT QUESTION YOU ARE ON OUT OF HOW MANY AND INCREASES WHEN CALLED BY NEXT BUTTON
 function questionOfQuestion() {
-    console.log('questionCountDisplay');
     let questionCount = parseInt(questionCountDisplay.innerText);
     questionCountDisplay.innerHTML = ++questionCount;
 }
@@ -224,7 +213,6 @@ function questionOfQuestion() {
 // CHECKS THE QUESTION COUNT AND CALLS TO END THE GAME WHEN IT REACHES 9 
 function queQuestionCount() {
     if (questionCountDisplay.innerHTML >= quizLength) {
-        console.log('queQuestionCount');
         endGame();
     }
 }
