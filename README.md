@@ -308,6 +308,7 @@ Fix bug of other category image showing up on 2nd round - needed to add hides
 
 on 2nd game it would stop working when the questions ran out so I needed to hook up a new function of reloading the game to its original state to clear the questions. default was selected in dropdown so people can change category. used w3 schools to default selected and get reload code.
 
+Required elements on home screen - initials input and dropdown rewuired was not being recognised because I had event listeners attached in js. So had to access this feature through JS. Had to change the event listener to run the game only when the name and select areas were filled. 
 
 
 --- 
