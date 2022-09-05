@@ -11,12 +11,10 @@ const playAgain = document.getElementById('play-again');
 const venus = document.getElementById('venus');
 const perseus = document.getElementById('perseus');
 const oedipus = document.getElementById('oedipus');
-
 let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
 let questionText = document.getElementById('question');
 let answerButtons = document.getElementsByClassName('ans-btn');
-let level;
 let chosenDifficulty;
 let questions;
 let correct, wrong;
@@ -72,7 +70,6 @@ function beginGame() {
     setUsername();
     score.innerHTML = 0;
     questionCountDisplay.innerHTML = 1;
-
 }
 
 
@@ -82,14 +79,12 @@ function resetAnsBtnColor() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeAttribute('style');
     }
-
 }
 
 
 // IDENTIFIES USERS CHOSEN DIFFICULTY FROM DROPDOWN AND LOADS AND RANDOMISES CORRESPONDING CATEGORY
 document.getElementById('select').addEventListener('change', function () {
     chosenDifficulty = this.value;
-
 
     if (chosenDifficulty === 'easy') {
         questions = easyCategory;
@@ -137,7 +132,6 @@ nextButton.addEventListener('click', function () {
     });
 
 
-
 // DISPLAYS QUESTION AND ANSWERS 
 function displayQuestion(question) {
     questionText.innerHTML = question.question;
@@ -154,10 +148,10 @@ function checkAns() {
     if (this.innerHTML === correctAns) {
         correct = this;
         correct.style.backgroundColor = '#004600';
-        adjustScore();
-        
+        adjustScore();    
     }
-    else if (this.innerHTML !== correctAns) {
+
+    else {
         wrong = this;
         wrong.style.backgroundColor = '#8B0000';   
     }
@@ -182,12 +176,9 @@ function disableHover() {
         answerButtons[i].style.pointerEvents = "none"; 
     }
 }
-// ADDS BACK EVENT LISTENERS TO ANSWER BUTTONS WHEN NEXT BUTTON IS PRESSED.
 
 
 // GAME PANEL BAR 
-
-
 // RESETS GAME TO HOME SCREEN WHEN PRESSED 
 
 function goHome() {
