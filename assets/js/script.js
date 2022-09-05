@@ -1,4 +1,4 @@
-const beginBtn = document.getElementById('begin');
+const form = document.getElementById("home-screen");
 const homeScreenElements = document.getElementsByClassName('home');
 const homeContainer = document.getElementById('home-container');
 const gameScreenContainer = document.getElementById('game-screen-container');
@@ -11,7 +11,6 @@ const playAgain = document.getElementById('play-again');
 const venus = document.getElementById('venus');
 const perseus = document.getElementById('perseus');
 const oedipus = document.getElementById('oedipus');
-let defaultDropdown = document.getElementById('default');
 let score = document.getElementById('score');
 let questionCountDisplay = document.getElementById('question-count-display');
 let questionText = document.getElementById('question');
@@ -28,16 +27,14 @@ let endMessage = document.getElementById('end-message');
 let correctAns;
 let currentQuestionIndex = 0;
 
-const form = document.getElementById("home-screen")
- 
 // EVENT LISTENERS
 
 //beginBtn.addEventListener('click', beginGame); // BEGIN BUTTON- BEGINS THE GAME
 document.getElementById('home.btn').addEventListener('click', goHome); // HOME ICON - RESETS TO HOME SCREEN
 playAgain.addEventListener('click', goHome); // PLAY AGAIN BUTTON - RESETS THE GAME TO THE START
 
-// !!!!!!  NEED TO DISABLE THESE WHEN ONE IS CLICKED AND ONLY ALLOW NEXT BUTTON TO BE PRESSES WHEN ANSWERED . ADD HOVER? !!!!! 
-ansA.addEventListener('click', checkAns); // ANSWER BUTTONS - CHECKS IF THE SELECTED ANSWER IS CORRECT OR WRONG
+// ANSWER BUTTONS - CHECKS IF THE SELECTED ANSWER IS CORRECT OR WRONG
+ansA.addEventListener('click', checkAns); 
 ansB.addEventListener('click', checkAns);
 ansC.addEventListener('click', checkAns);
 ansD.addEventListener('click', checkAns);
@@ -53,15 +50,15 @@ function setUsername() {
 // ADDS EVENT LISTENER TO THE FORM ON HOME SCREEN THAT ONLY ALLOWS THE 
 // PLAYER TO BEGIN THE GAME WHEN THE REQUIRED FIELDS ARE FILLED OUT
 form.addEventListener("submit", event => {
-    event.preventDefault()
-    
+    event.preventDefault();
+
     const name = event.target.name?.value;
     const select = event.target.select?.value;
-    
+
     if (name && select) {
-    beginGame()
+        beginGame();
     }
-    })
+});
 
 // BEGINS GAME - HIDES HOME CONTAINER , SHOWS GAME SCREEN, DISPLAYS NAME, RESETS SCORE AND QUESTION COUNTER
 function beginGame() {
@@ -75,7 +72,7 @@ function beginGame() {
     setUsername();
     score.innerHTML = 0;
     questionCountDisplay.innerHTML = 1;
-    
+
 }
 
 // RESETS COLOUR OF ANSWER BUTTONS
@@ -84,7 +81,7 @@ function resetAnsBtnColor() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeAttribute('style');
     }
-    
+
 }
 
 
@@ -132,16 +129,17 @@ function chooseNextQuestion() {
     queQuestionCount();
 }
 
-// NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION
-
+// NEXT BUTTON RESETS COLOR, INCREASES QUESTION COUNTER, CALLS NEXT QUESTION BUT ONLY IF AN ANSWER HAS
 nextButton.addEventListener('click', function () {
+    
     resetAnsBtnColor();
     currentQuestionIndex++;
     chooseNextQuestion();
     questionOfQuestion();
     addClick();
-    
-});
+
+    });
+
 
 
 // DISPLAYS QUESTION AND ANSWERS 
@@ -163,7 +161,7 @@ function checkAns() {
         correct.style.backgroundColor = '#004600';
         adjustScore();
         removeClick();
-        
+
     }
     if (this.innerHTML !== correctAns) {
         console.log('wrong');
@@ -179,7 +177,7 @@ function removeClick() {
     ansB.removeEventListener("click", checkAns);
     ansC.removeEventListener("click", checkAns);
     ansD.removeEventListener("click", checkAns);
-  
+
 }
 
 // ADDS BACK EVENT LISTENERS TO ANSWER BUTTONS WHEN NEXT BUTTON IS PRESSED.
