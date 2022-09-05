@@ -53,10 +53,10 @@ function setUsername() {
 homeScreenForm.addEventListener("submit", event => {
     event.preventDefault();
 
-    const name = event.target.name?.value;
-    const select = event.target.select?.value;
+    const userName = event.target.name?.value;
+    const level = event.target.select?.value;
 
-    if (name && select) {
+    if (userName && level) {
         beginGame();
     }
 });
@@ -89,6 +89,7 @@ function resetAnsBtnColor() {
 // IDENTIFIES USERS CHOSEN DIFFICULTY FROM DROPDOWN AND LOADS AND RANDOMISES CORRESPONDING CATEGORY
 document.getElementById('select').addEventListener('change', function () {
     chosenDifficulty = this.value;
+
 
     if (chosenDifficulty === 'easy') {
         chosenDifficulty = easyCategory;
@@ -228,7 +229,7 @@ function endGame() {
     gameScreenContainer.style.removeProperty('display');
     endGameContainer.style.display = 'flex';
     //endMessage()
-    endMessage.innerHTML = (`${username.innerText}, you scored ${score.innerText} out of 8 in the ${level} category. Ready to play again?`);
+    endMessage.innerHTML = (`${username.innerText}, you scored ${score.innerText} out of ${quizLength} in the ${level} category. Ready to play again?`);
     if (level === 'easy') {
         venus.classList.remove('hide');
         perseus.classList.add('hide');
