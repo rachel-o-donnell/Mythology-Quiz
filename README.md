@@ -257,6 +257,10 @@ https://www.quora.com/How-to-unhover-an-element-with-an-active-hover-with-JS
 
  Fisher yates shuffle code suggested ny Sean Young on slack as I had otriginally applied the math.random.  Took a few attempts to understand and how to apply to my needs
 
+disabling pointer - pointer-events: none or auto were not working: 
+Mohamed Ramrami
+ https://stackoverflow.com/questions/50349017/how-can-i-change-cursor-for-disabled-button-or-a-in-bootstrap-4
+
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
 
