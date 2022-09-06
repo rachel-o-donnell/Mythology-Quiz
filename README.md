@@ -38,6 +38,7 @@ Inspired by the color choice of this picture for its calming, wamr and complemen
 needed the red a greens to feel older and richer to blend with the color palette more.
 ![This is an image](/assets/images/read-me-images/red.png)
 ![This is an image](/assets/images/read-me-images/green.png)
+![This is an image](/assets/images/read-me-images/red-and-green.png)
 
 **Colours**
 added the dark purple font for more acceability while being a complimentary color to the mustard.
@@ -52,7 +53,7 @@ Google Fonts:
 
 Cormorant+Garamond Classic but with a little opulant decoration
 
-![This is an image](/assets/images/fonts.png)
+![This is an image](/assets/images/read-me-images/fonts.png)
 
 **Imagery:**
 
@@ -67,37 +68,52 @@ Hero image:
 Chamber of the Giants by Giulio Romano taken from
 https://www.atlasobscura.com/places/chamber-of-the-giants
 
-Once I found the background image I knew is would work perfectly to act as a background that would draw the players attention to the centre of the screen with its circular layout while still being an incredible texture compliment to the flat ochre screen.
+This rich painting provides a great backdrop as it features so many mythical characters, spiraling around the game screen.
+
+"It tells the story of the fall of the giants, as described by the Latin poet Ovid in his Metamorphoses. The god Jupiter is pictured on the ceiling, surrounded by the entire Roman cosmogony. The painting shows the moment he threw his lighting to destroy the giants. On the surrounding walls, there are images of crumbling buildings and desperate giants trying to escape." 
+quote taken directly from https://www.atlasobscura.com/places/chamber-of-the-giants
 
 End of game : 
 
 I wanted to show a different painting going from most easily recocniseable to more obscure as you go along to represent the categories themselves. 
-This research solidified my choice of color scheme as all images look at home within the game screen and create a beautiful pattern contrast
+This research solidified my choice of color scheme as all images look at home within the game screen and create a beautifully indulgent pattern contrast when layered
 
 Easy
 The Birth of Venus by Botticelli (1486). Photograph: Alamy taken from
 https://www.theguardian.com/artanddesign/2016/mar/05/destination-venus-how-botticelli-became-a-brand
+![This is an image](/assets/images/read-me-images/venus-end-screen.png)
 
 Medium
 “Perseus and Andromeda” by Frederic Leighton taken from
 https://joyofmuseums.com/artists-index/frederic-leighton/perseus-and-andromeda-by-frederic-leighton/
+![This is an image](/assets/images/read-me-images/perseus-end-screen.png)
 
 Hard
 "Oedipus and the Sphinx" by Gustave Moreau taken from
 https://www.widewalls.ch/magazine/greek-mythology-paintings/gustave-moreau-oedipus-and-the-sphinx
+![This is an image](/assets/images/read-me-images/oedipus-end-screen.png)
 
 ## Wireframes:
 
-Wireframes were made with Balsamiq and can be found here 
+Wireframes were made with Balsamiq and can be found ![here](/assets/wireframes-new/) 
 
 ---
 
 ## FEATURES:
 
-background image
-**Nav bar:**
+**Background image:** 
 
-**enter initials:**
+Once I found the background image I knew is would work perfectly to act as a background that would draw the players attention to the centre of the screen with its circular layout while still being an incredible texture compliment to the flat ochre screen.
+
+**Game Panel:** 
+![This is an image](/assets/images/read-me-images/game-panel.png)
+The Nav bar consists of 3 options, XYZ  allowing the user to easily navigate their journey without using the back button.
+Each nav button has an accompanying icon that can be easily read visually.
+The active page is underlined confirming to the user what page they are currently on.
+It is fully responsive with layout of the nav bar being consistent in style across different screen sizes save for a stacked style for a mobile device.
+A game pane
+**Enter initials:**
+
 **Drop down menu:**
 **Game Panel :**
 **Question :**

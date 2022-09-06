@@ -146,6 +146,7 @@ function checkAns() {
     } else {
         wrong = this;
         wrong.style.backgroundColor = '#8B0000';
+        correct.style.backgroundColor = '#004600';
     }
 }
 
