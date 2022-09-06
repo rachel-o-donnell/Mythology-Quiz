@@ -14,10 +14,143 @@ body {
     background-size: cover;
 }
 
-/* game area */
+h1 {
+    font-style: italic;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: #FAFAD2;
+}
 
-/* ADDED FROM JS */
-/* hides screens that are not needed untill called */
+h2 {
+    background-color: #e3a857;
+    color: #380456;
+    margin: 0 10px;
+    font-size: 1.3rem;
+}
+
+h3 {
+    background-color: #e3a857;
+    color: #301934;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.hide-home {
+    display: none;
+}
+
+.hide-game {
+    display: none;
+}
+
+#home-container,
+#game-screen-container,
+#end-game-container {
+    height: 560px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#game-screen,
+#home-screen,
+#end-screen {
+    background-color: #e3a857;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3%;
+    box-shadow: inset 0 0 13px 3px;
+    padding: 18px;
+}
+
+#home-screen,
+#end-screen {
+    height: 90%;
+}
+
+
+/* HOME GAME SCREEN */
+
+#home-container {
+    display: flex;
+}
+
+#home-screen {
+    justify-content: space-evenly;
+}
+
+
+.name-area>li {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-area {
+    margin: 10px 10px 40px;
+    list-style: none;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    color: #380456;
+    margin-bottom: 30px;
+}
+
+
+#select {
+    background-color: #FAFAD2;
+    color: #380456;
+}
+
+
+
+input {
+    background-color: #FAFAD2;
+    color: #6E6259;
+
+}
+
+.label {
+    background-color: #e3a857;
+    color: #380456;
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+}
+
+button {
+    font-size: 1.1rem;
+    /* was 1.5 but doesnt fit the hard categories*/
+    margin-bottom: 3%;
+    padding: 10px;
+    background-color: #6E6259;
+    color: #FAFAD2;
+    
+}
+
+#button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button:hover {
+    background-color: #FAFAD2;
+    color: #6E6259;
+    
+}
+
+/* game area */
 
 header {
     margin: 10px 0 0 20px;
@@ -49,163 +182,6 @@ header,
     margin-right: 20px;
 }
 
-/* game panel icons*/
-
-.hide {
-    display: none;
-}
-
-.hide-home {
-    display: none;
-}
-
-.hide-game {
-    display: none;
-}
-
-h1 {
-    font-style: italic;
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 2%;
-    color: #FAFAD2;
-}
-
-h2 {
-    background-color: #e3a857;
-    color: #380456;
-    margin: 0 10px;
-    font-size: 1.3rem;
-}
-
-#home-container,
-#game-screen-container,
-#end-game-container {
-    height: 560px;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#home-container {
-    display: flex;
-}
-
-#home-screen {
-    justify-content: space-evenly;
-}
-
-#game-screen,
-#home-screen,
-#end-screen {
-    /* background-color:rgba(227, 169, 87, 0.800);*/
-    background-color: #e3a857;
-    /* really like this but not sure about accessability 
-    background-color: rgba(224, 199, 199, 0.28);*/
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 3%;
-    box-shadow: inset 0 0 13px 3px;
-    padding: 18px;
-}
-
-#home-screen,
-#end-screen {
-    height: 90%;
-}
-
-#game-screen {
-    display: flex;
-    height: 100%;
-
-}
-
-#end-screen {
-    justify-content: space-around;
-}
-
-/* initial start screen*/
-
-.name-area>li {
-    display: flex;
-    flex-direction: column;
-}
-
-.name-area {
-    /*
-   This needs to turn off when we go to game screen 
-    display: flex; */
-    margin: 10px 10px 40px;
-    list-style: none;
-}
-
-input {
-    background-color: #FAFAD2;
-    color: #6E6259;
-
-}
-
-.label {
-    background-color: #e3a857;
-    color: #380456;
-    font-size: 1.5rem;
-    margin: 0 0 10px;
-}
-
-button {
-    font-size: 1.1rem;
-    /* was 1.5 but doesnt fit the hard categories*/
-    margin-bottom: 3%;
-    padding: 10px;
-    background-color: #6E6259;
-    color: #FAFAD2;
-    
-}
-
-.ans-btn:hover {
-    background-color:#FAFAD2;
-    color: #6E6259; ;
-}
-
-button:hover {
-    background-color: #FAFAD2;
-    color: #6E6259;
-    
-}
-/* !!!!! THIS KEEPS FUCKING UP MY GRID FOR BUTTONS */
-#button-container {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/*HTML DROPDOWN STYLE */
-/*DOES NOT WORK */
-.dropdown {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3rem;
-    color: #380456;
-    margin-bottom: 30px;
-}
-
-#select {
-    background-color: #FAFAD2;
-    color: #380456;
-}
-
-h3 {
-    background-color: #e3a857;
-    color: #301934;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-
-}
 
 /* questions and answers screen */
 .q-and-a-area {
@@ -216,23 +192,30 @@ h3 {
 
 }
 
+
+.ans-btn:hover {
+    background-color:#FAFAD2;
+    color: #6E6259; ;
+}
+
 /* next button */
+
 
 #next {
     margin: 5px auto;
     background-color: #6E6259;
     color: #FAFAD2;
-
-    /* THIS IS NOT RESPONSIVE NEED TO FIX*/
-    /*position: fixed;
-    bottom: 136px;
-    right: 120px;
-    */
 }
 
 #next-container {
     display: flex;
 
+}
+
+
+/* END SCREEN */ 
+#end-screen {
+    justify-content: space-around;
 }
 
 #venus {
@@ -248,7 +231,7 @@ h3 {
 }
 
 /* media queries for all screens more than iphone */
-/* breakpoints taken from my last project. playing in dev tools to get the right balance
+/* Breakpoints taken from my last project. Playing in dev tools to get the right balance
 
 /* for screens that are 481px or above*/
 @media screen and (min-width: 30em) {
@@ -314,7 +297,7 @@ h3 {
         gap: 10px;
         align-content: space-evenly;
         align-items: center;
-        margin-top: 20px 0 100px;
+        margin-top: 20px 100px;
     }
 }
 

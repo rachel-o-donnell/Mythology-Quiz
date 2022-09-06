@@ -90,14 +90,17 @@ document.getElementById('select').addEventListener('change', function() {
         questions = easyCategory;
         shuffleQuestions();
         chooseNextQuestion();
+        console.log(questions)
     } else if (chosenDifficulty === 'medium') {
         questions = mediumCategory;
         shuffleQuestions();
         chooseNextQuestion();
+        console.log(questions)
     } else if (chosenDifficulty === 'hard') {
         questions = hardCategory;
         shuffleQuestions();
         chooseNextQuestion();
+        console.log(questions)
     }
 });
 
