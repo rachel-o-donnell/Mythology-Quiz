@@ -16,36 +16,44 @@ Lovers or enthusiasts of Greek mythology and fine art. A multiple choice method 
 
 **Site Goals:** 
 
-users can easily navigate the game by use of of simple box displaying all interactive elements. Users can enter their initials coose a level of difficulty and begin the game. On the game screen the player can clearly see icons at the top of the screen with a home button that bring them back to the home screen at any point in the game, a user icon displays their own initials that they entered, an icon if a tropy displays / SUGGESTS??? the score the player is on and lastly that will be displayed on the screen, Users can easily see what question they are on out of 8 . 
+Users can easily navigate the game by use of of simple box displaying all interactive elements. Users can enter their initials coose a level of difficulty and begin the game. On the game screen the player can clearly see icons at the top of the screen with a clickable home button that bring them back to the home screen at any point in the game, a user icon displays their own initials that they entered, an icon of a tropy displays the score and a question icon shows the user what question they are on out of 8 . 
 
-each quesion is dispalyed with 4 options for answers, users can control when they see the next question but pressing a next button in case they want to study the answer in the event they chose incorrectly. the button will only fire after they have submitted an answer, and a color change will occur -green for rcorrect red for incorrect. the the player has answered 8 questions an end game screen will appear telling the user, a personalised message with the players name, score and level difficulty. A painting of a mythological significance will be displayed and the olayer has the option to play the game again if they wish.
+Each quesion is displayed with 4 options for answers, users can skip a question by pressing the next button, and control when they see the next question if they want to study the answer. After an answer is clicked a color change will occur -green for correct red for incorrect. When the player has answered 8 questions an end game screen will appear displaying a personalised message with the players name, score and level difficulty. A painting of a mythological significance will be displayed and the player has the option to play the game again, if they wish.
 
 **User Stories:**
 
+As a user I can enter my initials so I can personalise my experience.
+As a user I can choose different difficulties so I can challenge myself further when I am ready.
+As a user I can see my score go up and my answer button turn red or green so I can see if I have answered correctly.
+As a user I can control when I see the next question so I can study the answer if I have answered incorrectly.
+As a user I can press the next button so I skip a question if I dont want to guess.
+As a user I can play again immediately so I can see if I can beat my last score.
+As a user I can click the home button so I can exit to the home screen if I no longer want to play or want to change difficulty.
+
 **Colour choice:**
 
+I wanted a color scheme to feel classic, rich while remain somewhat neutral - they needed to feel like old colors of the time. I was very much inspired by the color choice of the below image for its calming, warm and complementary tones. 
+
 ![This is an image](/assets/images/read-me-images/color-inspo.png)
+
+**Colours**
+ Based on this I started pulling out some tones and ended up with the below palette.
+
+ #e3a857 - ochre
+ #6E6259 - slate gray
+ #FAFAD2 - pale yellow
+ #380456 - dark purple 
+ #301934 - darker purple: I addded the darker purple font for more acceability while being a complimentary color to the mustard.
+ #8B0000 - red : I opted for richer palette for the red and green that would appear older and sit within the mustard and not appear garish.
+#004600 - green
 ![This is an image](/assets/images/read-me-images/main-color.png)
 ![This is an image](/assets/images/read-me-images/%20button-color.png)
+![This is an image](/assets/images/read-me-images/light-yellow.png)
 ![This is an image](/assets/images/read-me-images/dark-purple.png)
 ![This is an image](/assets/images/read-me-images/darker-purple.png)
-![This is an image](/assets/images/read-me-images/light-yellow.png)
-
-Originally I wanted t have the game based on the Celtic wheel of the year but chose to change and try API . 
-
-Inspired by the color choice of this picture for its calming, wamr and complementary tones. I wanted a color scheeme to feel classic, rich while neutral.
-
-needed the red a greens to feel older and richer to blend with the color palette more.
 ![This is an image](/assets/images/read-me-images/red.png)
 ![This is an image](/assets/images/read-me-images/green.png)
 ![This is an image](/assets/images/read-me-images/red-and-green.png)
-
-**Colours**
-added the dark purple font for more acceability while being a complimentary color to the mustard.
-
-stone grey. 
-
-I opted for richer palette for the red and green that would sit within the mustard and not appear garish. They needed to feel like old colors of the time. I used the undertones of ht ebackgrouind image to pull out tones that might suit, ultimately landing on the ones fhosen. 
 
 **Fonts:**
 
@@ -60,7 +68,7 @@ Cormorant+Garamond Classic but with a little opulant decoration
 
 ## HERO IMAGE
 
-I do not have the rights to these images they are used for educational purposes only.
+*I do not have the rights to these images they are used for educational purposes only.*
 
 ![This is an image](/assets/images/chamber.png)
 
@@ -95,8 +103,9 @@ https://www.widewalls.ch/magazine/greek-mythology-paintings/gustave-moreau-oedip
 
 ## Wireframes:
 
-Wireframes were made with Balsamiq and can be found ![here](/assets/wireframes-new/) 
+Wireframes were made with Balsamiq and can be found ![here](/assets/wireframes-new/home.png
 
+Originally I wanted to have the game based on the Celtic wheel of the year but chose to change that on discovery of API. My origianl wireframes were very different as they were to have 8 images in a circle. 
 ---
 
 ## FEATURES:
