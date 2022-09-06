@@ -164,7 +164,7 @@ header,
 }
 
 .panel-element {
-    display: flex
+    display: flex;
 }
 
 
@@ -182,6 +182,9 @@ header,
     margin-right: 20px;
 }
 
+.no-pointer {
+    cursor: not-allowed;
+}
 
 /* questions and answers screen */
 .q-and-a-area {
