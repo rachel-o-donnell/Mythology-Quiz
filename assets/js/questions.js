@@ -27,7 +27,7 @@ const easyCategory = [{
 
     {
         difficulty: "easy",
-        question: "Which Greek &amp; Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
+        question: "Which Greek and Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
         correct_answer: "Apollo",
         answers: [
             "Aphrodite",
@@ -95,7 +95,7 @@ const easyCategory = [{
     },
     {
         difficulty: "easy",
-        question: "What mythology did the god &quot;Apollo&quot; come from?",
+        question: "What mythology did the god Apollo come from?",
         correct_answer: "Greek and Roman",
         answers: [
             "Roman and Spanish",
@@ -106,7 +106,7 @@ const easyCategory = [{
     },
     {
         difficulty: "easy",
-        question: "What mytological creatures have women&#039;s faces and vultures&#039; bodies?",
+        question: "What mytological creatures have women's faces and vultures' bodies?",
         correct_answer: "Harpies",
         answers: [
             "Mermaids",
@@ -117,7 +117,7 @@ const easyCategory = [{
     },
     {
         difficulty: "easy",
-        question: "The Nike apparel and footwear brand takes it&#039;s name from the Greek goddess of what?",
+        question: "The Nike apparel and footwear brand takes it's name from the Greek goddess of what?",
         correct_answer: "Victory",
         answers: [
             "Victory",
@@ -157,7 +157,7 @@ const mediumCategory = [{
     {
 
         difficulty: "medium",
-        question: "Neptune&#039;s greek name was...",
+        question: "Neptune's greek name was...",
         correct_answer: "Poseidon",
         answers: [
             "Ares",
@@ -241,7 +241,7 @@ const mediumCategory = [{
     {
 
         difficulty: "medium",
-        question: "Which greek god/goddess tossed a golden apple with the words &quot;for the fairest&quot; into the middle of the feast of the gods?",
+        question: "Which greek god/goddess tossed a golden apple with the words 'for the fairest' into the middle of the feast of the gods?",
         correct_answer: "Eris",
         answers: [
             "Eris",
@@ -280,7 +280,7 @@ const hardCategory = [{
     {
 
         difficulty: "hard",
-        question: "What was the punishment for Sysiphus&#039;s craftiness?",
+        question: "What was the punishment for Sysiphu's craftiness?",
         correct_answer: "Cursed to roll a boulder up a hill for eternity.",
         answers: [
             "Tied to a boulder for eternity, being pecked by birds.",
