@@ -21,28 +21,28 @@ let currentQuestionIndex = 0;
 let correctAns;
 let chosenDifficulty, questions;
 let correct, wrong;
-let level, username;
-let initials;
+let level, initials;
 
 
 // EVENT LISTENERS
 
-//beginBtn.addEventListener('click', beginGame); // BEGIN BUTTON- BEGINS THE GAME
-document.getElementById('home.btn').addEventListener('click', goHome); // HOME ICON - RESETS TO HOME SCREEN
-playAgain.addEventListener('click', goHome); // PLAY AGAIN BUTTON - RESETS THE GAME TO THE START
+// HOME ICON - RESETS TO HOME SCREEN
+document.getElementById('home.btn').addEventListener('click', goHome);
+
+// PLAY AGAIN BUTTON - RESETS THE GAME TO THE START
+playAgain.addEventListener('click', goHome);
 
 // ANSWER BUTTONS - CHECKS IF THE SELECTED ANSWER IS CORRECT OR WRONG
 Array.from(answerButtons).forEach(eachBtn => {
     eachBtn.addEventListener('click', checkAns);
 });
 
-// ADDS EVENT LISTENER TO THE FORM ON HOME SCREEN THAT ONLY ALLOWS THE 
-// PLAYER TO BEGIN THE GAME WHEN THE REQUIRED FIELDS ARE FILLED OUT
+// FORM ON HOME SCREEN THAT ONLY ALLOWS THE PLAYER TO BEGIN THE GAME WHEN THE REQUIRED FIELDS ARE FILLED OUT
 homeScreenForm.addEventListener("submit", event => {
     event.preventDefault();
 
     initials = event.target.name?.value;
-    const level = event.target.select?.value;
+    level = event.target.select?.value;
 
     if (initials && level) {
         beginGame();
@@ -74,7 +74,6 @@ function hideElements() {
 
 
 // RESETS COLOUR OF ANSWER BUTTONS
-
 function resetAnsBtnColor() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeAttribute('style');
@@ -90,17 +89,14 @@ document.getElementById('select').addEventListener('change', function() {
         questions = easyCategory;
         shuffleQuestions();
         chooseNextQuestion();
-        console.log(questions)
     } else if (chosenDifficulty === 'medium') {
         questions = mediumCategory;
         shuffleQuestions();
         chooseNextQuestion();
-        console.log(questions)
     } else if (chosenDifficulty === 'hard') {
         questions = hardCategory;
         shuffleQuestions();
         chooseNextQuestion();
-        console.log(questions)
     }
 });
 
