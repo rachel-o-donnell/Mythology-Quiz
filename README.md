@@ -20,6 +20,8 @@ Users can easily navigate the game by use of of simple box displaying all intera
 
 Each quesion is displayed with 4 options for answers, users can skip a question by pressing the next button, and control when they see the next question if they want to study the answer. After an answer is clicked a color change will occur -green for correct red for incorrect. When the player has answered 8 questions an end game screen will appear displaying a personalised message with the players name, score and level difficulty. A painting of a mythological significance will be displayed and the player has the option to play the game again, if they wish.
 
+The game is fully responsive.
+
 **User Stories:**
 
 As a user I can enter my initials so I can personalise my experience.
@@ -67,43 +69,41 @@ Cormorant+Garamond Classic but with a little opulant decoration
 **Imagery:**
 
 
-## HERO IMAGE
-
 *I do not have the rights to these images they are used for educational purposes only.*
+
+**Background image:**
 
 ![This is an image](/assets/images/chamber.png)
 
-Hero image:
-  Chamber of the Giants by Giulio Romano taken from
-  https://www.atlasobscura.com/places/chamber-of-the-giants
+  Chamber of the Giants by Giulio Romano
 
-This rich painting provides a great backdrop as it features so many mythical characters, spiraling around the game screen.
+This rich ceiling painting provides a great backdrop as it features so many mythical characters, drawing the player in spiraling around the game screen.
 
   *"It tells the story of the fall of the giants, as described by the Latin poet Ovid in his Metamorphoses. The god Jupiter is pictured on the ceiling, surrounded by the entire Roman cosmogony. The painting shows the moment he threw his lighting to destroy the giants. On the surrounding walls, there are images of crumbling buildings and desperate giants trying to escape."*
   quote taken directly from https://www.atlasobscura.com/places/chamber-of-the-giants
 
-End of game images: 
+**End of game images:** 
 
   I wanted to show a different painting going from most easily recocniseable to more obscure as you go along to represent the categories themselves. 
   This research solidified my choice of color scheme as all images look at home within the game screen and create a beautifully indulgent pattern contrast when layered
 
-Easy:
+**Easy:**
   The Birth of Venus by Botticelli (1486).
   ![This is an image](/assets/images/read-me-images/venus-end-screen.png)
 
-Medium:
+**Medium:**
   “Perseus and Andromeda” by Frederic Leighton
   ![This is an image](/assets/images/read-me-images/perseus-end-screen.png)
 
-Hard:
+**Hard:**
   "Oedipus and the Sphinx" by Gustave Moreau 
   ![This is an image](/assets/images/read-me-images/oedipus-end-screen.png)
 
 ## Wireframes:
 
-Wireframes were made with Balsamiq and can be found ![here](/assets/wireframes-new/home.png
+Wireframes were made with Balsamiq and can be found [here](assets/wireframes-new/)
+My original wireframes were for a game on the Celtic Wheel that would still have a game screen in the centre of an image.
 
-Originally I wanted to have the game based on the Celtic wheel of the year but chose to change that on discovery of API. My origianl wireframes were very different as they were to have 8 images in a circle. 
 ---
 
 ## FEATURES:
@@ -112,34 +112,44 @@ Originally I wanted to have the game based on the Celtic wheel of the year but c
 
 Once I found the background image I knew is would work perfectly to act as a background that would draw the players attention to the centre of the screen with its circular layout while still being an incredible texture compliment to the flat ochre screen.
 
-**Game Panel:** 
-![This is an image](/assets/images/read-me-images/game-panel.png)
-The Nav bar consists of 3 options, XYZ  allowing the user to easily navigate their journey without using the back button.
-Each nav button has an accompanying icon that can be easily read visually.
-The active page is underlined confirming to the user what page they are currently on.
-It is fully responsive with layout of the nav bar being consistent in style across different screen sizes save for a stacked style for a mobile device.
-A game pane
+**Game screen**
+
+The game plays out on three different screens that change as the user progresses. Each screen keeps the same colors for a smoother user expereiemce. It is fully responsive with layout of the whole screen being consistent in style across different screen sizes save for a Answer buttons being stacked for a mobile device.
+
 **Enter initials:**
+ The user enters their initials for a personalised experience
 
 **Drop down menu:**
-**Game Panel :**
-**Question :**
-**Ansers:**
-The Nav bar consists of 3 options, XYZ  allowing the user to easily navigate their journey without using the back button.
-Each nav button has an accompanying icon that can be easily read visually.
-The active page is underlined confirming to the user what page they are currently on.
-It is fully responsive with layout of the nav bar being consistent in style across different screen sizes save for a stacked style for a mobile device.
+ The user can choose from 3 different categories, easy, medium or hard.
 
-**Answer buttons:**
+**Game Panel:** 
+![This is an image](/assets/images/read-me-images/game-panel.png)
+The game panel  consists of 4 displays accompanying icon that can be easily read visually.
+    
+* Home icon - a clickable icon bringing the user to the home screen without having to use the back button 
+* Username - diplays the initials of the user that they entered in the previous screen
+* Score - displays your score
+* Questions - displays what question you are on out of 8 
+
+The latter 3 icons are not clickable and the pointer visually tells this to the user.
+
+**Question and Ansers:**
+
+Questions and answers are chosen at random and displayed in the centre of the screen. Each question have 4 answer options in button form. The button chosem will imediately turn red for incorrect and green for correct, visually telling the user is they are correct or not. The correct anwer is always displayed if an incorrect ans was chposen for a better learning experience.
+
+**Personalised message:**
+![This is an image](/assets/images/read-me-images/custom-end-msg.png)
+
 **Play again:**
+Allows users to immediatly play again if they wish to beat their score.
 
 ---
 
 ## TECHNOLOGIES USED:
 
-Html
-Css
-Javascript 
+* Html
+* Css
+* Javascript 
 
 ---
 
@@ -148,13 +158,14 @@ Javascript
 Devices tested:
 
  * Iphone 11
- * Iphone 5
+ * Iphone 
+ * MotoG7power
  * MacBook Air
  * Ipad
  * 32" monitor
  * Samsung Galaxy S8
  * Samsung Galaxy Ultra
- * tested in responsive form in Chrome Dev tools.
+ * Tested in responsive form in Chrome Dev tools.
 
 **Browsers tested:**
 
@@ -162,38 +173,46 @@ Devices tested:
  * Brave
  * Chrome
  * Safari
- * Validator Testing:
 
-HTML: No errors are returned when passing through the official W3C validator.
-CSS: No errors are returned when passing through the official Jigsaw validator.
-JShint: No errors are returned when passing through the official JShint.
-https://beautifier.io/
+**Validator Testing:**
+
+* HTML:
+   No errors are returned when passing through the official W3C validator.
+* CSS: 
+   No errors are returned when passing through the official Jigsaw validator.
+* JShint: 
+   No errors are returned when passing through the official JShint.
+* https://beautifier.io/: 
+  Completed
 
 **Lighthouse**
 
 Mobile Pages:
-  
-Desktop Pages:
+![This is an image](/assets/images/read-me-images/lighthouse-mobile.png)
 
-testing game elements :
+Desktop Pages:
+![This is an image](/assets/images/read-me-images)
+
+## Testing game elements :
+
+
 | FEATURE | EXPEXT | ACTION | RESULT |
 | ----- | ------- | ------ | ------ |
-| Enter initials area | Input are requires the player to enter their initials before the game gan be played |  Pressed begin button without entering| Player is prompted to enter initials before game can be played|
-| Dropdown button | Each button on the dropdown menu works, displays questions ans answers from category chosen and defaults to choose difficulty when game resets | Chose each category, logged the answer sets to the console to check the category | Each button on the dropdown menu works, displays questions ans answers from category chosen and defaults to choose difficulty when game resets|
-|Dropdown menu | Player must select a difficulty setting before game can be played | Pressed begin button without choosing a level | layer must select a difficulty setting before game can be played. |s
-| Begin button | Begin button will start the game and load the game screen. | Pressed begin button (after submiting initials and difficulty | Begin button will start the game and load the game screen. |
-| Home icon   |   Pressing home button brings you to the home screen and resets the game | Clicked home button | Home button resets game and bring to home screen when pressed |
+| Enter initials area | Input area requires the player to enter their initials before the game can be played |  Pressed begin button without entering| Player is prompted to enter initials before game can be played|
+|Dropdown menu | Player must select a difficulty setting before game can be played | Pressed begin button without choosing a level | layer must select a difficulty setting before game can be played. |
+| Dropdown button | Each button on the dropdown menu works, displays questions and answers from category chosen and defaults to choose difficulty when game resets | Chose each category, logged the answer sets to the console to check the category | Each button on the dropdown menu works, displays questions and answers from category chosen and defaults to choose difficulty when game resets|
+| Begin button | Begin button will start the game and load the game screen. | Pressed begin button (after submiting initials and difficulty | Begin button starts the game and load the game screen. |
+| Home icon  |   Pressing home button brings you to the home screen and resets the game | Clicked home button | Home button resets game and bring to home screen when pressed |
 | Username display| Username displays inputted initials from home screen on the right og the user icon | Entered initials into username input | Username displays inputted username on the right of the user icon |
-| Score display | Game screen displays a score of zero on the right of the trophy icon and increases by 1 each time the player answers correctly but stays the same if answered incorrectly. | Played the game to the end answering correctly and Incorrectly  | Score begins at zero increases with eachc orrect ans and stays the same when answered incorrectly |
-| Question counter | Question counter displays to the right of the ? icon. It begins at 1/8 and increases with each new question until it reaches 8/8 | Played game from start to finish | Question counter displays to the right of the ? icon. It begins at 1/8 and increases with each new question until it reaches 8 | 
+| Score display | Game screen displays a score of zero on the right of the trophy icon and increases by 1 each time the player answers correctly but stays the same if answered incorrectly. | Played the game to the end answering correctly and incorrectly  | Score begins at zero increases with each correct ans and stays the same when answered incorrectly |
+| Question counter | Question counter displays to the right of the question icon. It begins at 1/8 and increases with each new question until it reaches 8/8 | Played game from start to finish | Question counter displays to the right of the ? icon. It begins at 1/8 and increases with each new question until it reaches 8 | 
 | Questions | Questions are not repeated in a game. | Played each level repeatedly. | Questions are not repeated in a game.|
-| Anwer Buttons | Player can only select one answer button, and attempts to click will not incur a color change | Click an answer button , then tried to click all other answers.| Can not select more than one answer. Game no longer recocgnises the click or changes the color of the buttons. |
+| Answer Buttons | Player can only select one answer button, and attempts to click will not incur a color change | Click an answer button , then tried to click all other answers.| Can not select more than one answer. Game no longer recocgnises the click or changes the color of the buttons. |
 | Correct answer | Correct answer button turns green when selected | Selected the correct answer | Correct answer button turns green when selected |
-| Incorrect answer | Incorrect answer button turns red when selected | Selected an incorrect answer | Incorrect answer button turns red when selected |
+| Incorrect answer | Incorrect answer button turns red when selected and shows the correct answer in green | Selected an incorrect answer | Incorrect answer button turns red when selected and the correct answer turns green|
 | Next Button | Next button skips to next question, whether an anwer is chosen or not. | Clicked next button with and without answering a question|  Next button then works when an answer is given and skips to next question without an answer.|
-| End Game | Game ends when player has answered 8 questions.| Played game | Game ends when player has answered 8 questions.|
+| End Game | Game ends when player has answered 8 questions.| Played game to the end | Game ends when player has answered 8 questions.|
 | End screen message | The players initials, score and reminder of what category was played on the end screen. | Played the game multiple times on all levels to the end, with different initials, and different scores. The inputted initials, score and reminder of what category was played on the end screen. 
-| Home icon | Game resets when play again button is clicked.| Clicked home button | Game resets when play again button is clicked.|
 | End screen picture| A different picture is displayed when you reach the end game screen depending on the category chosen  - Easy: Venus, Medium: Perseus, Hard: Oedipus | Played each game repeatedly until the end screen appears | A different picture is displayed when you reach the end game screen depending on the category chosen - Easy: Venus, Medium: Perseus, Hard: Oedipus|
 | Play again button | Resets game to home screen and resets to the default settings allowing the player to choose a new level or a new player can enter their initials without having to clear the last players.  | PLayed game multiple times on  different levels using the play again button. | Resets game to home screen and resets to the default settings. Initial area is clear waiting foe input and dropdown prompts to choose a difficulty. 
 
@@ -241,6 +260,8 @@ To Clone this repository follow these steps:
 * Keep next button in a constant place for better player experience.
 * Option not to be able to use next button unless answr has been given.
 * Bonus points for correctly guessing the name of the displayed picture
+* Connect to API to expand to to related subjects like art history
+    * Initially I wanted my quiz to be about the Celtic Calendar but after learning about API I needed to change my subject and design to practice using this. I made a serious effort to connect and interact fully with the API but I was stumped on how to populate my answers buttons so I copied and pasted the questions into a new JS file so I could continue.
 
 
 ---
@@ -248,80 +269,93 @@ To Clone this repository follow these steps:
 ## CREDITS:
 
 **Code:**
-Using Love Running and my last project ******INSERT LINK****  as guidlines to rememeber Html and CSS,Love Maths as a guide for JS and adapting all to my needs and design for this project. 
+
+Using Love Running and my last project
+https://rachel-o-donnell.github.io/craft-and-cocktail-club/
+https://github.com/rachel-o-donnell/craft-and-cocktail-club
+ as guidlines to rememeber Html and CSS and Love Maths as a guide for JS and adapting all to my needs and design for this project. 
+
 Heavily relying on Dev Tooos to play around and find the right fit.
 
-LOVE MATHS - code for increasing score and questioncount.
-
-https://miker94.github.io/CI-Project-Portfolio-2/ I absolutely loved the style and design of this quiz so Ive been looking a lot at Mike's code to see how he created it but changing as much as possible to suit my needs and simplify it. Mostly I am using the idea of the game screen with all the info centered. Initially I wanted my quiz to be about the Celtic Calendar but after learning about API I needed to change my subject and design. I chose to use an API rather than write all my questions - really just so I could practice on how to use API. 
+* LOVE MATHS 
+    * code for increasing score and questioncount.
+    
+* https://miker94.github.io/CI-Project-Portfolio-2/ 
+    * I absolutely loved the style and design of this quiz I found on the peer review channel. I've been looking a lot at Mike's code to see how he created it in many sections but changing as much as possible to suit my needs and simplify it. Mostly I am using the idea of the game screen with all the info centered. 
 
 Used how to add background image directly- I couldnt find a way to add and style differently that would work. I changed mine only by adding it to the body element and not the html ????? DID I CHANGE THIS BACK ????. 
  
- Dropdown code: https://www.w3schools.com/howto/howto_js_dropdown.asp
 
- all videos watched about building quizes with JS:
- https://www.youtube.com/watch?v=riDzcEQbX6k: Web Dev Simplified
- box shadow detail, 
- hideing game screen 
+ **Tutorials**:
+ All videos watched about building quizes with JS:
 
-Adding and event listener to the html dropdown: Changed to suit my wants
-https://www.codegrepper.com/code-examples/javascript/javascript+event+listener+on+select+option (Defeated Dotterel)
+ * USING FETCH API :  Used a combo of both below videos to fetch api, set questions, difficulty. etc.
+      * Web Dev simplified: https://www.youtube.com/watch?v=cuEtnrL9-H0 
+      * Code with Ania Dubów: https://www.youtube.com/watch?v=zgHim4ZDpZY: - using array to fetch difficulty setting and set question
+ 
+*  Web Dev Simplified: https://www.youtube.com/watch?v=riDzcEQbX6k
+    * Box shadow detail, 
+    * Hideing game screen 
 
- USING FETCH API : USe a coombo of both below videos to fetch api, set questions, difficulty. etc.
- https://www.youtube.com/watch?v=cuEtnrL9-H0 Web Dev simplified - to use fetch APi
+* Mike Dane: https://www.youtube.com/watch?v=LQGTb112N_c
 
- https://www.youtube.com/watch?v=zgHim4ZDpZY: Code with Ania Dubów - using array to fetch difficulty setting and set question
+* Bro Code: https://www.youtube.com/watch?v=w9GNyw8AvlM 
+    * help with code for connecting username on begin game button. 
 
-https://www.youtube.com/watch?v=LQGTb112N_c: Mike Dane
- Image:
- Otiginally I had a grey background but I had tyed with the idea of adding images. When I changed my idea to a mythology I immediatly knew I would want to add some rich, classical imagaery. 
- Background image taken from google search on mythological fine art paintings. This was perfect as has many mythological characters and as its painted on a ceiling I feel you can get the feeling of looking up into the sky as you anser your questions- spiraling into a void/ its spiral deign hold the game centre nicely no matter what the screen size. I changed my styling to suit the image .  https://artsandculture.google.com/asset/chamber-of-the-giants-giulio-romano/kwH6-YlTRSD9fA?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A9.70138
 
- https://bobbyhadz.com/blog/javascript-cannot-read-property-add-of-undefined - could not get my classList.add to work realsied I needed to use a for loop. this helped. 
+* Defeated Dotterel: https://www.codegrepper.com/code-examples/javascript/javascript+event+listener+on+select+option
+    * Adding and event listener to the html dropdown: Changed to suit my wants
+ 
+ * https://bobbyhadz.com/blog/javascript-cannot-read-property-add-of-undefined 
+    *  could not get my classList.add to work realsied I needed to use a for loop. This helped. 
 
-help with code for inputting usernaem on begin game button. 
-https://www.youtube.com/watch?v=w9GNyw8AvlM 
-and with separating the font awesome icon so it still deisplays with the new text input of username...https://stackoverflow.com/questions/25708569/font-awesome-icons-in-html-form ans from jagmitg
+* Answer from jagmitg: .https://stackoverflow.com/questions/25708569/font-awesome-icons-in-html-form 
+    * separating the font awesome icon so it still displays with the new text input of username..
 
-HTML DROPDOWN MENU: 
+* Dropdown code: 
+    * https://www.w3schools.com/howto/howto_js_dropdown.asp
+        * made a good effort to work with this at the start but found it a little too complicated to interact with whien adding event listeners so resorted to HTML but earlier commits used this.
+
+* HTML dropdown: 
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_value
 
-MAKING THE NEXT BUTTON STICK IN THE ONE PLACE (FOR BETTER USER EXPERIENCE)
-https://stackoverflow.com/questions/30026487/how-to-make-a-button-stay-at-a-bottom-of-a-screen
-ans from Nilesh Mahajan then I played in dev tools untill I was happy with the position
-
-editing a commit message after being pushed
+* Editing a commit message after being pushed
 https://www.educative.io/answers/how-to-change-a-git-commit-message-after-a-push
 
-disabling elements :
+* Disabling elements: 
 https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a%20button%20using,disabled%20JavaScript%20property%20to%20false%20.
 
-disabling hover functio
-Bert Verhelst comment from 
-https://www.quora.com/How-to-unhover-an-element-with-an-active-hover-with-JS
+* Disabling hover function
+    * Bert Verhelst comment: https://www.quora.com/How-to-unhover-an-element-with-an-active-hover-with-JS
 
- Fisher yates shuffle code suggested ny Sean Young on slack as I had otriginally applied the math.random.  Took a few attempts to understand and how to apply to my needs
+* Fisher Yates shuffle code suggested ny Sean Young on slack as I had otriginally applied the math.random.  Took a few attempts to understand and how to apply to my needs
 
-disabling pointer - pointer-events: none or auto were not working: 
-Mohamed Ramrami
- https://stackoverflow.com/questions/50349017/how-can-i-change-cursor-for-disabled-button-or-a-in-bootstrap-4
+* Disabling pointer - pointer-events: none/auto were not working: 
+    * Mohamed Ramrami: https://stackoverflow.com/questions/50349017/how-can-i-change-cursor-for-disabled-button-or-a-in-bootstrap-4
+
+**Images**
+
+**Background image**
+* Chamber of the Giants by Giulio Romano taken from
+  https://www.atlasobscura.com/places/chamber-of-the-giants
+ https://artsandculture.google.com/asset/chamber-of-the-giants-giulio-romano/kwH6-YlTRSD9fA?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A9.70138
 
 
- The Birth of Venus by Botticelli (1486). Photograph: Alamy taken from
+* The Birth of Venus by Botticelli (1486). Photograph: Alamy taken from
   https://www.theguardian.com/artanddesign/2016/mar/05/destination-venus-how-botticelli-became-a-brand
 
-  “Perseus and Andromeda” by Frederic Leighton taken from
+* “Perseus and Andromeda” by Frederic Leighton taken from
    https://joyofmuseums.com/artists-index/frederic-leighton/perseus-and-andromeda-by-frederic-leighton/
 
-   "Oedipus and the Sphinx" by Gustave Moreau taken from
+* "Oedipus and the Sphinx" by Gustave Moreau taken from
    https://www.widewalls.ch/magazine/greek-mythology-paintings/gustave-moreau-oedipus-and-the-sphinx
 
  **Questions:**
-Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
+Used and API to use pre done questions and answers - https://opentdb.com/api_config.php
 
 **Markdown:**
 
-format learnings from below
+Format learnings from below
 https://www.youtube.com/watch?v=HUBNt18RFbo
 https://www.markdownguide.org/cheat-sheet/
 
@@ -333,7 +367,6 @@ https://www.w3schools.com/tags/ref_pxtoemconversion.asp - px converter - convert
 
 *Saving and optimizing images for SEO: https://www.jimdo.com/blog/optimize-website-images-for-better-design-seo/
 
-**Hero image**
 
 **Fonts:**
 
@@ -399,3 +432,5 @@ Required elements on home screen - initials input and dropdown rewuired was not 
 * Open Trivia Database 
 * Quora
 ---
+
+![This is an image](/assets/images/read-me-images/venus-responsive.png)
