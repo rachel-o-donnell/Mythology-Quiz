@@ -22,6 +22,7 @@ let correctAns;
 let chosenDifficulty, questions;
 let correct, wrong;
 let level, username;
+let initials;
 
 
 // EVENT LISTENERS
@@ -35,26 +36,31 @@ Array.from(answerButtons).forEach(eachBtn => {
     eachBtn.addEventListener('click', checkAns);
 });
 
-// SETS USERNAME IN PANEL WHEN CALLED
-function setUsername() {
-    let name = document.getElementById('name');
-    let username = name.value;
-    document.getElementById('username').textContent = username;
-}
-
 // ADDS EVENT LISTENER TO THE FORM ON HOME SCREEN THAT ONLY ALLOWS THE 
 // PLAYER TO BEGIN THE GAME WHEN THE REQUIRED FIELDS ARE FILLED OUT
 homeScreenForm.addEventListener("submit", event => {
     event.preventDefault();
 
-    const userName = event.target.name?.value;
+    initials = event.target.name?.value;
     const level = event.target.select?.value;
 
-    if (userName && level) {
+    if (initials && level) {
         beginGame();
     }
 });
 
+// BEGINS GAME - HIDES HOME CONTAINER , SHOWS GAME SCREEN, DISPLAYS NAME, RESETS SCORE AND QUESTION COUNTER
+function beginGame() {
+    hideElements();
+    setUsername();
+    score.innerHTML = 0;
+    questionCountDisplay.innerHTML = 1;
+}
+
+// SETS USERNAME IN PANEL WHEN CALLED
+function setUsername() {
+    document.getElementById('username').textContent = initials;
+}
 
 //HIDES HOME SCREEN
 function hideElements() {
@@ -64,14 +70,6 @@ function hideElements() {
     homeContainer.style.display = 'none';
     gameScreenContainer.style.display = 'flex';
     gameScreenElements.classList.remove('hide-game');
-}
-
-// BEGINS GAME - HIDES HOME CONTAINER , SHOWS GAME SCREEN, DISPLAYS NAME, RESETS SCORE AND QUESTION COUNTER
-function beginGame() {
-    hideElements();
-    setUsername();
-    score.innerHTML = 0;
-    questionCountDisplay.innerHTML = 1;
 }
 
 
@@ -130,7 +128,7 @@ nextButton.addEventListener('click', function() {
 
 // DISPLAYS QUESTION AND ANSWERS 
 function displayQuestion(question) {
-    questionText.innerHTML = question.question;
+    questionText.innerText = question.question;
     question.answers.forEach((answer, index) => {
         answerButtons[index].innerHTML = answer;
     });
@@ -199,7 +197,7 @@ function questionOfQuestion() {
 
 // CHECKS THE QUESTION COUNT AND CALLS TO END THE GAME WHEN IT REACHES 9 
 function queQuestionCount() {
-    if (questionCountDisplay.innerHTML >= quizLength) {
+    if (questionCountDisplay.innerText >= quizLength) {
         endGame();
     }
 }
@@ -215,7 +213,7 @@ function endGame() {
     gameScreenContainer.style.removeProperty('display');
     endGameContainer.style.display = 'flex';
     //endMessage()
-    endMessage.innerHTML = (`${username.innerText}, you scored ${score.innerText} out of ${quizLength} in the ${level} category. Ready to play again?`);
+    endMessage.innerHTML = (`${initials}, you scored ${score.innerText} out of ${quizLength} in the ${chosenDifficulty} category. Ready to play again?`);
     if (chosenDifficulty === 'easy') {
         venus.classList.remove('hide');
         perseus.classList.add('hide');
