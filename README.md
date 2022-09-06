@@ -39,13 +39,14 @@ I wanted a color scheme to feel classic, rich while remain somewhat neutral - th
 **Colours**
  Based on this I started pulling out some tones and ended up with the below palette.
 
- #e3a857 - ochre
- #6E6259 - slate gray
- #FAFAD2 - pale yellow
- #380456 - dark purple 
- #301934 - darker purple: I addded the darker purple font for more acceability while being a complimentary color to the mustard.
- #8B0000 - red : I opted for richer palette for the red and green that would appear older and sit within the mustard and not appear garish.
-#004600 - green
+ - #e3a857 - ochre
+ - #6E6259 - slate gray
+ - #FAFAD2 - pale yellow
+ - #380456 - dark purple 
+ - #301934 - darker purple: I addded the darker purple font for more acceability while being a complimentary color to the mustard.
+ - #8B0000 - red : I opted for richer palette for the red and green that would appear older and sit within the mustard and not appear garish.
+ - #004600 - green
+
 ![This is an image](/assets/images/read-me-images/main-color.png)
 ![This is an image](/assets/images/read-me-images/%20button-color.png)
 ![This is an image](/assets/images/read-me-images/light-yellow.png)
@@ -73,33 +74,30 @@ Cormorant+Garamond Classic but with a little opulant decoration
 ![This is an image](/assets/images/chamber.png)
 
 Hero image:
-Chamber of the Giants by Giulio Romano taken from
-https://www.atlasobscura.com/places/chamber-of-the-giants
+  Chamber of the Giants by Giulio Romano taken from
+  https://www.atlasobscura.com/places/chamber-of-the-giants
 
 This rich painting provides a great backdrop as it features so many mythical characters, spiraling around the game screen.
 
-"It tells the story of the fall of the giants, as described by the Latin poet Ovid in his Metamorphoses. The god Jupiter is pictured on the ceiling, surrounded by the entire Roman cosmogony. The painting shows the moment he threw his lighting to destroy the giants. On the surrounding walls, there are images of crumbling buildings and desperate giants trying to escape." 
-quote taken directly from https://www.atlasobscura.com/places/chamber-of-the-giants
+  *"It tells the story of the fall of the giants, as described by the Latin poet Ovid in his Metamorphoses. The god Jupiter is pictured on the ceiling, surrounded by the entire Roman cosmogony. The painting shows the moment he threw his lighting to destroy the giants. On the surrounding walls, there are images of crumbling buildings and desperate giants trying to escape."*
+  quote taken directly from https://www.atlasobscura.com/places/chamber-of-the-giants
 
-End of game : 
+End of game images: 
 
-I wanted to show a different painting going from most easily recocniseable to more obscure as you go along to represent the categories themselves. 
-This research solidified my choice of color scheme as all images look at home within the game screen and create a beautifully indulgent pattern contrast when layered
+  I wanted to show a different painting going from most easily recocniseable to more obscure as you go along to represent the categories themselves. 
+  This research solidified my choice of color scheme as all images look at home within the game screen and create a beautifully indulgent pattern contrast when layered
 
-Easy
-The Birth of Venus by Botticelli (1486). Photograph: Alamy taken from
-https://www.theguardian.com/artanddesign/2016/mar/05/destination-venus-how-botticelli-became-a-brand
-![This is an image](/assets/images/read-me-images/venus-end-screen.png)
+Easy:
+  The Birth of Venus by Botticelli (1486).
+  ![This is an image](/assets/images/read-me-images/venus-end-screen.png)
 
-Medium
-“Perseus and Andromeda” by Frederic Leighton taken from
-https://joyofmuseums.com/artists-index/frederic-leighton/perseus-and-andromeda-by-frederic-leighton/
-![This is an image](/assets/images/read-me-images/perseus-end-screen.png)
+Medium:
+  “Perseus and Andromeda” by Frederic Leighton
+  ![This is an image](/assets/images/read-me-images/perseus-end-screen.png)
 
-Hard
-"Oedipus and the Sphinx" by Gustave Moreau taken from
-https://www.widewalls.ch/magazine/greek-mythology-paintings/gustave-moreau-oedipus-and-the-sphinx
-![This is an image](/assets/images/read-me-images/oedipus-end-screen.png)
+Hard:
+  "Oedipus and the Sphinx" by Gustave Moreau 
+  ![This is an image](/assets/images/read-me-images/oedipus-end-screen.png)
 
 ## Wireframes:
 
@@ -236,11 +234,13 @@ To Clone this repository follow these steps:
 * Your high scores 
 * Rules page
 * Sound effects
-* Insert message of correct or wrong
+* Option to turn off showing correct answer
+* Insert message if correct or wrong
 * Hints
 * Option to mix levels 
 * Keep next button in a constant place for better player experience.
 * Option not to be able to use next button unless answr has been given.
+* Bonus points for correctly guessing the name of the displayed picture
 
 
 ---
@@ -305,6 +305,16 @@ https://www.quora.com/How-to-unhover-an-element-with-an-active-hover-with-JS
 disabling pointer - pointer-events: none or auto were not working: 
 Mohamed Ramrami
  https://stackoverflow.com/questions/50349017/how-can-i-change-cursor-for-disabled-button-or-a-in-bootstrap-4
+
+
+ The Birth of Venus by Botticelli (1486). Photograph: Alamy taken from
+  https://www.theguardian.com/artanddesign/2016/mar/05/destination-venus-how-botticelli-became-a-brand
+
+  “Perseus and Andromeda” by Frederic Leighton taken from
+   https://joyofmuseums.com/artists-index/frederic-leighton/perseus-and-andromeda-by-frederic-leighton/
+
+   "Oedipus and the Sphinx" by Gustave Moreau taken from
+   https://www.widewalls.ch/magazine/greek-mythology-paintings/gustave-moreau-oedipus-and-the-sphinx
 
  **Questions:**
 Used and API to fetch pre done questions and answers - https://opentdb.com/api_config.php
