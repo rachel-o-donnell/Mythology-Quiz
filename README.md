@@ -1,8 +1,10 @@
 # WELCOME TO THE MYTHOLOGY QUIZ 
 
-A multiple choice quiz for lovers of Greek mythology set in a sreen with a backdrop of one of the most famous paintings on this theme 
+![This is an image](/assets/images/read-me-images/home-screen.png)
 
-There is 3 difficulty levels to choose from easy, medium and hard. Players can enter their initials 
+A multiple choice quiz for lovers of Greek mythology set in a sreen with a backdrop of one of the most famous paintings on this theme, Chamber of the Giants by Giulio Romano.
+
+There is 3 difficulty levels to choose from easy, medium and hard so players of all levels are welcome!
 
 ---
 
@@ -10,7 +12,7 @@ There is 3 difficulty levels to choose from easy, medium and hard. Players can e
 
 **Target Audience:**
 
-Lovers of Greek mythology and art. A multtiple choice method makes it more accessable to different knowledge levels as well as the choice to step up the challenge by choosing different difficulty levels. 
+Lovers or enthusiasts of Greek mythology and fine art. A multiple choice method makes it more accessable to different knowledge levels as well as the choice to step up the challenge by choosing different difficulty levels. 
 
 **Site Goals:** 
 
@@ -22,12 +24,20 @@ each quesion is dispalyed with 4 options for answers, users can control when the
 
 **Colour choice:**
 
+![This is an image](/assets/images/read-me-images/color-inspo.png)
+![This is an image](/assets/images/read-me-images/main-color.png)
+![This is an image](/assets/images/read-me-images/%20button-color.png)
+![This is an image](/assets/images/read-me-images/dark-purple.png)
+![This is an image](/assets/images/read-me-images/darker-purple.png)
+![This is an image](/assets/images/read-me-images/light-yellow.png)
+
 Originally I wanted t have the game based on the Celtic wheel of the year but chose to change and try API . 
 
-Insoired by the color choice of this picture for its calming, wamr and complementary tones. I wanted a color scheeme to feel classic, rich while neutral.
+Inspired by the color choice of this picture for its calming, wamr and complementary tones. I wanted a color scheeme to feel classic, rich while neutral.
 
-Once I found the background image I knew is would work perfectly to act as a background that would draw the players attention to the centre of the screen with its circular layout while still being an incredible textur compliment to the ochre screen.
-
+needed the red a greens to feel older and richer to blend with the color palette more.
+![This is an image](/assets/images/read-me-images/red.png)
+![This is an image](/assets/images/read-me-images/green.png)
 
 **Colours**
 added the dark purple font for more acceability while being a complimentary color to the mustard.
@@ -51,24 +61,34 @@ Cormorant+Garamond Classic but with a little opulant decoration
 
 I do not have the rights to these images they are used for educational purposes only.
 
-Hero image:
+![This is an image](/assets/images/chamber.png)
 
-end of game : 
-easy
+Hero image:
+Chamber of the Giants by Giulio Romano taken from
+https://www.atlasobscura.com/places/chamber-of-the-giants
+
+Once I found the background image I knew is would work perfectly to act as a background that would draw the players attention to the centre of the screen with its circular layout while still being an incredible texture compliment to the flat ochre screen.
+
+End of game : 
+
+I wanted to show a different painting going from most easily recocniseable to more obscure as you go along to represent the categories themselves. 
+This research solidified my choice of color scheme as all images look at home within the game screen and create a beautiful pattern contrast
+
+Easy
 The Birth of Venus by Botticelli (1486). Photograph: Alamy taken from
 https://www.theguardian.com/artanddesign/2016/mar/05/destination-venus-how-botticelli-became-a-brand
 
-medium
+Medium
 “Perseus and Andromeda” by Frederic Leighton taken from
 https://joyofmuseums.com/artists-index/frederic-leighton/perseus-and-andromeda-by-frederic-leighton/
 
-hard
+Hard
 "Oedipus and the Sphinx" by Gustave Moreau taken from
 https://www.widewalls.ch/magazine/greek-mythology-paintings/gustave-moreau-oedipus-and-the-sphinx
 
 ## Wireframes:
 
-Wireframes were made with Balsamiq and can be found here
+Wireframes were made with Balsamiq and can be found here 
 
 ---
 
@@ -164,7 +184,7 @@ This site was deployed to Github pages.
 1. In the github repository, click the settings tab
 2. From the source section drop down menu select the main branch
 3. Once the main branch has been selected the page will automatically refresh with a detailed ribbon display indicating the successful deployment.
-***************** ADD LINK HERE
+https://rachel-o-donnell.github.io/Mythology-Quiz/
 
 To Clone this repository follow these steps:
 
@@ -177,7 +197,7 @@ To Clone this repository follow these steps:
 4. Open Terminal.
 5. Change the current working directory to the location where you want the cloned directory.
 6. Type git clone, and then paste the URL you copied earlier.
-    * $ git clone ******************ADD LINK HERE
+    * $ git clone https://rachel-o-donnell.github.io/Mythology-Quiz/
 7. Press Enter to create your local clone.
 
 --- 
