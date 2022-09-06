@@ -131,7 +131,6 @@ input {
 
 button {
     font-size: 1.1rem;
-    /* was 1.5 but doesnt fit the hard categories*/
     margin-bottom: 3%;
     padding: 10px;
     background-color: #6E6259;
