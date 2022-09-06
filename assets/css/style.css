@@ -115,12 +115,12 @@ h3 {
 }
 
 
-
 input {
     background-color: #FAFAD2;
     color: #6E6259;
 
 }
+
 
 .label {
     background-color: #e3a857;
@@ -136,7 +136,6 @@ button {
     padding: 10px;
     background-color: #6E6259;
     color: #FAFAD2;
-    
 }
 
 #button-container {
@@ -147,10 +146,9 @@ button {
 button:hover {
     background-color: #FAFAD2;
     color: #6E6259;
-    
 }
 
-/* game area */
+/* GAME SCREEN */
 
 header {
     margin: 10px 0 0 20px;
@@ -166,7 +164,6 @@ header,
 .panel-element {
     display: flex;
 }
-
 
 #game-panel {
     display: flex;
@@ -186,23 +183,22 @@ header,
     cursor: not-allowed;
 }
 
+
 /* questions and answers screen */
 .q-and-a-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #380456;
-
 }
-
 
 .ans-btn:hover {
-    background-color:#FAFAD2;
-    color: #6E6259; ;
+    background-color: #FAFAD2;
+    color: #6E6259;
 }
 
-/* next button */
 
+/* next button */
 
 #next {
     margin: 5px auto;
@@ -216,7 +212,8 @@ header,
 }
 
 
-/* END SCREEN */ 
+/* END SCREEN */
+
 #end-screen {
     justify-content: space-around;
 }
@@ -242,7 +239,6 @@ header,
         font-size: 1.3rem;
         margin: 15px 3px 9px 45px;
     }
-
 }
 
 @media screen and (min-width: 30em) {
@@ -260,8 +256,8 @@ header,
 
 @media screen and (min-width: 30em) {
     #perseus {
-    width: 40%;
-}
+        width: 40%;
+    }
 }
 
 @media screen and (min-width: 30em) {
@@ -284,6 +280,7 @@ header,
         width: 30%;
     }
 }
+
 /* for screens that are 769px or above*/
 
 @media screen and (min-width: 48em) {
@@ -291,8 +288,8 @@ header,
         font-size: 1.3rem;
         margin: 15px 3px 9px 100px;
     }
-
 }
+
 @media screen and (min-width: 48em) {
     #button-container {
         display: grid;
@@ -321,6 +318,7 @@ header,
         margin-left: 105px;
     }
 }
+
 @media screen and (min-width: 48em) {
     .game-panel-containers {
         margin-right: 100px;
@@ -330,14 +328,14 @@ header,
 
 @media screen and (min-width: 48em) {
     h1 {
-        font-size: 4rem;      
-}
+        font-size: 4rem;
+    }
 }
 
 @media screen and (min-width: 48em) {
     h2 {
-        font-size: 2rem;      
-}
+        font-size: 2rem;
+    }
 }
 
 @media screen and (min-width: 48em) {
