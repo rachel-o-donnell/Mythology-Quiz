@@ -191,7 +191,7 @@ Mobile Pages:
 ![This is an image](/assets/images/read-me-images/lighthouse-mobile.png)
 
 Desktop Pages:
-![This is an image](/assets/images/read-me-images)
+![This is an image](/assets/images/read-me-images/lighthouse-desktop.png)
 
 ## Testing game elements :
 
