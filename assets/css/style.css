@@ -290,6 +290,13 @@ header,
 }
 
 @media screen and (min-width: 48em) {
+    #select {
+        font-size: 1.5rem;  
+    }
+}
+
+
+@media screen and (min-width: 48em) {
     #button-container {
         display: grid;
         grid-template-columns: 50% auto;
