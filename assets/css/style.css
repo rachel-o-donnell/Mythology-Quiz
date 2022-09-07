@@ -205,9 +205,13 @@ header,
     color: #FAFAD2;
 }
 
+#next:hover { 
+    background-color: #FAFAD2;
+    color: #6E6259;
+}
+
 #next-container {
     display: flex;
-
 }
 
 

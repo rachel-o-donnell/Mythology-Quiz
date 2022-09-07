@@ -1,6 +1,6 @@
 # WELCOME TO THE MYTHOLOGY QUIZ 
 
-![This is an image](/assets/images/read-me-images/home-screen.png)
+![This is an image](/assets/images/read-me-images/home-responsive.png)
 
 A multiple choice quiz for lovers of Greek mythology set in a sreen with a backdrop of one of the most famous paintings on this theme, Chamber of the Giants by Giulio Romano.
 
@@ -16,7 +16,7 @@ Lovers or enthusiasts of Greek mythology and fine art. A multiple choice method 
 
 **Site Goals:** 
 
-Users can easily navigate the game by use of of simple box displaying all interactive elements. Users can enter their initials coose a level of difficulty and begin the game. On the game screen the player can clearly see icons at the top of the screen with a clickable home button that bring them back to the home screen at any point in the game, a user icon displays their own initials that they entered, an icon of a tropy displays the score and a question icon shows the user what question they are on out of 8 . 
+Users can easily navigate the game by use of of simple box displaying all interactive elements. Users can enter their initials coose a level of difficulty and begin the game. All buttons have a hover feature helping a player to distinguish where their cursor is on the screen. On the game screen the player can clearly see icons at the top of the screen with a clickable home button that bring them back to the home screen at any point in the game, a user icon displays their own initials that they entered, an icon of a tropy displays the score and a question icon shows the user what question they are on out of 8 . 
 
 Each quesion is displayed with 4 options for answers, users can skip a question by pressing the next button, and control when they see the next question if they want to study the answer. After an answer is clicked a color change will occur -green for correct red for incorrect. When the player has answered 8 questions an end game screen will appear displaying a personalised message with the players name, score and level difficulty. A painting of a mythological significance will be displayed and the player has the option to play the game again, if they wish.
 
@@ -88,15 +88,18 @@ This rich ceiling painting provides a great backdrop as it features so many myth
   This research solidified my choice of color scheme as all images look at home within the game screen and create a beautifully indulgent pattern contrast when layered
 
 **Easy:**
+
   The Birth of Venus by Botticelli (1486).
   ![This is an image](/assets/images/read-me-images/venus-end-screen.png)
 
 **Medium:**
   “Perseus and Andromeda” by Frederic Leighton
+
   ![This is an image](/assets/images/read-me-images/perseus-end-screen.png)
 
 **Hard:**
   "Oedipus and the Sphinx" by Gustave Moreau 
+
   ![This is an image](/assets/images/read-me-images/oedipus-end-screen.png)
 
 ## Wireframes:
@@ -113,20 +116,27 @@ My original wireframes were for a game on the Celtic Wheel that would still have
 Once I found the background image I knew is would work perfectly to act as a background that would draw the players attention to the centre of the screen with its circular layout while still being an incredible texture compliment to the flat ochre screen.
 
 **Game screen**
+
 ![This is an image](/assets/images/read-me-images/game-screen.png)
 
 The game plays out on three different screens that change as the user progresses. Each screen keeps the same colors for a smoother user expereiemce. It is fully responsive with layout of the whole screen being consistent in style across different screen sizes save for a Answer buttons being stacked for a mobile device.
 
 **Enter initials:**
-![This is an image](/assets/images/read-me-images/home-screen.png)
+
+![This is an image](/assets/images/read-me-images/initials.png)
 
  The user enters their initials for a personalised experience
 
 **Drop down menu:**
+
+![This is an image](/assets/images/read-me-images/dropdown.png)
+
  The user can choose from 3 different categories, easy, medium or hard.
 
 **Game Panel:** 
+
 ![This is an image](/assets/images/read-me-images/game-panel.png)
+
 The game panel  consists of 4 displays accompanying icon that can be easily read visually.
     
 * Home icon - a clickable icon bringing the user to the home screen without having to use the back button 
@@ -138,6 +148,8 @@ The latter 3 icons are not clickable and the pointer visually tells this to the 
 
 **Question and Ansers:**
 
+![This is an image](/assets/images/read-me-images/q-and-a.png)
+
 Questions and answers are chosen at random and displayed in the centre of the screen. Each question have 4 answer options in button form. The button chosem will imediately turn red for incorrect and green for correct, visually telling the user is they are correct or not. The correct anwer is always displayed if an incorrect ans was chposen for a better learning experience.
 
 **Personalised message:**
@@ -147,6 +159,7 @@ The end screen displays a personal message to the user and an overview of their 
 ![This is an image](/assets/images/read-me-images/custom-end-msg.png)
 
 **Play again:**
+
 Allows users to immediatly play again if they wish to beat their score.
 
 ---
@@ -390,40 +403,43 @@ Balsamiq
 
 ## BUGS FIXED:
 
-.dropdown background color changed when I added a margin bottom to the button element. Added new background color.
-Only had a  margin left 15px to h2 so it stuck too far to the right when on a smaller screen (320px) changed to margin 0 10px to be more balanced. 
+* .dropdown background color changed when I added a margin bottom to the button element. Added new background color.
+    Only had a  margin left 15px to h2 so it stuck too far to the right when on a smaller screen (320px) changed to margin 0 10px to be more balanced. 
 
-game panel was pushed down so there was a space on top no matter how many hides I addded.
-Removed justify-content on name-area (need to add listener) then styled.s
+* Game panel was pushed down so there was a space on top no matter how many hides I addded.
+    Removed justify-content on name-area (need to add listener) then styled.
 
-Font awesome icon missing when You input username - Had to take it out of the text area
+* Font awesome icon missing when you input username - Had to take it out of the text area
 
-redesign username to initials instead as a name pushed the game panel to be too crowded on a mobile device. 
+* Redesign username to initials instead as a name pushed the game panel to be too crowded on a mobile device. 
 
-surrounded icon and li partners in game panel with containers to style side by side but still separated out n the screen. 
+* Surrounded icon and their texgt partners in game panel with containers to style side by side but still separated out on the screen. 
 
-Could not make home ontaner disappear by adding any of the hide classes I had previously made. From playing in dev tools I knew adding display:none worked so I found the correct syntax at https://www.javascripttutorial.net/dom/css/add-styles-to-an-element/ (homeContainer.style.display = 'none')
+* Could not make home container disappear by adding any of the hide classes I had previously made. 
+    From playing in dev tools I knew adding display:none worked so I found the correct syntax at https://www.javascripttutorial.net/dom/css/add-styles-to-an-element/ (homeContainer.style.display = 'none')
 
-game kept getting reset to home when answer button was pressed - Changed form to section and that fixed the problem thanks to Sean Young's help on Slack!
+* Game kept getting reset to home when answer button was pressed
+    Changed form to section and that fixed the problem thanks to Sean Young's help on Slack!
 
-game screens not displaying because they had been set to flex i style.css so I made JS add display style to only brin up the containers with display flex when they were called by a function like- begin and endgame. 
+* Game screens not displaying because they had been set to flex in style.css.
+     I made JS add display style to only bring up the containers with    display flex when they were called by a function like- begin and endgame. 
 
-Fix bug of not displaying the next question"
-needed to inscrease currentquestion index in next button call and declare the variable outside of the choose next question function
+* Fix bug of not displaying the next question
+    Needed to increase currentquestion index in next button call and declare the variable outside of the choose next question function
 
-fa-solid was at 0 5px 10px so would not manipulate with margin- right (I renamed them panel-elements)
+* fa-solid was at 0 5px 10px so would not manipulate with margin- right (I renamed them panel-elements)
 
-major overhaul of html structure - trying to get panel to separate and run on the same line but after fixing home by adding the display flex the user icon still runs lower than the others . Tried flex end but that doesnt move it and when I apply that to the others they move way too low.
---- !!!!!!!!cone back to this I think
+* Fix bug of other category image showing up on 2nd round - needed to add hides 
 
-Fix bug of other category image showing up on 2nd round - needed to add hides 
+* On playin 2nd game in a row after using the play again button, game would stop working when the questions ran out.
+     I needed to hook up a new function of reloading the game to its original state to clear the questions. Default was selected in dropdown so people can change category. Used w3 schools to default selected and get reload code.
 
-on 2nd game it would stop working when the questions ran out so I needed to hook up a new function of reloading the game to its original state to clear the questions. default was selected in dropdown so people can change category. used w3 schools to default selected and get reload code.
+* Required elements on home screen - initials input and dropdown required was not being recognised because I had event listeners attached in js. 
+    So had to access this feature through JS. Had to change the event listener to run the game only when the name and select areas were filled. 
 
-Required elements on home screen - initials input and dropdown rewuired was not being recognised because I had event listeners attached in js. So had to access this feature through JS. Had to change the event listener to run the game only when the name and select areas were filled. 
-
-
---- 
+## BUG TO BE FIXED.
+* Major overhaul of html structure -
+     Trying to get panel to separate and run on the same line but after fixing home icon by adding the display flex the user icon still runs lower than the others . I think this is becasue they are different sizes. Tried flex end but that doesnt move it and when I apply that to the others they move way too low. 
 
 ## RESOURCES USED:
 
@@ -437,6 +453,7 @@ Required elements on home screen - initials input and dropdown rewuired was not 
 * Grid Garden
 * Open Trivia Database 
 * Quora
+* Unicorn revealer.
 ---
 
 ![This is an image](/assets/images/read-me-images/venus-responsive.png)
