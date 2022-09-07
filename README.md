@@ -102,7 +102,7 @@ This rich ceiling painting provides a great backdrop as it features so many myth
 ## Wireframes:
 
 Wireframes were made with Balsamiq and can be found [here](assets/wireframes-new/)
-My original wireframes were for a game on the Celtic Wheel that would still have a game screen in the centre of an image.
+My original wireframes were for a game on the Celtic Wheel that would still have a game screen in the centre of an image but had a very different layout. This all changed when I decided to try using an API to generate questions.
 
 ---
 
@@ -113,10 +113,13 @@ My original wireframes were for a game on the Celtic Wheel that would still have
 Once I found the background image I knew is would work perfectly to act as a background that would draw the players attention to the centre of the screen with its circular layout while still being an incredible texture compliment to the flat ochre screen.
 
 **Game screen**
+![This is an image](/assets/images/read-me-images/game-screen.png)
 
 The game plays out on three different screens that change as the user progresses. Each screen keeps the same colors for a smoother user expereiemce. It is fully responsive with layout of the whole screen being consistent in style across different screen sizes save for a Answer buttons being stacked for a mobile device.
 
 **Enter initials:**
+![This is an image](/assets/images/read-me-images/home-screen.png)
+
  The user enters their initials for a personalised experience
 
 **Drop down menu:**
@@ -138,6 +141,9 @@ The latter 3 icons are not clickable and the pointer visually tells this to the 
 Questions and answers are chosen at random and displayed in the centre of the screen. Each question have 4 answer options in button form. The button chosem will imediately turn red for incorrect and green for correct, visually telling the user is they are correct or not. The correct anwer is always displayed if an incorrect ans was chposen for a better learning experience.
 
 **Personalised message:**
+
+The end screen displays a personal message to the user and an overview of their completed game. 
+
 ![This is an image](/assets/images/read-me-images/custom-end-msg.png)
 
 **Play again:**
